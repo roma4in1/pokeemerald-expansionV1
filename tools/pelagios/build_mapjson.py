@@ -81,16 +81,18 @@ mapjson('HavenIsle_TidemarkVillage', 'LAYOUT_HAVEN_ISLE_TIDEMARK_VILLAGE',
     objects=[
         obj('OBJ_EVENT_GFX_RIVAL_MAY_NORMAL', 8, 10, 'TidemarkVillage_EventScript_Cass',
             local_id='LOCALID_TIDEMARK_CASS', flag='FLAG_HIDE_TIDEMARK_CASS_INTRO'),
-        obj('OBJ_EVENT_GFX_OLD_WOMAN', 4, 11, 'TidemarkVillage_EventScript_OldWoman',
-            movement='MOVEMENT_TYPE_WANDER_AROUND', rx=1, ry=1),
+        # Keep her wander column clear of (5,10), where the Cass intercept
+        # parks the player.
+        obj('OBJ_EVENT_GFX_OLD_WOMAN', 3, 11, 'TidemarkVillage_EventScript_OldWoman',
+            movement='MOVEMENT_TYPE_WANDER_UP_AND_DOWN', rx=0, ry=1),
         obj('OBJ_EVENT_GFX_LITTLE_BOY', 12, 16, 'TidemarkVillage_EventScript_Child',
             movement='MOVEMENT_TYPE_WANDER_AROUND', rx=2, ry=2),
         obj('OBJ_EVENT_GFX_SAILOR', 12, 18, 'TidemarkVillage_EventScript_Sailor'),
     ],
     coords=[
-        trigger(4, 8, 'VAR_PELAGIOS_INTRO_STATE', 2, 'TidemarkVillage_EventScript_CassIntercept'),
+        # Fires on the doormat tile the door-exit step lands on (just south of
+        # the player house door at (5,7)).
         trigger(5, 8, 'VAR_PELAGIOS_INTRO_STATE', 2, 'TidemarkVillage_EventScript_CassIntercept'),
-        trigger(6, 8, 'VAR_PELAGIOS_INTRO_STATE', 2, 'TidemarkVillage_EventScript_CassIntercept'),
         trigger(10, 2, 'VAR_HAVEN_RUINS_STATE', 0, 'TidemarkVillage_EventScript_BlockNorth'),
         trigger(11, 2, 'VAR_HAVEN_RUINS_STATE', 0, 'TidemarkVillage_EventScript_BlockNorth'),
         trigger(12, 2, 'VAR_HAVEN_RUINS_STATE', 0, 'TidemarkVillage_EventScript_BlockNorth'),
@@ -112,12 +114,21 @@ mapjson('HavenIsle_Harbor', 'LAYOUT_HAVEN_ISLE_HARBOR',
     connections=[conn('up', -2, M('TIDEMARK_VILLAGE'))],
     objects=[
         obj('OBJ_EVENT_GFX_SAILOR', 5, 8, 'HavenIsleHarbor_EventScript_Sailor'),
-        obj('OBJ_EVENT_GFX_SS_TIDAL', 13, 12, 'HavenIsleHarbor_EventScript_Tennyson',
+        # The SS_TIDAL sprite (96x40, drawn centered over ~6x2.5 tiles) is pure
+        # decoration, exactly like every vanilla SS Tidal (script 0x0). Actual
+        # boarding interaction is the row of sign bg_events on the shore-edge
+        # water tiles below - reliable from the sand regardless of sprite size.
+        obj('OBJ_EVENT_GFX_SS_TIDAL', 13, 11, '0x0',
             local_id='LOCALID_HARBOR_TENNYSON', elevation=1),
     ],
     bgs=[
         sign(7, 4, 'HavenIsleHarbor_EventScript_VillageSign'),
         sign(12, 8, 'HavenIsleHarbor_EventScript_BerthSign'),
+        # Boarding interaction: face the water/ship from the sand at row 9
+        # anywhere along the hull and press A.
+        sign(12, 10, 'HavenIsleHarbor_EventScript_Tennyson'),
+        sign(13, 10, 'HavenIsleHarbor_EventScript_Tennyson'),
+        sign(14, 10, 'HavenIsleHarbor_EventScript_Tennyson'),
     ])
 
 # ---------------- Coastal Route 1 ----------------
@@ -147,11 +158,8 @@ mapjson('HavenIsle_AncientRuinsExterior', 'LAYOUT_HAVEN_ISLE_ANCIENT_RUINS_EXTER
     mapid=M('ANCIENT_RUINS_EXTERIOR'),
     connections=[conn('down', -1, M('ROUTE1'))],
     warps=[warp(8, 10, M('ANCIENT_RUINS_INTERIOR1'), 0)],
-    coords=[
-        trigger(7, 11, 'VAR_HAVEN_RUINS_STATE', 0, 'AncientRuinsExterior_EventScript_Disturbance'),
-        trigger(8, 11, 'VAR_HAVEN_RUINS_STATE', 0, 'AncientRuinsExterior_EventScript_Disturbance'),
-        trigger(9, 11, 'VAR_HAVEN_RUINS_STATE', 0, 'AncientRuinsExterior_EventScript_Disturbance'),
-    ],
+    # The disturbance scene runs as an ON_FRAME entry script on Interior1
+    # (guaranteed inside the ruins) - no exterior coord triggers.
     bgs=[sign(10, 11, 'AncientRuinsExterior_EventScript_Sign')])
 
 # ---------------- Ancient Ruins Interior 1 ----------------
@@ -163,7 +171,9 @@ mapjson('HavenIsle_AncientRuinsInterior1', 'LAYOUT_HAVEN_ISLE_ANCIENT_RUINS_INTE
         warp(5, 3, M('ANCIENT_RUINS_INTERIOR2'), 0),
     ],
     objects=[
-        obj('OBJ_EVENT_GFX_SPECIES(RALTS)', 16, 10, '0x0',
+        # (16,19): verified walkable floor (0x3211) in the entrance chamber,
+        # on-screen from the entry tile (18,22) when the ON_FRAME scene plays.
+        obj('OBJ_EVENT_GFX_SPECIES(RALTS)', 16, 19, '0x0',
             local_id='LOCALID_RUINS_RALTS', flag='FLAG_HIDE_RUINS_RALTS'),
     ],
     bgs=[sign(17, 10, 'AncientRuinsInterior1_EventScript_GlowingTile')])

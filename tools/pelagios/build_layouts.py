@@ -266,6 +266,12 @@ results['HavenIsle_FishingDocks'] = write_layout('HavenIsle_FishingDocks', docks
 
 # ---------------- Ancient Ruins Interior 1 (Altering Cave copy + ladder) ----------------
 int1 = [row[:] for row in ALTERING]
+# Altering Cave has a decorative dirt patch (0x3201) by the entrance that reads
+# as a sand seam against the exterior transition - flatten it to cave floor.
+for row in int1:
+    for x, w in enumerate(row):
+        if w == 0x3201:
+            row[x] = 0x3211
 ladder = None
 for y in range(3, 10):
     for x in range(4, 14):

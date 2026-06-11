@@ -30,7 +30,14 @@ HavenIsleHarbor_EventScript_TennysonKey::
 HavenIsleHarbor_EventScript_TennysonReady::
 	msgbox HavenIsleHarbor_Text_TennysonReady, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, HavenIsleHarbor_EventScript_TennysonStay
-	msgbox HavenIsleHarbor_Text_TennysonNotYet, MSGBOX_DEFAULT
+	@ Safety net: never downgrade the tier, but guarantee at least Sloop here.
+	goto_if_ne VAR_BOAT_TIER, 0, HavenIsleHarbor_EventScript_SetSail
+	setvar VAR_BOAT_TIER, 1
+HavenIsleHarbor_EventScript_SetSail::
+	msgbox HavenIsleHarbor_Text_TennysonCastOff, MSGBOX_DEFAULT
+	closemessage
+	warp MAP_IRONHOLD_GATEMARK_PORT, 10, 14
+	waitstate
 	releaseall
 	end
 
@@ -69,7 +76,7 @@ HavenIsleHarbor_Text_SailorSloop:
 	.string "apologize never.$"
 
 HavenIsleHarbor_Text_TennysonLocked:
-	.string "It's the TENNYSON — the WARDEN's\n"
+	.string "It's the TENNYSON - the WARDEN's\n"
 	.string "boat.\p"
 	.string "Her brass is dull and her mooring\n"
 	.string "lines are stiff with salt, but she\l"
@@ -91,24 +98,23 @@ HavenIsleHarbor_Text_TennysonReady:
 	.string "softly in the wind.\p"
 	.string "Set sail for IRONHOLD?$"
 
-HavenIsleHarbor_Text_TennysonNotYet:
-	.string "The TENNYSON strains against her\n"
-	.string "mooring…\p"
-	.string "…but the harbor master waves you\n"
-	.string "down. The strait charts for IRONHOLD\l"
-	.string "haven't arrived yet.\p"
-	.string "(To be continued — IRONHOLD awaits\n"
-	.string "in the next chapter of PELAGIOS.)$"
+HavenIsleHarbor_Text_TennysonCastOff:
+	.string "You cast off the mooring lines.\p"
+	.string "The TENNYSON leans into the wind\n"
+	.string "like she's been waiting years for\l"
+	.string "permission.\p"
+	.string "Haven Isle shrinks behind you…\n"
+	.string "and the iron coast rises ahead.$"
 
 HavenIsleHarbor_Text_TennysonStay:
 	.string "You rest a hand on the gunwale.\p"
 	.string "No rush. She's waited this long.$"
 
 HavenIsleHarbor_Text_VillageSign:
-	.string "TIDEMARK VILLAGE — 1 AHEAD\p"
+	.string "TIDEMARK VILLAGE - 1 AHEAD\p"
 	.string "“Fair winds begin at home.”$"
 
 HavenIsleHarbor_Text_BerthSign:
-	.string "PRIVATE BERTH — THE TENNYSON\p"
+	.string "PRIVATE BERTH - THE TENNYSON\p"
 	.string "Registered keeper: (the name has\n"
 	.string "been lovingly re-painted many times)$"

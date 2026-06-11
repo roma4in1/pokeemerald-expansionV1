@@ -309,7 +309,7 @@ Uncommon (30%): Horsea
 
 **Coastal Route 2 (Fishing - Old Rod):**
 ```
-Common (70%): Magikarp
+Common (70%): Magikarpw
 Uncommon (30%): Horsea
 ```
 

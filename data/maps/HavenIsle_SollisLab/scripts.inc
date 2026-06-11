@@ -47,6 +47,7 @@ SollisLab_EventScript_SollisWardenTalk::
 	msgbox SollisLab_Text_SollisSloop, MSGBOX_DEFAULT
 	setflag FLAG_HAVEN_ISLE_COMPLETE
 	setflag FLAG_BOAT_SLOOP_UNLOCKED
+	setvar VAR_BOAT_TIER, 1
 	release
 	end
 
@@ -268,7 +269,7 @@ SollisLab_Text_SollisInvestigate:
 	.string "SOLLIS: You felt it too, didn't you.\n"
 	.string "The whole island shivered.\p"
 	.string "My instruments all point the same\n"
-	.string "way — the old ruins, north of\l"
+	.string "way - the old ruins, north of\l"
 	.string "COASTAL ROUTE 1.\p"
 	.string "Please. Go and look. I'd go myself,\n"
 	.string "but somebody has to watch the\l"
@@ -283,7 +284,7 @@ SollisLab_Text_SollisWardenTalk:
 	.string "word you need to learn.\p"
 	.string "WARDEN.\p"
 	.string "It's what your parent was. Not a\n"
-	.string "sailor, not a fisher — a WARDEN.\p"
+	.string "sailor, not a fisher - a WARDEN.\p"
 	.string "This archipelago is held together\n"
 	.string "by something older than any of us.\l"
 	.string "A network of seals, scattered\l"
@@ -295,7 +296,7 @@ SollisLab_Text_SollisWardenTalk:
 	.string "wake up screaming.\p"
 	.string "That is not a coincidence.\p"
 	.string "Word came this morning from\n"
-	.string "IRONHOLD — the same disturbance,\l"
+	.string "IRONHOLD - the same disturbance,\l"
 	.string "ten times the size. And the\l"
 	.string "Covenant has locked the island down.\p"
 	.string "Someone has to go. Someone the\n"
@@ -320,7 +321,7 @@ SollisLab_Text_SollisIronholdReminder:
 	.string "IRONHOLD is occupied ground, so\n"
 	.string "keep your head down and your\l"
 	.string "partner close.\p"
-	.string "And {PLAYER} — read the journal.\n"
+	.string "And {PLAYER} - read the journal.\n"
 	.string "Even the parts that look like\l"
 	.string "nonsense.\p"
 	.string "ESPECIALLY those.$"
@@ -412,13 +413,13 @@ SollisLab_Text_DeclineStarter:
 
 SollisLab_Text_CassTakesChimchar:
 	.string "CASS: TOTODILE?! That's the one\n"
-	.string "I— okay. Okay! Fine!\p"
+	.string "I- okay. Okay! Fine!\p"
 	.string "The CHIMCHAR's been eyeing me\n"
 	.string "anyway. We have an understanding.\l"
 	.string "A fiery, chaotic understanding.\p"
 	.string "SOLLIS: I'll bring it down to your\n"
 	.string "house tonight, Cass. With gloves.\p"
-	.string "CASS: {PLAYER} — first battle, the\n"
+	.string "CASS: {PLAYER} - first battle, the\n"
 	.string "moment we're both ready. Deal?\l"
 	.string "Deal. You can't undeal it now!$"
 
@@ -430,7 +431,7 @@ SollisLab_Text_CassTakesRowlet:
 	.string "we are going to be unstoppable.\p"
 	.string "SOLLIS: I'll bring it to your house\n"
 	.string "tonight, Cass. If it agrees to wake up.\p"
-	.string "CASS: {PLAYER} — first battle, the\n"
+	.string "CASS: {PLAYER} - first battle, the\n"
 	.string "moment we're both ready. Deal?\l"
 	.string "Deal. You can't undeal it now!$"
 
@@ -443,7 +444,7 @@ SollisLab_Text_CassTakesTotodile:
 	.string "SOLLIS: I'll bring it to your house\n"
 	.string "tonight, Cass. Count your fingers\l"
 	.string "after every meal.\p"
-	.string "CASS: {PLAYER} — first battle, the\n"
+	.string "CASS: {PLAYER} - first battle, the\n"
 	.string "moment we're both ready. Deal?\l"
 	.string "Deal. You can't undeal it now!$"
 

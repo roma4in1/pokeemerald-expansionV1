@@ -139,6 +139,39 @@ gStdScripts_End::
 	.include "data/maps/SootopolisCity/scripts.inc"
 	.include "data/maps/EverGrandeCity/scripts.inc"
 	.include "data/maps/LittlerootTown/scripts.inc"
+	.include "data/maps/HavenIsle_Harbor/scripts.inc"
+	.include "data/maps/HavenIsle_TidemarkVillage/scripts.inc"
+	.include "data/maps/HavenIsle_Route1/scripts.inc"
+	.include "data/maps/HavenIsle_Route2/scripts.inc"
+	.include "data/maps/HavenIsle_AncientRuinsExterior/scripts.inc"
+	.include "data/maps/HavenIsle_AncientRuinsInterior1/scripts.inc"
+	.include "data/maps/HavenIsle_AncientRuinsInterior2/scripts.inc"
+	.include "data/maps/HavenIsle_FishingDocks/scripts.inc"
+	.include "data/maps/HavenIsle_PlayerHouse_1F/scripts.inc"
+	.include "data/maps/HavenIsle_PlayerHouse_2F/scripts.inc"
+	.include "data/maps/HavenIsle_CassHouse/scripts.inc"
+	.include "data/maps/HavenIsle_ElderHouse/scripts.inc"
+	.include "data/maps/HavenIsle_SollisLab/scripts.inc"
+	.include "data/maps/HavenIsle_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/HavenIsle_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/HavenIsle_Mart/scripts.inc"
+	.include "data/maps/Ironhold_GatemarkPort/scripts.inc"
+	.include "data/maps/Ironhold_GatemarkPort_Inn/scripts.inc"
+	.include "data/maps/Ironhold_GatemarkPort_Inn_Interior/scripts.inc"
+	.include "data/maps/Ironhold_OuterDistrict/scripts.inc"
+	.include "data/maps/Ironhold_IronholdCity/scripts.inc"
+	.include "data/maps/Ironhold_IronholdCity_Armory/scripts.inc"
+	.include "data/maps/Ironhold_IronholdCity_Armory_Interior/scripts.inc"
+	.include "data/maps/Ironhold_IronholdCity_PokemonCenter/scripts.inc"
+	.include "data/maps/Ironhold_IronholdCity_PokeMart/scripts.inc"
+	.include "data/maps/Ironhold_ResistanceHideout/scripts.inc"
+	.include "data/maps/Ironhold_MountainPass/scripts.inc"
+	.include "data/maps/Ironhold_MountainPass_Cave/scripts.inc"
+	.include "data/maps/Ironhold_SummitApproach/scripts.inc"
+	.include "data/maps/Ironhold_SummitFortress_Exterior/scripts.inc"
+	.include "data/maps/Ironhold_SummitFortress_Interior1/scripts.inc"
+	.include "data/maps/Ironhold_SummitFortress_Interior2/scripts.inc"
+	.include "data/maps/Ironhold_SummitFortress_SealChamber/scripts.inc"
 	.include "data/maps/OldaleTown/scripts.inc"
 	.include "data/maps/DewfordTown/scripts.inc"
 	.include "data/maps/LavaridgeTown/scripts.inc"
@@ -1085,7 +1118,9 @@ EventScript_AfterWhiteOutHealMsg::
 EventScript_AfterWhiteOutMomHeal::
 	lockall
 	textcolor NPC_TEXT_COLOR_FEMALE
-	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, Common_Movement_WalkInPlaceFasterDown
+	@ VAR_LAST_TALKED is set to the respawn healer NPC by SetWhiteoutRespawnWarpAndHealerNPC,
+	@ so this works for both the vanilla Littleroot mom and the Haven Isle mom.
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox gText_HadQuiteAnExperienceTakeRest
 	call Common_EventScript_OutOfCenterPartyHeal

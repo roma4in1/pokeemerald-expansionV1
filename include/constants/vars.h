@@ -275,9 +275,35 @@
 #define VAR_PELAGIOS_INTRO_STATE                 0x40FC // Pelagios opening sequence progress
 #define VAR_HAVEN_RUINS_STATE                    0x40FD // Ancient Ruins event progress
 #define VAR_PELAGIOS_STARTER                     0x40FE // 0=none, 1=Totodile, 2=Chimchar, 3=Rowlet
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_IRONHOLD_PROGRESS                    0x40FF // 0=not arrived, 1=arrived, 2=Petra, 3=Forge+hook, 4=Rook, 5=Sever, 6=siphon found, 7=resolved
 
-#define VARS_END                                         0x40FF
+// Pokémon Pelagios — Expanded Var Block (0x4100-0x410F)
+// VARS_END was raised from 0x40FF to 0x410F on 2026-06-11 to reclaim var space after
+// the vanilla 0x4000-0x40FF range was exhausted by VAR_IRONHOLD_PROGRESS. This adds
+// 16 new u16 vars (+32 bytes to SaveBlock1). SAVE-BREAKING change — accepted (dev phase).
+// The 0x4000-0x40FF range is unchanged; this block sits directly above it and well
+// below SPECIAL_VARS_START (0x8000).
+#define VAR_BOAT_TIER                            0x4100 // 0=Dinghy, 1=Sloop, 2=Brigantine, 3=Galleon
+#define VAR_SIROCCO_PROGRESS                     0x4101 // Sirocco Isle story progress
+#define VAR_EMBERVEIL_PROGRESS                   0x4102 // Emberveil story progress
+#define VAR_SCHISM_PROGRESS                      0x4103 // Schism Isle story progress
+#define VAR_THALVERN_PROGRESS                    0x4104 // Thalvern story progress
+#define VAR_GILDHAVEN_PROGRESS                   0x4105 // Gildhaven story progress
+#define VAR_PRIMALIS_PROGRESS                    0x4106 // Primalis story progress
+#define VAR_ASHENVEIL_PROGRESS                   0x4107 // Ashenveil story progress
+#define VAR_AETHERON_PROGRESS                    0x4108 // Aetheron story progress
+#define VAR_CONVERGENCE_PROGRESS                 0x4109 // Convergence (final island) story progress
+#define VAR_PELAGIOS_RESERVED_0x410A             0x410A // Reserved for Pelagios future use
+#define VAR_PELAGIOS_RESERVED_0x410B             0x410B // Reserved for Pelagios future use
+#define VAR_PELAGIOS_RESERVED_0x410C             0x410C // Reserved for Pelagios future use
+#define VAR_PELAGIOS_RESERVED_0x410D             0x410D // Reserved for Pelagios future use
+#define VAR_PELAGIOS_RESERVED_0x410E             0x410E // Reserved for Pelagios future use
+#define VAR_PELAGIOS_RESERVED_0x410F             0x410F // Reserved for Pelagios future use
+
+// NOTE: 0x410F is now the LAST general-purpose var slot. VARS_END is 0x410F.
+// Six reserved slots (0x410A-0x410F) remain for Pelagios. Any var beyond 0x410F
+// requires another VARS_END expansion (saveblock impact) — STOP and flag this.
+#define VARS_END                                         0x410F
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
 
 #define SPECIAL_VARS_START            0x8000

@@ -55,7 +55,7 @@ FishingDocks_Text_AlreadyGaveRod:
 
 FishingDocks_Text_FishingTips:
 	.string "Press the button when you feel a\n"
-	.string "tug — not before, not after. THE\l"
+	.string "tug - not before, not after. THE\l"
 	.string "MOMENT.\p"
 	.string "I've seen grown sailors weep over\n"
 	.string "a slow thumb.$"

@@ -859,13 +859,40 @@
 #define TRAINER_LEAF                        852
 #define TRAINER_BRENDAN_PLACEHOLDER         853
 #define TRAINER_MAY_PLACEHOLDER             854
+#define TRAINER_YOUNGSTER_HAVEN_1           855
+#define TRAINER_FISHERMAN_HAVEN_1           856
+// Pelagios — Ironhold generic trainers (857-863).
+#define TRAINER_OFFICER_IRONHOLD_1          857
+#define TRAINER_WORKER_IRONHOLD_1           858
+#define TRAINER_HIKER_IRONHOLD_1            859
+#define TRAINER_COVENANT_IRONHOLD_1         860
+#define TRAINER_COVENANT_IRONHOLD_2         861
+#define TRAINER_COVENANT_IRONHOLD_3         862
+#define TRAINER_COVENANT_IRONHOLD_4         863
+// Pelagios — Ironhold gym leaders (864-867). Enabled by the 2026-06-11 flag-space
+// expansion that raised MAX_TRAINERS_COUNT_EMERALD 864 -> 1024 (see flags.h).
+#define TRAINER_LEADER_IRONHOLD_PETRA       864 // Gym 1 — Fighting
+#define TRAINER_LEADER_IRONHOLD_FORGE       865 // Gym 2 — Steel
+#define TRAINER_LEADER_IRONHOLD_ROOK        866 // Gym 3 — Fighting/Steel
+#define TRAINER_LEADER_IRONHOLD_SEVER       867 // Gym 4 — Steel/Fighting (Commander Holt Sever)
+// Pelagios — Ironhold summit garrison (868-872), added 2026-06-11 by script-writer:
+// the SummitApproach patrols, fortress stationed soldiers, and second elite gate
+// guard referenced more Covenant trainers than the 4 generic IDs provided.
+#define TRAINER_COVENANT_IRONHOLD_5         868 // Soldier Bryn — SummitApproach patrol
+#define TRAINER_COVENANT_IRONHOLD_6         869 // Soldier Karst — SummitApproach patrol
+#define TRAINER_COVENANT_IRONHOLD_7         870 // Private Ostin — Fortress Interior1 stationed
+#define TRAINER_COVENANT_IRONHOLD_8         871 // Private Wrenna — Fortress Interior1 stationed
+#define TRAINER_COVENANT_IRONHOLD_9         872 // Elite Guard Senna — Fortress gate, 2nd elite
 
-// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
-//       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
-//       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
+// Trainer flag space was expanded on 2026-06-11: MAX_TRAINERS_COUNT_EMERALD raised
+// from 864 to 1024 (+160 slots). Trainer defeat flags now occupy 0x500-0x8FF.
+// SYSTEM_FLAGS is derived from TRAINER_FLAGS_END (flags.h), so the entire system/
+// daily flag block floats up automatically with no per-flag collisions.
+// Headroom after the 5 summit garrison trainers: TRAINERS_COUNT_EMERALD 873, so
+// 1024-873 = 151 free trainer slots remain for future islands. SAVE-BREAKING (dev).
 
-#define TRAINERS_COUNT_EMERALD     855
-#define MAX_TRAINERS_COUNT_EMERALD 864
+#define TRAINERS_COUNT_EMERALD     873
+#define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG

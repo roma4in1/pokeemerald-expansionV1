@@ -137,8 +137,8 @@ static void WarpToTruck(void)
 {
     if (IS_FRLG)
         SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, 6, 6);
-    else
-        SetWarpDestination(MAP_GROUP(MAP_INSIDE_OF_TRUCK), MAP_NUM(MAP_INSIDE_OF_TRUCK), WARP_ID_NONE, -1, -1);
+    else // Pelagios: new game starts in the player's bedroom on Haven Isle
+        SetWarpDestination(MAP_GROUP(MAP_HAVEN_ISLE_PLAYER_HOUSE_2F), MAP_NUM(MAP_HAVEN_ISLE_PLAYER_HOUSE_2F), WARP_ID_NONE, 4, 3);
     WarpIntoMap();
 }
 

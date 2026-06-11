@@ -47,11 +47,11 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 4,
+      "x": 3,
       "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 1,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
@@ -132,25 +132,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 4,
-      "y": 8,
-      "elevation": 3,
-      "var": "VAR_PELAGIOS_INTRO_STATE",
-      "var_value": "2",
-      "script": "TidemarkVillage_EventScript_CassIntercept"
-    },
-    {
-      "type": "trigger",
       "x": 5,
-      "y": 8,
-      "elevation": 3,
-      "var": "VAR_PELAGIOS_INTRO_STATE",
-      "var_value": "2",
-      "script": "TidemarkVillage_EventScript_CassIntercept"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
       "y": 8,
       "elevation": 3,
       "var": "VAR_PELAGIOS_INTRO_STATE",

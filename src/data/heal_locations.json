@@ -349,6 +349,32 @@
       "y": 12,
       "respawn_map": "MAP_SIX_ISLAND_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_SIX_ISLAND_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_TIDEMARK_VILLAGE",
+      "map": "MAP_HAVEN_ISLE_TIDEMARK_VILLAGE",
+      "x": 8,
+      "y": 15,
+      "respawn_map": "MAP_HAVEN_ISLE_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_TIDEMARK_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_HAVEN_ISLE_PLAYER_HOUSE_2F",
+      "map": "MAP_HAVEN_ISLE_PLAYER_HOUSE_2F",
+      "x": 4,
+      "y": 3,
+      "respawn_map": "MAP_HAVEN_ISLE_PLAYER_HOUSE_1F",
+      "respawn_npc": "LOCALID_HAVEN_MOM",
+      "respawn_x": 5,
+      "respawn_y": 5
+    },
+    {
+      "id": "HEAL_LOCATION_IRONHOLD_GATEMARK_PORT",
+      "map": "MAP_IRONHOLD_GATEMARK_PORT",
+      "x": 4,
+      "y": 8,
+      "respawn_map": "MAP_IRONHOLD_GATEMARK_PORT_INN",
+      "respawn_npc": "LOCALID_IRONHOLD_INNKEEPER"
     }
   ]
 }

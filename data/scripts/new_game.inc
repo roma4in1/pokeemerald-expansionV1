@@ -273,6 +273,12 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_WALLACE
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	call EventScript_ResetAllBerries
+	@ Pokémon Pelagios — Haven Isle new-game state
+	setflag FLAG_HIDE_RUINS_RALTS
+	setflag FLAG_SYS_B_DASH
+	setrespawn HEAL_LOCATION_HAVEN_ISLE_PLAYER_HOUSE_2F
+	setberrytree BERRY_TREE_HAVEN_ROUTE1_ORAN_1, BERRY_ID_ORAN, BERRY_STAGE_BERRIES
+	setberrytree BERRY_TREE_HAVEN_ROUTE1_ORAN_2, BERRY_ID_ORAN, BERRY_STAGE_BERRIES
 	end
 
 EventScript_ResetAllMapFlagsFrlg::

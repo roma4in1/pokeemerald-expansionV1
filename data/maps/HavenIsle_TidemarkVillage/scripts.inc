@@ -1,8 +1,12 @@
 HavenIsle_TidemarkVillage_MapScripts::
 	.byte 0
 
+@ Pattern mirrors the vanilla rival intercepts (lockall; every applymovement
+@ followed by waitmovement 0; no dialogue until all movement has finished).
 TidemarkVillage_EventScript_CassIntercept::
 	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, TidemarkVillage_Movement_PlayerStepOut
+	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_TIDEMARK_CASS, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -33,14 +37,20 @@ TidemarkVillage_EventScript_Cass::
 	release
 	end
 
+TidemarkVillage_Movement_PlayerStepOut:
+	walk_down
+	walk_down
+	step_end
+
+@ Cass starts at (8,10); two steps west puts her at (6,10), facing the
+@ player at (5,10).
 TidemarkVillage_Movement_CassApproach:
-	walk_up
-	walk_up
 	walk_left
 	walk_left
 	face_left
 	step_end
 
+@ From (6,10): east along the open row to x19, then up to the lab doormat.
 TidemarkVillage_Movement_CassRunToLab:
 	walk_fast_right
 	walk_fast_right
@@ -55,6 +65,7 @@ TidemarkVillage_Movement_CassRunToLab:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
+	walk_fast_up
 	walk_fast_up
 	step_end
 

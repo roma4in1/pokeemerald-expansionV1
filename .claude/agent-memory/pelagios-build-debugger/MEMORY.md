@@ -1,0 +1,1 @@
+- [Charmap: no em dashes](feedback_charmap-no-emdash.md) — em/en dashes break script preproc; use ASCII hyphen in dialogue

@@ -30,35 +30,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 7,
-      "y": 11,
-      "elevation": 3,
-      "var": "VAR_HAVEN_RUINS_STATE",
-      "var_value": "0",
-      "script": "AncientRuinsExterior_EventScript_Disturbance"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 11,
-      "elevation": 3,
-      "var": "VAR_HAVEN_RUINS_STATE",
-      "var_value": "0",
-      "script": "AncientRuinsExterior_EventScript_Disturbance"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 11,
-      "elevation": 3,
-      "var": "VAR_HAVEN_RUINS_STATE",
-      "var_value": "0",
-      "script": "AncientRuinsExterior_EventScript_Disturbance"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

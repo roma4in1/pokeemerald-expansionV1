@@ -36577,6 +36577,535 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_HAVEN_ISLE_ROUTE1",
+          "base_label": "gHavenIsleRoute1",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 2,
+                "max_level": 3,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 2,
+                "max_level": 3,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 4,
+                "max_level": 4,
+                "species": "SPECIES_GASTLY"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
+                "species": "SPECIES_GASTLY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_GASTLY"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_AZUMARILL"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_AZUMARILL"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_AZUMARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_AZUMARILL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_HAVEN_ISLE_ROUTE2",
+          "base_label": "gHavenIsleRoute2",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 2,
+                "max_level": 4,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 2,
+                "max_level": 3,
+                "species": "SPECIES_TAILLOW"
+              },
+              {
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_RALTS"
+              },
+              {
+                "min_level": 3,
+                "max_level": 5,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_RALTS"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
+                "species": "SPECIES_RALTS"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
+                "species": "SPECIES_RALTS"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_RALTS"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_MARILL"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_TOTODILE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_TOTODILE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TOTODILE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_TOTODILE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_IRONHOLD_OUTER_DISTRICT",
+          "base_label": "gIronholdOuterDistrict",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 8,
+                "max_level": 11,
+                "species": "SPECIES_MEDITITE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 11,
+                "species": "SPECIES_MEDITITE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 11,
+                "species": "SPECIES_MEDITITE"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_RIOLU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_RIOLU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_RIOLU"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_RIOLU"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_IRONHOLD_MOUNTAIN_PASS",
+          "base_label": "gIronholdMountainPass",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE_ALOLA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE_ALOLA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE_ALOLA"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_BELDUM"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_BELDUM"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_BELDUM"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_BELDUM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_IRONHOLD_MOUNTAIN_PASS_CAVE",
+          "base_label": "gIronholdMountainPassCave",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 14,
+                "max_level": 17,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 14,
+                "max_level": 17,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 14,
+                "max_level": 17,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 15,
+                "max_level": 18,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 15,
+                "max_level": 18,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 15,
+                "max_level": 18,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_PAWNIARD"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_PAWNIARD"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_PAWNIARD"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_PAWNIARD"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_BELDUM"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_BELDUM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_IRONHOLD_SUMMIT_APPROACH",
+          "base_label": "gIronholdSummitApproach",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 18,
+                "max_level": 21,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PAWNIARD"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PAWNIARD"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PAWNIARD"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_FARFETCHD_GALAR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_FARFETCHD_GALAR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_FARFETCHD_GALAR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_FARFETCHD_GALAR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_FARFETCHD_GALAR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_FARFETCHD_GALAR"
+              }
+            ]
+          }
         }
       ]
     },

@@ -75,7 +75,8 @@
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
-    "gMapGroup_HavenIsle"
+    "gMapGroup_HavenIsle",
+    "gMapGroup_Ironhold"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1179,5 +1180,24 @@
     "HavenIsle_PokemonCenter_1F",
     "HavenIsle_PokemonCenter_2F",
     "HavenIsle_Mart"
+  ],
+  "gMapGroup_Ironhold": [
+    "Ironhold_GatemarkPort",
+    "Ironhold_GatemarkPort_Inn",
+    "Ironhold_GatemarkPort_Inn_Interior",
+    "Ironhold_OuterDistrict",
+    "Ironhold_IronholdCity",
+    "Ironhold_IronholdCity_Armory",
+    "Ironhold_IronholdCity_Armory_Interior",
+    "Ironhold_IronholdCity_PokemonCenter",
+    "Ironhold_IronholdCity_PokeMart",
+    "Ironhold_ResistanceHideout",
+    "Ironhold_MountainPass",
+    "Ironhold_MountainPass_Cave",
+    "Ironhold_SummitApproach",
+    "Ironhold_SummitFortress_Exterior",
+    "Ironhold_SummitFortress_Interior1",
+    "Ironhold_SummitFortress_Interior2",
+    "Ironhold_SummitFortress_SealChamber"
   ]
 }

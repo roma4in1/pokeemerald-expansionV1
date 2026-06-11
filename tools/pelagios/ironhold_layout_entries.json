@@ -1,0 +1,68 @@
+[
+  {
+    "id": "LAYOUT_IRONHOLD_GATEMARK_PORT",
+    "name": "Ironhold_GatemarkPort_Layout",
+    "width": 20,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Ironhold_GatemarkPort/border.bin",
+    "blockdata_filepath": "data/layouts/Ironhold_GatemarkPort/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_IRONHOLD_OUTER_DISTRICT",
+    "name": "Ironhold_OuterDistrict_Layout",
+    "width": 24,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Ironhold_OuterDistrict/border.bin",
+    "blockdata_filepath": "data/layouts/Ironhold_OuterDistrict/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_IRONHOLD_IRONHOLD_CITY",
+    "name": "Ironhold_IronholdCity_Layout",
+    "width": 28,
+    "height": 24,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Ironhold_IronholdCity/border.bin",
+    "blockdata_filepath": "data/layouts/Ironhold_IronholdCity/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_IRONHOLD_MOUNTAIN_PASS",
+    "name": "Ironhold_MountainPass_Layout",
+    "width": 20,
+    "height": 34,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Cave",
+    "border_filepath": "data/layouts/Ironhold_MountainPass/border.bin",
+    "blockdata_filepath": "data/layouts/Ironhold_MountainPass/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_IRONHOLD_SUMMIT_APPROACH",
+    "name": "Ironhold_SummitApproach_Layout",
+    "width": 22,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Cave",
+    "border_filepath": "data/layouts/Ironhold_SummitApproach/border.bin",
+    "blockdata_filepath": "data/layouts/Ironhold_SummitApproach/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_IRONHOLD_SUMMIT_FORTRESS_EXTERIOR",
+    "name": "Ironhold_SummitFortress_Exterior_Layout",
+    "width": 18,
+    "height": 16,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Ironhold_SummitFortress_Exterior/border.bin",
+    "blockdata_filepath": "data/layouts/Ironhold_SummitFortress_Exterior/map.bin",
+    "layout_version": "emerald"
+  }
+]

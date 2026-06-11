@@ -1063,10 +1063,16 @@ enum __attribute__((packed)) Item
     ITEM_PHANTOM_LANTERN = 881,
     ITEM_SEAL_SHARD_1 = 882,
     ITEM_TENNYSON_KEY = 883,
+    ITEM_DOCUMENT_FRAGMENT = 884,
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };
+
+// ITEM_SEAL_SHARD_IRONHOLD is an alias for the existing Ironhold seal shard
+// (ITEM_SEAL_SHARD_1 = 882). The brief uses the descriptive name; scripts may use
+// either. No new ID is consumed.
+#define ITEM_SEAL_SHARD_IRONHOLD ITEM_SEAL_SHARD_1
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
 // Its icon is defined at ITEMS_COUNT as the "return to field" arrow

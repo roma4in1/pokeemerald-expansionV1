@@ -1658,6 +1658,26 @@
     {
       "id": "MAPSEC_HAVEN_FISHING_DOCKS",
       "name": "FISHING DOCKS"
+    },
+    {
+      "id": "MAPSEC_IRONHOLD_GATEMARK_PORT",
+      "name": "GATEMARK PORT"
+    },
+    {
+      "id": "MAPSEC_IRONHOLD_OUTER_DISTRICT",
+      "name": "OUTER DISTRICT"
+    },
+    {
+      "id": "MAPSEC_IRONHOLD_CITY",
+      "name": "IRONHOLD CITY"
+    },
+    {
+      "id": "MAPSEC_IRONHOLD_MOUNTAIN_PASS",
+      "name": "MOUNTAIN PASS"
+    },
+    {
+      "id": "MAPSEC_IRONHOLD_SUMMIT",
+      "name": "IRONHOLD SUMMIT"
     }
   ]
 }

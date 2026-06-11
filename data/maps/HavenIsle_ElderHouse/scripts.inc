@@ -18,7 +18,7 @@ HavenIsleElderHouse_Text_ElderHistory:
 	.string "Haven Isle. Hmph. The name is\n"
 	.string "newer than I am.\p"
 	.string "The old charts call this place\n"
-	.string "FIRSTMOOR — the first mooring.\l"
+	.string "FIRSTMOOR - the first mooring.\l"
 	.string "The first place anyone in the\l"
 	.string "archipelago dropped anchor.\p"
 	.string "And those ruins up north? Older\n"

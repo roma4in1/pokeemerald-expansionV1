@@ -663,10 +663,12 @@
 #define FLAG_HIDDEN_ITEM_NAVEL_ROCK_TOP_SACRED_ASH           (FLAG_HIDDEN_ITEMS_START + 0x6D)
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
+// Pelagios — Ironhold hidden items (must live in the hidden-items range; the
+// bg_hidden_item_event macro hard-errors if flag < FLAG_HIDDEN_ITEMS_START)
+#define FLAG_HIDDEN_ITEM_IRONHOLD_ANTIDOTE                   (FLAG_HIDDEN_ITEMS_START + 0x71) // 0x265 (was FLAG_UNUSED_0x265)
+#define FLAG_HIDDEN_ITEM_IRONHOLD_IRON                       (FLAG_HIDDEN_ITEMS_START + 0x72) // 0x266 (was FLAG_UNUSED_0x266)
 
 #define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
@@ -1301,17 +1303,20 @@
 #define FLAG_RECEIVED_OLD_ROD_HAVEN                         0x4D6
 #define FLAG_RECEIVED_TENNYSON_KEY                          0x4D7
 #define FLAG_ITEM_HAVEN_ROUTE1_POTION                       0x4D8
-#define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
-#define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
-#define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
-#define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
-#define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
-#define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag
-#define FLAG_UNUSED_0x4DF                                           0x4DF // Unused Flag
-#define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag
-#define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
-#define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
-#define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
+
+// Pelagios — Ironhold Progression Flags (0x4D9-0x4E3)
+// NOTE: FLAG_IRONHOLD_RESOLVED already defined above at 0x4AC (Island Resolution Flags block)
+#define FLAG_IRONHOLD_ARRIVED                               0x4D9 // Player first docked at GatemarkPort
+#define FLAG_IRONHOLD_GYM1_CLEAR                            0x4DA // Petra defeated
+#define FLAG_IRONHOLD_GYM2_CLEAR                            0x4DB // Forge defeated
+#define FLAG_IRONHOLD_GYM3_CLEAR                            0x4DC // Rook defeated
+#define FLAG_IRONHOLD_GYM4_CLEAR                            0x4DD // Sever defeated
+#define FLAG_IRONHOLD_RESISTANCE_MET                        0x4DE // Player found the hideout
+#define FLAG_IRONHOLD_SEAL_FOUND                            0x4DF // Player discovered the siphon apparatus
+#define FLAG_IRONHOLD_CIPHER_FOUND                          0x4E0 // Warden's Journal cipher 1 collected
+#define FLAG_GRAPPLE_HOOK_OBTAINED                          0x4E1 // ITEM_GRAPPLE_HOOK received from Forge
+#define FLAG_DOCUMENT_FRAGMENT_OBTAINED                     0x4E2 // Resistance document received
+#define FLAG_HIDE_IRONHOLD_SEVER_GATE                       0x4E3 // Hides Sever's gate cameo until both summit guards fall
 #define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
 #define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
 #define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
@@ -1346,15 +1351,20 @@
 #define FLAG_UNUSED_0x4FF                                           0x4FF // Unused Flag
 
 // Trainer Flags
-// Trainer flags occupy 0x500 - 0x85F, the last 9 of which are unused
-// See constants/opponents.h. The values there + FLAG_TRAINER_FLAG_START are the flag IDs
+// Trainer flags occupy 0x500 - 0x8FF after the 2026-06-11 Pelagios expansion
+// (MAX_TRAINERS_COUNT raised 864 -> 1024 in constants/opponents.h to make room for
+// the Ironhold gym leaders and future-island trainers). The values in opponents.h
+// + TRAINER_FLAGS_START are the flag IDs. SYSTEM_FLAGS is anchored to the END of this
+// block, so the entire system/badge/landmark/daily flag region floats up with the
+// trainer count automatically — no per-flag constant needed editing. This shift is
+// SAVE-BREAKING (every system flag's numeric ID changed). Accepted: dev phase.
 
 #define TRAINER_FLAGS_START                                         0x500
-#define TRAINER_FLAGS_END                                           (TRAINER_FLAGS_START + MAX_TRAINERS_COUNT - 1) // 0x85F
+#define TRAINER_FLAGS_END                                           (TRAINER_FLAGS_START + MAX_TRAINERS_COUNT - 1) // 0x8FF
 
 // System Flags
 
-#define SYSTEM_FLAGS                                   (TRAINER_FLAGS_END + 1) // 0x860
+#define SYSTEM_FLAGS                                   (TRAINER_FLAGS_END + 1) // 0x900
 
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)

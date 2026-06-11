@@ -15927,8 +15927,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_AquaScope,
-        .iconPalette = gItemIconPalette_AquaScope,
+        .iconPic = gItemIcon_SilphScope,
+        .iconPalette = gItemIconPalette_SilphScope,
     },
 
     [ITEM_STORM_COMPASS] =
@@ -15959,8 +15959,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_FlashOrb,
-        .iconPalette = gItemIconPalette_FlashOrb,
+        .iconPic = gItemIcon_FlameOrb,
+        .iconPalette = gItemIconPalette_FlameOrb,
     },
 
     [ITEM_SEAL_SHARD_1] =
@@ -15991,8 +15991,24 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_TmCase,
-        .iconPalette = gItemIconPalette_TmCase,
+        .iconPic = gItemIcon_TMCase,
+        .iconPalette = gItemIconPalette_TMCase,
+    },
+
+    [ITEM_DOCUMENT_FRAGMENT] =
+    {
+        .name = ITEM_NAME("Document Frag."),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A partial Covenant\n"
+            "report. The legible\n"
+            "words are damning."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Powder,
+        .iconPalette = gItemIconPalette_EnergyPowder,
     },
 };
 
