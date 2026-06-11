@@ -266,14 +266,15 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
-#define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
-#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
-#define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
+// Pokémon Pelagios — Relationship Variables (0=lowest, 3=highest)
+#define VAR_CASS_RELATIONSHIP                            0x40F7 // 0=Distant, 1=Competitive, 2=Trusting, 3=Devoted
+#define VAR_DORNE_RELATIONSHIP                           0x40F8 // 0=Adversarial, 1=Wary, 2=Conflicted, 3=Reluctant Respect
+#define VAR_MAREN_RELATIONSHIP                           0x40F9 // 0=Distant, 1=Strained, 2=Honest, 3=Reconciled
+#define VAR_SEVER_RELATIONSHIP                           0x40FA // 0=Unacknowledged, 1=Respected
+#define VAR_DAGAN_RELATIONSHIP                           0x40FB // 0-3 comedy scale
+#define VAR_PELAGIOS_INTRO_STATE                 0x40FC // Pelagios opening sequence progress
+#define VAR_HAVEN_RUINS_STATE                    0x40FD // Ancient Ruins event progress
+#define VAR_PELAGIOS_STARTER                     0x40FE // 0=none, 1=Totodile, 2=Chimchar, 3=Rowlet
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
 
 #define VARS_END                                         0x40FF

@@ -1,0 +1,72 @@
+{
+  "id": "MAP_HAVEN_ISLE_ANCIENT_RUINS_EXTERIOR",
+  "name": "HavenIsle_AncientRuinsExterior",
+  "layout": "LAYOUT_HAVEN_ISLE_ANCIENT_RUINS_EXTERIOR",
+  "music": "MUS_ROUTE113",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_HAVEN_ANCIENT_RUINS",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_HAVEN_ISLE_ROUTE1",
+      "offset": -1,
+      "direction": "down"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_HAVEN_ISLE_ANCIENT_RUINS_INTERIOR1",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "AncientRuinsExterior_EventScript_Disturbance"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "AncientRuinsExterior_EventScript_Disturbance"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "AncientRuinsExterior_EventScript_Disturbance"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AncientRuinsExterior_EventScript_Sign"
+    }
+  ]
+}

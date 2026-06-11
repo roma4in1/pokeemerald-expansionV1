@@ -74,7 +74,8 @@
     "gMapGroup_IndoorFiveIslandRoute_Frlg",
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
-    "gMapGroup_IndoorSevenIslandRoute_Frlg"
+    "gMapGroup_IndoorSevenIslandRoute_Frlg",
+    "gMapGroup_HavenIsle"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1160,5 +1161,23 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
+  ],
+  "gMapGroup_HavenIsle": [
+    "HavenIsle_Harbor",
+    "HavenIsle_TidemarkVillage",
+    "HavenIsle_Route1",
+    "HavenIsle_Route2",
+    "HavenIsle_AncientRuinsExterior",
+    "HavenIsle_AncientRuinsInterior1",
+    "HavenIsle_AncientRuinsInterior2",
+    "HavenIsle_FishingDocks",
+    "HavenIsle_PlayerHouse_1F",
+    "HavenIsle_PlayerHouse_2F",
+    "HavenIsle_CassHouse",
+    "HavenIsle_ElderHouse",
+    "HavenIsle_SollisLab",
+    "HavenIsle_PokemonCenter_1F",
+    "HavenIsle_PokemonCenter_2F",
+    "HavenIsle_Mart"
   ]
 }

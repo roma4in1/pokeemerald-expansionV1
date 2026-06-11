@@ -1242,56 +1242,65 @@
 #define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
 #define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
 #define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
-#define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
-#define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
-#define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
-#define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
-#define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
-#define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
-#define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
-#define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
-#define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
-#define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
-#define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
-#define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
-#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
-#define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
-#define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
-#define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
-#define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
-#define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
-#define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
-#define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
-#define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
+// Pokémon Pelagios — Story Progression Flags
+#define FLAG_STARTER_CHOSEN                                         0x4A7
+#define FLAG_JOURNAL_OBTAINED                                       0x4A8
+#define FLAG_HAVEN_RUINS_VISITED                                    0x4A9
+#define FLAG_HAVEN_ISLE_COMPLETE                                    0x4AA
+#define FLAG_BOAT_SLOOP_UNLOCKED                                    0x4AB
+
+// Pelagios — Island Resolution Flags
+#define FLAG_IRONHOLD_RESOLVED                                      0x4AC
+#define FLAG_SIROCCO_RESOLVED                                       0x4AD
+#define FLAG_EMBERVEIL_RESOLVED                                     0x4AE
+#define FLAG_SCHISM_RESOLVED                                        0x4AF
+#define FLAG_THALVERN_RESOLVED                                      0x4B0
+#define FLAG_GILDHAVEN_RESOLVED                                     0x4B1
+#define FLAG_PRIMALIS_RESOLVED                                      0x4B2
+#define FLAG_ASHENVEIL_VISITED                                      0x4B3
+#define FLAG_AETHERON_RESOLVED                                      0x4B4
+
+// Pelagios — Choice Flags
+#define FLAG_DORNE_CHOICE_STOP                                      0x4B5
+#define FLAG_DORNE_CHOICE_HELP                                      0x4B6
+#define FLAG_DORNE_CHOICE_DEFER                                     0x4B7
+#define FLAG_TRUE_ENDING_UNLOCKED                                   0x4B8
+#define FLAG_SOLACE_ALT_ENDING                                      0x4B9
+#define FLAG_DEX_ALIVE                                              0x4BA
+#define FLAG_DRENN_ALIVE                                            0x4BB
+#define FLAG_CASS_DEFECTED                                          0x4BC
+
+// Pelagios — Journal Cipher Progress
+#define FLAG_CIPHER_1_FOUND                                         0x4BD
+#define FLAG_CIPHER_2_FOUND                                         0x4BE
+#define FLAG_CIPHER_3_FOUND                                         0x4BF
+#define FLAG_CIPHER_4_FOUND                                         0x4C0
+#define FLAG_CIPHER_5_FOUND                                         0x4C1
+#define FLAG_CIPHER_6_FOUND                                         0x4C2
+#define FLAG_CIPHER_7_FOUND                                         0x4C3
+#define FLAG_CIPHER_8_FOUND                                         0x4C4
+#define FLAG_CIPHER_9_FOUND                                         0x4C5
+
+// Pelagios — Memory Shards
+#define FLAG_MEMORY_SHARD_1                                         0x4C6
+#define FLAG_MEMORY_SHARD_2                                         0x4C7
+#define FLAG_MEMORY_SHARD_3                                         0x4C8
+#define FLAG_MEMORY_SHARD_4                                         0x4C9
+#define FLAG_MEMORY_SHARD_5                                         0x4CA
+#define FLAG_MEMORY_SHARD_6                                         0x4CB
+#define FLAG_MEMORY_SHARD_7                                         0x4CC
+#define FLAG_MEMORY_SHARD_8                                         0x4CD
+#define FLAG_MEMORY_SHARD_9                                         0x4CE
+#define FLAG_MEMORY_SHARD_10                                        0x4CF
+#define FLAG_HIDE_TIDEMARK_CASS_INTRO                       0x4D0
+#define FLAG_HIDE_SOLLIS_LAB_CASS                           0x4D1
+#define FLAG_HIDE_SOLLIS_LAB_TOTODILE                       0x4D2
+#define FLAG_HIDE_SOLLIS_LAB_CHIMCHAR                       0x4D3
+#define FLAG_HIDE_SOLLIS_LAB_ROWLET                         0x4D4
+#define FLAG_HIDE_RUINS_RALTS                               0x4D5
+#define FLAG_RECEIVED_OLD_ROD_HAVEN                         0x4D6
+#define FLAG_RECEIVED_TENNYSON_KEY                          0x4D7
+#define FLAG_ITEM_HAVEN_ROUTE1_POTION                       0x4D8
 #define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
 #define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag

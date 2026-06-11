@@ -1630,6 +1630,34 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_HAVEN_ISLE",
+      "name": "HAVEN ISLE"
+    },
+    {
+      "id": "MAPSEC_TIDEMARK_VILLAGE",
+      "name": "TIDEMARK VILLAGE"
+    },
+    {
+      "id": "MAPSEC_HAVEN_ISLE_HARBOR",
+      "name": "HAVEN ISLE HARBOR"
+    },
+    {
+      "id": "MAPSEC_HAVEN_COASTAL_ROUTE_1",
+      "name": "COASTAL ROUTE 1"
+    },
+    {
+      "id": "MAPSEC_HAVEN_COASTAL_ROUTE_2",
+      "name": "COASTAL ROUTE 2"
+    },
+    {
+      "id": "MAPSEC_HAVEN_ANCIENT_RUINS",
+      "name": "ANCIENT RUINS"
+    },
+    {
+      "id": "MAPSEC_HAVEN_FISHING_DOCKS",
+      "name": "FISHING DOCKS"
     }
   ]
 }

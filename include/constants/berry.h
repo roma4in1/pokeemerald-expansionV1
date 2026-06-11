@@ -143,6 +143,10 @@ enum __attribute__((__packed__)) Flavor
 #define BERRY_TREE_ROUTE_123_SITRUS   88
 #define BERRY_TREE_ROUTE_123_RAWST    89
 
+// Pokémon Pelagios — Haven Isle
+#define BERRY_TREE_HAVEN_ROUTE1_ORAN_1 90
+#define BERRY_TREE_HAVEN_ROUTE1_ORAN_2 91
+
 // Remainder are unused
 
 #define BERRY_TREES_COUNT 128

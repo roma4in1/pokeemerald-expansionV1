@@ -9323,6 +9323,94 @@
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/map.bin",
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_HAVEN_ISLE_TIDEMARK_VILLAGE",
+      "name": "HavenIsle_TidemarkVillage_Layout",
+      "width": 24,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HavenIsle_TidemarkVillage/border.bin",
+      "blockdata_filepath": "data/layouts/HavenIsle_TidemarkVillage/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HAVEN_ISLE_HARBOR",
+      "name": "HavenIsle_Harbor_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HavenIsle_Harbor/border.bin",
+      "blockdata_filepath": "data/layouts/HavenIsle_Harbor/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HAVEN_ISLE_ROUTE1",
+      "name": "HavenIsle_Route1_Layout",
+      "width": 20,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HavenIsle_Route1/border.bin",
+      "blockdata_filepath": "data/layouts/HavenIsle_Route1/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HAVEN_ISLE_ANCIENT_RUINS_EXTERIOR",
+      "name": "HavenIsle_AncientRuinsExterior_Layout",
+      "width": 18,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HavenIsle_AncientRuinsExterior/border.bin",
+      "blockdata_filepath": "data/layouts/HavenIsle_AncientRuinsExterior/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HAVEN_ISLE_ROUTE2",
+      "name": "HavenIsle_Route2_Layout",
+      "width": 32,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HavenIsle_Route2/border.bin",
+      "blockdata_filepath": "data/layouts/HavenIsle_Route2/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HAVEN_ISLE_FISHING_DOCKS",
+      "name": "HavenIsle_FishingDocks_Layout",
+      "width": 14,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HavenIsle_FishingDocks/border.bin",
+      "blockdata_filepath": "data/layouts/HavenIsle_FishingDocks/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HAVEN_ISLE_ANCIENT_RUINS_INTERIOR1",
+      "name": "HavenIsle_AncientRuinsInterior1_Layout",
+      "width": 32,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/HavenIsle_AncientRuinsInterior1/border.bin",
+      "blockdata_filepath": "data/layouts/HavenIsle_AncientRuinsInterior1/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HAVEN_ISLE_ANCIENT_RUINS_INTERIOR2",
+      "name": "HavenIsle_AncientRuinsInterior2_Layout",
+      "width": 15,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/HavenIsle_AncientRuinsInterior2/border.bin",
+      "blockdata_filepath": "data/layouts/HavenIsle_AncientRuinsInterior2/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

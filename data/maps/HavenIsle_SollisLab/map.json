@@ -1,0 +1,116 @@
+{
+  "id": "MAP_HAVEN_ISLE_SOLLIS_LAB",
+  "name": "HavenIsle_SollisLab",
+  "layout": "LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
+  "music": "MUS_BIRCH_LAB",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_TIDEMARK_VILLAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_LAB_SOLLIS",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 6,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SollisLab_EventScript_Sollis",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_LAB_CASS",
+      "graphics_id": "OBJ_EVENT_GFX_RIVAL_MAY_NORMAL",
+      "x": 8,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SollisLab_EventScript_Cass",
+      "flag": "FLAG_HIDE_SOLLIS_LAB_CASS"
+    },
+    {
+      "local_id": "LOCALID_LAB_TOTODILE",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TOTODILE)",
+      "x": 5,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SollisLab_EventScript_Totodile",
+      "flag": "FLAG_HIDE_SOLLIS_LAB_TOTODILE"
+    },
+    {
+      "local_id": "LOCALID_LAB_CHIMCHAR",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CHIMCHAR)",
+      "x": 2,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SollisLab_EventScript_Chimchar",
+      "flag": "FLAG_HIDE_SOLLIS_LAB_CHIMCHAR"
+    },
+    {
+      "local_id": "LOCALID_LAB_ROWLET",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(ROWLET)",
+      "x": 9,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SollisLab_EventScript_Rowlet",
+      "flag": "FLAG_HIDE_SOLLIS_LAB_ROWLET"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_HAVEN_ISLE_TIDEMARK_VILLAGE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_HAVEN_ISLE_TIDEMARK_VILLAGE",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SollisLab_EventScript_Journal"
+    }
+  ]
+}

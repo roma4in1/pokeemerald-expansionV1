@@ -15832,6 +15832,168 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+// Pokémon Pelagios — Key Items
+
+    [ITEM_WARDENS_JOURNAL] =
+    {
+        .name = ITEM_NAME("Warden's Journal"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Your parent's\n"
+            "weathered journal.\n"
+            "Some entries coded."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OldRod,
+        .iconPalette = gItemIconPalette_OldRod,
+    },
+
+    [ITEM_NAVIGATORS_LOG] =
+    {
+        .name = ITEM_NAME("Navigator's Log"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "An ancient sailing\n"
+            "chart. Lets you\n"
+            "traverse open water."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_TownMap,
+        .iconPalette = gItemIconPalette_TownMap,
+    },
+
+    [ITEM_GRAPPLE_HOOK] =
+    {
+        .name = ITEM_NAME("Grapple Hook"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Military-grade gear.\n"
+            "Traverse crumbling\n"
+            "walls and barriers."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Bicycle,
+        .iconPalette = gItemIconPalette_Bicycle,
+    },
+
+    [ITEM_LAVA_BOOTS] =
+    {
+        .name = ITEM_NAME("Lava Boots"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Fireproof boots.\n"
+            "Walk across ash\n"
+            "fields and lava rock."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Bicycle,
+        .iconPalette = gItemIconPalette_Bicycle,
+    },
+
+    [ITEM_SONAR_LENS] =
+    {
+        .name = ITEM_NAME("Sonar Lens"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Ancient tech from\n"
+            "the Sunken Kingdom.\n"
+            "Allows deep diving."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_GoGoggles,
+        .iconPalette = gItemIconPalette_GoGoggles,
+    },
+
+    [ITEM_BEAST_WHISTLE] =
+    {
+        .name = ITEM_NAME("Beast Whistle"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A carved bone\n"
+            "whistle. Jungle\n"
+            "creatures move aside."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_AquaScope,
+        .iconPalette = gItemIconPalette_AquaScope,
+    },
+
+    [ITEM_STORM_COMPASS] =
+    {
+        .name = ITEM_NAME("Storm Compass"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Navigates between\n"
+            "any visited island\n"
+            "harbor instantly."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_TownMap,
+        .iconPalette = gItemIconPalette_TownMap,
+    },
+
+    [ITEM_PHANTOM_LANTERN] =
+    {
+        .name = ITEM_NAME("Phantom Lantern"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Reveals hidden paths\n"
+            "in fog and\n"
+            "darkness."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_FlashOrb,
+        .iconPalette = gItemIconPalette_FlashOrb,
+    },
+
+    [ITEM_SEAL_SHARD_1] =
+    {
+        .name = ITEM_NAME("Seal Shard"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A fragment of\n"
+            "crystallized legendary\n"
+            "energy. Ironhold."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BlueOrb,
+        .iconPalette = gItemIconPalette_BlueOrb,
+    },
+
+    [ITEM_TENNYSON_KEY] =
+    {
+        .name = ITEM_NAME("Tennyson Key"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "The key to the\n"
+            "Tennyson. Your\n"
+            "parent's boat."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_TmCase,
+        .iconPalette = gItemIconPalette_TmCase,
+    },
 };
 
 #undef ITEM_NAME

@@ -1,0 +1,251 @@
+{
+  "id": "MAP_HAVEN_ISLE_TIDEMARK_VILLAGE",
+  "name": "HavenIsle_TidemarkVillage",
+  "layout": "LAYOUT_HAVEN_ISLE_TIDEMARK_VILLAGE",
+  "music": "MUS_LITTLEROOT",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_TIDEMARK_VILLAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_HAVEN_ISLE_ROUTE1",
+      "offset": 2,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_HAVEN_ISLE_HARBOR",
+      "offset": 2,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_HAVEN_ISLE_ROUTE2",
+      "offset": 3,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_TIDEMARK_CASS",
+      "graphics_id": "OBJ_EVENT_GFX_RIVAL_MAY_NORMAL",
+      "x": 8,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TidemarkVillage_EventScript_Cass",
+      "flag": "FLAG_HIDE_TIDEMARK_CASS_INTRO"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "x": 4,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TidemarkVillage_EventScript_OldWoman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
+      "x": 12,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TidemarkVillage_EventScript_Child",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 12,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TidemarkVillage_EventScript_Sailor",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_HAVEN_ISLE_PLAYER_HOUSE_1F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_HAVEN_ISLE_CASS_HOUSE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 19,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_HAVEN_ISLE_SOLLIS_LAB",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_HAVEN_ISLE_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_HAVEN_ISLE_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_HAVEN_ISLE_ELDER_HOUSE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_PELAGIOS_INTRO_STATE",
+      "var_value": "2",
+      "script": "TidemarkVillage_EventScript_CassIntercept"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_PELAGIOS_INTRO_STATE",
+      "var_value": "2",
+      "script": "TidemarkVillage_EventScript_CassIntercept"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_PELAGIOS_INTRO_STATE",
+      "var_value": "2",
+      "script": "TidemarkVillage_EventScript_CassIntercept"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 2,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "TidemarkVillage_EventScript_BlockNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 2,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "TidemarkVillage_EventScript_BlockNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 2,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "TidemarkVillage_EventScript_BlockNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 2,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "TidemarkVillage_EventScript_BlockNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 9,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "TidemarkVillage_EventScript_BlockEast"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 10,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "TidemarkVillage_EventScript_BlockEast"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "TidemarkVillage_EventScript_BlockEast"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 12,
+      "elevation": 3,
+      "var": "VAR_HAVEN_RUINS_STATE",
+      "var_value": "0",
+      "script": "TidemarkVillage_EventScript_BlockEast"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "TidemarkVillage_EventScript_VillageSign"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "TidemarkVillage_EventScript_LabSign"
+    }
+  ]
+}
