@@ -1,0 +1,216 @@
+{
+  "id": "MAP_EMBERVEIL_CINDERHOLD_CITY",
+  "name": "Emberveil_CinderholdCity",
+  "layout": "LAYOUT_EMBERVEIL_CINDERHOLD_CITY",
+  "music": "MUS_LILYCOVE",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_EMBERVEIL_CINDERHOLD_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_EMBERVEIL_ASH_FIELDS",
+      "offset": 2,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_EMBERVEIL_LAVA_ROUTE2",
+      "offset": 3,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_EMBERVEIL_CINDER",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 14,
+      "y": 20,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EmberveilCinderholdCity_EventScript_Cinder",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_EMBERVEIL_SLAG",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 21,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EmberveilCinderholdCity_EventScript_Slag",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "x": 10,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EmberveilCinderholdCity_EventScript_Historian",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 9,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EmberveilCinderholdCity_EventScript_DoubtingNpc",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
+      "x": 16,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EmberveilCinderholdCity_EventScript_Child",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 11,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EmberveilCinderholdCity_EventScript_CultMember",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_EMBERVEIL_CINDERHOLD_CITY_TEMPLE_HALL",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_EMBERVEIL_CINDERHOLD_CITY_POKEMON_CENTER",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "0",
+      "script": "EmberveilCinderholdCity_EventScript_CalderaGate"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 12,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "0",
+      "script": "EmberveilCinderholdCity_EventScript_CalderaGate"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "1",
+      "script": "EmberveilCinderholdCity_EventScript_CalderaGate"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 12,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "1",
+      "script": "EmberveilCinderholdCity_EventScript_CalderaGate"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "2",
+      "script": "EmberveilCinderholdCity_EventScript_CalderaGate"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 12,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "2",
+      "script": "EmberveilCinderholdCity_EventScript_CalderaGate"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EmberveilCinderholdCity_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EmberveilCinderholdCity_EventScript_TempleSign"
+    },
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EmberveilCinderholdCity_EventScript_CenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EmberveilCinderholdCity_EventScript_LavaWorksSign"
+    }
+  ]
+}

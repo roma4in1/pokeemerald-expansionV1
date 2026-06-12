@@ -16,6 +16,7 @@ HavenIslePokemonCenter_1F_EventScript_Nurse::
 	end
 
 HavenIslePokemonCenter_1F_EventScript_Boy::
+	setspeaker Pelagios_Speaker_Boy
 	msgbox HavenIslePokemonCenter_1F_Text_Boy, MSGBOX_NPC
 	end
 

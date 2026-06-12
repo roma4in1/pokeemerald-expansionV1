@@ -33,10 +33,12 @@ Ironhold_SummitFortress_Exterior_OnTransition_End:
 @ -------------------------------------------------------------------
 IronholdSummitFortressExterior_EventScript_EliteVael::
 	trainerbattle_single TRAINER_COVENANT_IRONHOLD_4, IronholdSummitFortressExterior_Text_VaelIntro, IronholdSummitFortressExterior_Text_VaelDefeat, IronholdSummitFortressExterior_EventScript_VaelVictory
+	setspeaker Pelagios_Speaker_Vael
 	msgbox IronholdSummitFortressExterior_Text_VaelPost, MSGBOX_AUTOCLOSE
 	end
 
 IronholdSummitFortressExterior_EventScript_VaelVictory::
+	setspeaker Pelagios_Speaker_Vael
 	msgbox IronholdSummitFortressExterior_Text_VaelPost, MSGBOX_DEFAULT
 	closemessage
 	goto_if_defeated TRAINER_COVENANT_IRONHOLD_9, IronholdSummitFortressExterior_EventScript_SeverReveal
@@ -48,10 +50,12 @@ IronholdSummitFortressExterior_EventScript_VaelVictory::
 @ -------------------------------------------------------------------
 IronholdSummitFortressExterior_EventScript_EliteGuard2::
 	trainerbattle_single TRAINER_COVENANT_IRONHOLD_9, IronholdSummitFortressExterior_Text_SennaIntro, IronholdSummitFortressExterior_Text_SennaDefeat, IronholdSummitFortressExterior_EventScript_SennaVictory
+	setspeaker Pelagios_Speaker_Senna
 	msgbox IronholdSummitFortressExterior_Text_SennaPost, MSGBOX_AUTOCLOSE
 	end
 
 IronholdSummitFortressExterior_EventScript_SennaVictory::
+	setspeaker Pelagios_Speaker_Senna
 	msgbox IronholdSummitFortressExterior_Text_SennaPost, MSGBOX_DEFAULT
 	closemessage
 	goto_if_defeated TRAINER_COVENANT_IRONHOLD_4, IronholdSummitFortressExterior_EventScript_SeverReveal
@@ -84,6 +88,7 @@ IronholdSummitFortressExterior_EventScript_SeverRevealSkip::
 IronholdSummitFortressExterior_EventScript_Sever::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Sever
 	msgbox IronholdSummitFortressExterior_Text_SeverGate, MSGBOX_DEFAULT
 	closemessage
 	delay 20

@@ -126,7 +126,13 @@ IronholdSealChamber_EventScript_Apparatus::
 	delay 30
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
+	msgbox IronholdSealChamber_Text_PokenavBuzz, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Sollis
 	msgbox IronholdSealChamber_Text_SollisCall, MSGBOX_DEFAULT
+	setspeaker 0
+	msgbox IronholdSealChamber_Text_SollisCallReply, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Sollis
+	msgbox IronholdSealChamber_Text_SollisCallComeHome, MSGBOX_DEFAULT
 	closemessage
 	msgbox IronholdSealChamber_Text_BrigantineUnlocked, MSGBOX_DEFAULT
 	release
@@ -229,18 +235,24 @@ IronholdSealChamber_Text_JournalUnlocks:
 	.string "been recorded in the journal's\l"
 	.string "margin!)$"
 
+IronholdSealChamber_Text_PokenavBuzz:
+	.string "…Your POKéNAV buzzes.$"
+
 IronholdSealChamber_Text_SollisCall:
-	.string "…Your POKéNAV buzzes.\p"
-	.string "SOLLIS: {PLAYER}! The readings\n"
+	.string "{PLAYER}! The readings\n"
 	.string "from IRONHOLD just changed.\l"
-	.string "What did you find up there?\p"
+	.string "What did you find up there?$"
+
+IronholdSealChamber_Text_SollisCallReply:
 	.string "You tell her. The Covenant was\n"
 	.string "using the seal. Draining it.\p"
 	.string "The line is quiet for a long\n"
-	.string "moment.\p"
-	.string "SOLLIS: …Come back to HAVEN ISLE\n"
+	.string "moment.$"
+
+IronholdSealChamber_Text_SollisCallComeHome:
+	.string "…Come back to HAVEN ISLE\n"
 	.string "when you can.\p"
-	.string "SOLLIS: There are things I should\n"
+	.string "There are things I should\n"
 	.string "have told you earlier.$"
 
 IronholdSealChamber_Text_BrigantineUnlocked:

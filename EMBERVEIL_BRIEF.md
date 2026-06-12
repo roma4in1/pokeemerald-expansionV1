@@ -879,64 +879,75 @@ Battle backgrounds:
 
 ## Emberveil — Task Checklist
 
-### pelagios-systems-engineer (first)
-- [ ] Add all Emberveil flags to include/constants/flags.h
-- [ ] Confirm VAR_EMBERVEIL_PROGRESS exists (capacity refactor)
-- [ ] Add ITEM_LAVA_BOOTS to items.h and src/data/items.h
-- [ ] Add ITEM_WARDEN_NOTES to items.h and src/data/items.h
-- [ ] Add ITEM_SEAL_SHARD_EMBERVEIL stub to items.h
-- [ ] Add all trainer entries to trainers.party
-  (TRAINER_CULTMEMBER_EMBERVEIL_1 through _8 + 4 gym leaders)
-- [ ] Add gym leader trainer entries:
-  - Cinder (next available ID)
-  - Slag
-  - Vex
-  - Solace
-- [ ] Add Emberveil map group stub to map_groups.json
-- [ ] Compile and fix errors
+### pelagios-systems-engineer (first) — DONE 2026-06-12
+- [x] Add all Emberveil flags to include/constants/flags.h
+  (story block 2 opened at 0x493-0x4A6; Emberveil claims 0x493-0x49C + ARRIVED 0x4EF;
+   hidden-item berries 0x268/0x269; RESOLVED 0x4AE / SOLACE_ALT_ENDING 0x4B9 reused)
+- [x] Confirm VAR_EMBERVEIL_PROGRESS exists (capacity refactor) — 0x4102, no new vars
+- [x] Add ITEM_LAVA_BOOTS to items.h and src/data/items.h — already existed (877)
+- [x] Add ITEM_WARDEN_NOTES to items.h and src/data/items.h — 886
+- [x] Add ITEM_SEAL_SHARD_EMBERVEIL stub to items.h — 887
+- [x] Add all trainer entries to trainers.party
+  (TRAINER_CULTMEMBER_EMBERVEIL_1 through _8 = 888-895 + 4 gym leaders 896-899)
+- [x] Add gym leader trainer entries:
+  - Cinder 896 (Pic Youngster)
+  - Slag 897 (Pic Hiker — no Worker pic in expansion)
+  - Vex 898 (Pic Cooltrainer M)
+  - Solace 899 (Pic Lady)
+- [~] Add Emberveil map group stub to map_groups.json — SKIPPED: empty map groups
+  cannot be expressed in the generated groups.inc. The map-builder registers
+  MAP_GROUP_EMBERVEIL when it creates the island's first real map (Emberveil_AshmouthPort).
+- [x] Compile and fix errors — gmake exit 0 (EWRAM 86.45%, ROM 79.12%)
 
-### pelagios-map-builder (second)
-- [ ] Emberveil_AshmouthPort
-- [ ] Emberveil_AshmouthPort_Inn + Interior
-- [ ] Emberveil_LavaRoute1
-- [ ] Emberveil_AshFields
-- [ ] Emberveil_CinderholdCity
-- [ ] Emberveil_CinderholdCity_PokemonCenter
-- [ ] Emberveil_CinderholdCity_TempleHall + Interior
-- [ ] Emberveil_LavaRoute2
-- [ ] Emberveil_CalderaApproach
-- [ ] Emberveil_CalderaRuins
-- [ ] Emberveil_VolcanoAscent
-- [ ] Emberveil_VolcanoSummit
-- [ ] Emberveil_SealChamber
-- [ ] Wild encounter tables (all 5 outdoor areas)
-- [ ] Heal location (AshmouthPort Inn)
-- [ ] Reference: use volcanic/dark tileset for outdoor maps,
-     cave tileset for caldera areas,
-     grand interior tileset for TempleHall
-- [ ] Lava obstacle tiles on LavaRoute2 and CalderaApproach
-     (passable only with ITEM_LAVA_BOOTS check)
-- [ ] Compile after every 4 maps
+### pelagios-map-builder (second) — DONE 2026-06-12 (gmake exit 0)
+- [x] Emberveil_AshmouthPort
+- [x] Emberveil_AshmouthPort_Inn + Interior
+- [x] Emberveil_LavaRoute1
+- [x] Emberveil_AshFields
+- [x] Emberveil_CinderholdCity
+- [x] Emberveil_CinderholdCity_PokemonCenter
+- [x] Emberveil_CinderholdCity_TempleHall + Interior
+- [x] Emberveil_LavaRoute2
+- [x] Emberveil_CalderaApproach
+- [x] Emberveil_CalderaRuins
+- [x] Emberveil_VolcanoAscent
+- [x] Emberveil_VolcanoSummit
+- [x] Emberveil_SealChamber
+- [x] Wild encounter tables (all 5 outdoor areas)
+- [x] Heal location (AshmouthPort Inn)
+- [x] Volcanic outdoor tileset = General/Lavaridge (Mt Chimney sampled); SealChamber +
+     TempleHall interior reuse vanilla Cave/Sealed-Chamber layouts. NOTE: caldera areas
+     use the same General/Lavaridge volcanic look (not a separate Cave tileset) for
+     visual continuity; SealChamber is the only Cave-tileset map.
+- [x] Lava obstacle tiles on LavaRoute2 and CalderaApproach (impassable lava walls leaving
+     gated corridors; coord triggers compare VAR_EMBERVEIL_PROGRESS - scripter wires the
+     ITEM_LAVA_BOOTS field check / clear)
+- [x] Compile clean (full build exit 0; also fixed a pre-existing Sirocco MUS_ROUTE111
+     link blocker to let the tree link)
 
-### pelagios-script-writer (third)
-- [ ] Arrival script + volcano camera pan
-- [ ] Lava Boots handoff (Slag post-battle)
-- [ ] Lava Boots field effect on obstacle tiles
-- [ ] Warden's Notes discovery (panel sequence)
-- [ ] Solace pre-battle scene Path A
-- [ ] Solace pre-battle scene Path B (commune ritual sequence)
-- [ ] Solace post-battle dialogue + player choice (Path A)
-- [ ] Path B resolution (no battle variant)
-- [ ] SealChamber resolution script
-- [ ] Island resolution + conditional Galleon check
-- [ ] Warden's Journal cipher 4 unlock
-- [ ] All gym leader pre/post battle dialogue
-- [ ] All NPC dialogue per guidelines above
-- [ ] All trainer pre/post battle dialogue
-- [ ] Path A post-resolution NPC dialogue variants
-- [ ] Path B post-resolution NPC dialogue variants
-- [ ] TempleHall central flame vision trigger
-- [ ] CalderaRuins panel examine scripts (3 panels)
+### pelagios-script-writer (third) — DONE 2026-06-12
+(gmake exit 0; full implementation record in CLAUDE.md "Completed — Emberveil SCRIPTS")
+- [x] Arrival script + volcano camera pan (ON_FRAME at progress 0, not coord triggers)
+- [x] Lava Boots handoff (Slag post-battle, key item BEFORE the TM)
+- [x] Lava Boots field effect on obstacle tiles (script-side coord triggers,
+      progress 0-2 armed, checkitem defensive branch - no C code needed)
+- [x] Warden's Notes discovery (panel sequence via VAR_TEMP_1 local step counter)
+- [x] Solace pre-battle scene Path A
+- [x] Solace pre-battle scene Path B (commune ritual sequence; decline retreats + re-arms)
+- [x] Solace post-battle dialogue + player choice (Path A: TOLD_TRUTH / ALT_ENDING)
+- [x] Path B resolution (no battle variant; FLAG_EMBERVEIL_PATH_B)
+- [x] SealChamber resolution script (discovery progress 5->6, apparatus 6->7)
+- [x] Island resolution + conditional Galleon check (mirrors Sirocco's; tier never lowered)
+- [x] Warden's Journal cipher 4 unlock (FLAG_CIPHER_4_FOUND + FLAG_EMBERVEIL_CIPHER_FOUND)
+- [x] All gym leader pre/post battle dialogue (badges narrative-only - engine badge
+      flags exhausted; TM subs lampshaded: Earthquake for Earth Power, Aerial Ace
+      for Brave Bird)
+- [x] All NPC dialogue per guidelines above
+- [x] All trainer pre/post battle dialogue (cult members 1-8, sight-initiated)
+- [x] Path A post-resolution NPC dialogue variants
+- [x] Path B post-resolution NPC dialogue variants
+- [x] TempleHall central flame vision trigger (repeatable)
+- [x] CalderaRuins panel examine scripts (3 panels, translations gated on cipher 2)
 
 ### pelagios-build-debugger (last)
 - [ ] Full compile passes with zero errors

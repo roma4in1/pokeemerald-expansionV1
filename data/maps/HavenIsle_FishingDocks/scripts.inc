@@ -4,10 +4,13 @@ HavenIsle_FishingDocks_MapScripts::
 FishingDocks_EventScript_OldFisherman::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Fisherman
 	goto_if_set FLAG_RECEIVED_OLD_ROD_HAVEN, FishingDocks_EventScript_AlreadyGaveRod
 	msgbox FishingDocks_Text_TakeOldRod, MSGBOX_DEFAULT
+	setspeaker 0
 	giveitem ITEM_OLD_ROD
 	setflag FLAG_RECEIVED_OLD_ROD_HAVEN
+	setspeaker Pelagios_Speaker_Fisherman
 	msgbox FishingDocks_Text_RodAdvice, MSGBOX_DEFAULT
 	release
 	end
@@ -18,6 +21,7 @@ FishingDocks_EventScript_AlreadyGaveRod::
 	end
 
 FishingDocks_EventScript_TipsSailor::
+	setspeaker Pelagios_Speaker_Sailor
 	msgbox FishingDocks_Text_FishingTips, MSGBOX_NPC
 	end
 

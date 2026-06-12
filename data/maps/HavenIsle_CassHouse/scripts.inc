@@ -4,6 +4,7 @@ HavenIsle_CassHouse_MapScripts::
 HavenIsleCassHouse_EventScript_CassMother::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_CassMom
 	goto_if_set FLAG_STARTER_CHOSEN, HavenIsleCassHouse_EventScript_MotherAfter
 	msgbox HavenIsleCassHouse_Text_MotherBefore, MSGBOX_DEFAULT
 	release

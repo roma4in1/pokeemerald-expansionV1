@@ -1,0 +1,127 @@
+{
+  "id": "MAP_EMBERVEIL_LAVA_ROUTE2",
+  "name": "Emberveil_LavaRoute2",
+  "layout": "LAYOUT_EMBERVEIL_LAVA_ROUTE2",
+  "music": "MUS_ROUTE110",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_EMBERVEIL_LAVA_ROUTE2",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_EMBERVEIL_CINDERHOLD_CITY",
+      "offset": -3,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_EMBERVEIL_CALDERA_APPROACH",
+      "offset": -2,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 5,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "EmberveilLavaRoute2_EventScript_AcolyteRem",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 16,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "EmberveilLavaRoute2_EventScript_AcolyteVoss",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 18,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "EmberveilLavaRoute2_EventScript_AcolyteTane",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "0",
+      "script": "EmberveilLavaRoute2_EventScript_LavaGate"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 9,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "0",
+      "script": "EmberveilLavaRoute2_EventScript_LavaGate"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "1",
+      "script": "EmberveilLavaRoute2_EventScript_LavaGate"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 9,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "1",
+      "script": "EmberveilLavaRoute2_EventScript_LavaGate"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "2",
+      "script": "EmberveilLavaRoute2_EventScript_LavaGate"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 9,
+      "elevation": 3,
+      "var": "VAR_EMBERVEIL_PROGRESS",
+      "var_value": "2",
+      "script": "EmberveilLavaRoute2_EventScript_LavaGate"
+    }
+  ],
+  "bg_events": []
+}

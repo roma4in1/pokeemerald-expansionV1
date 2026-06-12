@@ -1,0 +1,90 @@
+[
+  {
+    "id": "LAYOUT_SIROCCO_DUSTMOUTH_PORT",
+    "name": "Sirocco_DustmouthPort_Layout",
+    "width": 20,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Mauville",
+    "border_filepath": "data/layouts/Sirocco_DustmouthPort/border.bin",
+    "blockdata_filepath": "data/layouts/Sirocco_DustmouthPort/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SIROCCO_DESERT_ROUTE_1",
+    "name": "Sirocco_DesertRoute1_Layout",
+    "width": 22,
+    "height": 40,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Mauville",
+    "border_filepath": "data/layouts/Sirocco_DesertRoute1/border.bin",
+    "blockdata_filepath": "data/layouts/Sirocco_DesertRoute1/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SIROCCO_MIRADEN_OASIS",
+    "name": "Sirocco_MiradenOasis_Layout",
+    "width": 28,
+    "height": 24,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Mauville",
+    "border_filepath": "data/layouts/Sirocco_MiradenOasis/border.bin",
+    "blockdata_filepath": "data/layouts/Sirocco_MiradenOasis/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SIROCCO_DEX_CAMP",
+    "name": "Sirocco_DexCamp_Layout",
+    "width": 16,
+    "height": 14,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Mauville",
+    "border_filepath": "data/layouts/Sirocco_DexCamp/border.bin",
+    "blockdata_filepath": "data/layouts/Sirocco_DexCamp/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SIROCCO_DESERT_ROUTE_2",
+    "name": "Sirocco_DesertRoute2_Layout",
+    "width": 24,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Mauville",
+    "border_filepath": "data/layouts/Sirocco_DesertRoute2/border.bin",
+    "blockdata_filepath": "data/layouts/Sirocco_DesertRoute2/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SIROCCO_BURIED_CITY_EXTERIOR",
+    "name": "Sirocco_BuriedCity_Exterior_Layout",
+    "width": 22,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Mauville",
+    "border_filepath": "data/layouts/Sirocco_BuriedCity_Exterior/border.bin",
+    "blockdata_filepath": "data/layouts/Sirocco_BuriedCity_Exterior/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SIROCCO_GILT_CLAW_TERRITORY",
+    "name": "Sirocco_GiltClawTerritory_Layout",
+    "width": 20,
+    "height": 22,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Mauville",
+    "border_filepath": "data/layouts/Sirocco_GiltClawTerritory/border.bin",
+    "blockdata_filepath": "data/layouts/Sirocco_GiltClawTerritory/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SIROCCO_DAGAN_PALACE_EXTERIOR",
+    "name": "Sirocco_DaganPalace_Exterior_Layout",
+    "width": 18,
+    "height": 16,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Mauville",
+    "border_filepath": "data/layouts/Sirocco_DaganPalace_Exterior/border.bin",
+    "blockdata_filepath": "data/layouts/Sirocco_DaganPalace_Exterior/map.bin",
+    "layout_version": "emerald"
+  }
+]

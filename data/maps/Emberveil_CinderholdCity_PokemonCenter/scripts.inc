@@ -1,0 +1,16 @@
+Emberveil_CinderholdCity_PokemonCenter_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Emberveil_CinderholdCity_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	.byte 0
+
+Emberveil_CinderholdCity_PokemonCenter_OnTransition:
+	setrespawn HEAL_LOCATION_EMBERVEIL_ASHMOUTH_PORT
+	end
+
+EmberveilCinderholdCityPokemonCenter_EventScript_Nurse::
+	setvar VAR_0x800B, LOCALID_EMBERVEIL_CITY_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end

@@ -20,6 +20,8 @@ IronholdArmoryInterior_EventScript_ForgeNotYet::
 	lock
 	faceplayer
 	msgbox IronholdArmoryInterior_Text_ForgeNotYet, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Forge
+	msgbox IronholdArmoryInterior_Text_ForgeNotYetSpeech, MSGBOX_DEFAULT
 	release
 	end
 
@@ -31,13 +33,18 @@ IronholdArmoryInterior_EventScript_ForgeVictory::
 	waitfanfare
 	setflag FLAG_BADGE03_GET
 	setflag FLAG_IRONHOLD_GYM2_CLEAR
+	setspeaker Pelagios_Speaker_Forge
 	msgbox IronholdArmoryInterior_Text_ForgeSalvage, MSGBOX_DEFAULT
+	setspeaker 0
 	giveitem ITEM_GRAPPLE_HOOK
 	setflag FLAG_GRAPPLE_HOOK_OBTAINED
 	setvar VAR_IRONHOLD_PROGRESS, 3
+	setspeaker Pelagios_Speaker_Forge
 	msgbox IronholdArmoryInterior_Text_ForgeDirections, MSGBOX_DEFAULT
+	setspeaker 0
 	giveitem ITEM_TM_STEEL_WING
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setspeaker Pelagios_Speaker_Forge
 	msgbox IronholdArmoryInterior_Text_ForgeExplainTM, MSGBOX_DEFAULT
 	release
 	end
@@ -46,12 +53,15 @@ IronholdArmoryInterior_EventScript_ForgeDefeated::
 	lock
 	faceplayer
 	goto_if_set FLAG_IRONHOLD_RESOLVED, IronholdArmoryInterior_EventScript_ForgeResolved
+	setspeaker Pelagios_Speaker_Forge
 	msgbox IronholdArmoryInterior_Text_ForgePostBadge, MSGBOX_DEFAULT
 	release
 	end
 
 IronholdArmoryInterior_EventScript_ForgeResolved::
 	msgbox IronholdArmoryInterior_Text_ForgeResolved, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Forge
+	msgbox IronholdArmoryInterior_Text_ForgeResolvedSpeech, MSGBOX_DEFAULT
 	release
 	end
 
@@ -61,7 +71,9 @@ IronholdArmoryInterior_EventScript_ForgeResolved::
 IronholdArmoryInterior_Text_ForgeNotYet:
 	.string "He doesn't look up from the\n"
 	.string "anvil. The hammer keeps its\l"
-	.string "rhythm.\p"
+	.string "rhythm.$"
+
+IronholdArmoryInterior_Text_ForgeNotYetSpeech:
 	.string "PETRA screens my challengers.\n"
 	.string "Town hall. North end.\p"
 	.string "Come back with her badge or\n"
@@ -116,7 +128,9 @@ IronholdArmoryInterior_Text_ForgePostBadge:
 	.string "answers aren't good.$"
 
 IronholdArmoryInterior_Text_ForgeResolved:
-	.string "He is staring at his hands.\p"
+	.string "He is staring at his hands.$"
+
+IronholdArmoryInterior_Text_ForgeResolvedSpeech:
 	.string "I made tools for that machine.\n"
 	.string "Didn't ask what it was for.\p"
 	.string "I should have asked.$"

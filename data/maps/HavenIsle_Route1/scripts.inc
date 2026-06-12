@@ -3,6 +3,7 @@ HavenIsle_Route1_MapScripts::
 
 HavenIsleRoute1_EventScript_Jay::
 	trainerbattle_single TRAINER_YOUNGSTER_HAVEN_1, HavenIsleRoute1_Text_JayIntro, HavenIsleRoute1_Text_JayDefeat
+	setspeaker Pelagios_Speaker_Jay
 	msgbox HavenIsleRoute1_Text_JayPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -20,7 +21,7 @@ HavenIsleRoute1_Text_JayDefeat:
 	.string "You're legit.$"
 
 HavenIsleRoute1_Text_JayPostBattle:
-	.string "JAY: My RATTATA's been jumpy all\n"
+	.string "My RATTATA's been jumpy all\n"
 	.string "week. Won't go near the ruins.\p"
 	.string "Animals know stuff. That's what\n"
 	.string "my gran says, anyway.$"

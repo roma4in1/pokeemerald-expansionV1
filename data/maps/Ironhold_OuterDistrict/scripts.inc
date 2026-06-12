@@ -6,6 +6,7 @@ Ironhold_OuterDistrict_MapScripts::
 @ -------------------------------------------------------------------
 IronholdOuterDistrict_EventScript_OfficerMace::
 	trainerbattle_single TRAINER_OFFICER_IRONHOLD_1, IronholdOuterDistrict_Text_MaceIntro, IronholdOuterDistrict_Text_MaceDefeat
+	setspeaker Pelagios_Speaker_Mace
 	msgbox IronholdOuterDistrict_Text_MacePost, MSGBOX_AUTOCLOSE
 	end
 
@@ -14,6 +15,7 @@ IronholdOuterDistrict_EventScript_OfficerMace::
 @ -------------------------------------------------------------------
 IronholdOuterDistrict_EventScript_WorkerFinn::
 	trainerbattle_single TRAINER_WORKER_IRONHOLD_1, IronholdOuterDistrict_Text_FinnIntro, IronholdOuterDistrict_Text_FinnDefeat
+	setspeaker Pelagios_Speaker_Finn
 	msgbox IronholdOuterDistrict_Text_FinnPost, MSGBOX_AUTOCLOSE
 	end
 

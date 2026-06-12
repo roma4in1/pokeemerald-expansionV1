@@ -4,6 +4,7 @@ HavenIsle_ElderHouse_MapScripts::
 HavenIsleElderHouse_EventScript_Elder::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Elder
 	goto_if_set FLAG_HAVEN_RUINS_VISITED, HavenIsleElderHouse_EventScript_ElderAfterRuins
 	msgbox HavenIsleElderHouse_Text_ElderHistory, MSGBOX_DEFAULT
 	release

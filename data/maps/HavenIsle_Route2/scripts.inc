@@ -3,6 +3,7 @@ HavenIsle_Route2_MapScripts::
 
 HavenIsleRoute2_EventScript_OldBren::
 	trainerbattle_single TRAINER_FISHERMAN_HAVEN_1, HavenIsleRoute2_Text_BrenIntro, HavenIsleRoute2_Text_BrenDefeat
+	setspeaker Pelagios_Speaker_OldBren
 	msgbox HavenIsleRoute2_Text_BrenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -21,8 +22,8 @@ HavenIsleRoute2_Text_BrenDefeat:
 	.string "thing, years back.$"
 
 HavenIsleRoute2_Text_BrenPostBattle:
-	.string "OLD BREN: The MAGIKARP school past\n"
-	.string "the point every dawn, regular as\l"
+	.string "The MAGIKARP school past the\n"
+	.string "point every dawn, regular as\l"
 	.string "bells. Not this week.\p"
 	.string "This week they circle. Like they\n"
 	.string "don't want to pass over something.$"

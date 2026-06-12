@@ -45,3 +45,47 @@ map-generator triggers.
 - msgbox MSGBOX_YESNO -> goto_if_eq VAR_RESULT, YES/NO. Custom multichoice menus
   live in C (forbidden) - phrase binary story choices as yes/no prompts.
 - charmap: ASCII `-` only (no em/en dashes); `é`, `…`, and curly quotes are fine.
+- Speaker nameboxes (`setspeaker` + Pelagios_Speaker_* labels): full usage rules
+  documented in CLAUDE.md > Dialogue Style Guidelines > Speaker nameboxes.
+  Engine facts verified 2026-06-11: speaker persists across msgboxes while the
+  box is open; cleared by closemessage/script end/battle/warp (ResetNameboxData
+  in InitStandardTextBoxWindows); `setspeaker 0` clears mid-conversation;
+  SP_NAME_* is a C enum - unusable from asm, use string labels or literal 0.
+
+Added during the Sirocco script build (2026-06-12):
+
+- Badge flags END at FLAG_BADGE08_GET (NUM_BADGES = 8, no FLAG_BADGE09 exists).
+  Pelagios has 4+ gyms per island, so the 9th+ badges must be narrative-only:
+  play the fanfare + "received the X BADGE" text but set only the island's
+  GYM_CLEAR flag. First hit: Dagan's Mire Badge (badge 9 overall). Any later
+  badge that must affect obedience/HM checks needs a systems-engineer refactor.
+- Objects hidden by a FLAG_TEMP_x hide flag are VISIBLE by default on every map
+  load (temp flags are cleared on warp). A mid-scene cameo object (Miria in
+  DaganPalace_Interior2) needs MAP_SCRIPT_ON_TRANSITION `setflag FLAG_TEMP_x`,
+  then the scene does clearflag + addobject. The cameo auto-vanishes next entry.
+- Critical cutscenes that hand out a TM must NOT goto Common_EventScript_ShowBagIsFull
+  (it ends the script). Use `checkitemspace ITEM_X, 1` + `call_if_eq VAR_RESULT,
+  TRUE, GiveSub` so a full bag silently skips the TM and the scene continues
+  (Sever and Dagan escape scenes use this).
+- Nonlinear island progress vars: only advance the island's VAR_*_PROGRESS when it is
+  EXACTLY the expected predecessor (`call_if_eq VAR, n, AdvanceSub`). Sirocco's
+  Miria is reachable before Crag; an unconditional setvar 4 would have disarmed
+  the Miraden north-gate triggers (armed at 1/2) without Gym 2, and Crag's
+  unconditional setvar 3 would later REGRESS it. The choke-point scene (Dagan
+  escape -> 5) may set unconditionally.
+- Parallel agent sessions can leave the tree unlinkable (dangling .string label
+  in an Emberveil script broke MY baseline). Always `gmake` BEFORE writing
+  anything and fix/triage other-island breakage first - otherwise you can't
+  attribute new errors to your own edits.
+- Two-sided unlock checks (Galleon = Sirocco AND Emberveil resolved) must be
+  implemented in BOTH islands' resolution scripts - whichever resolves second
+  sets VAR_BOAT_TIER. Verify the sibling island's script actually has the
+  mirror branch before assuming the unlock works.
+
+Added while finishing Emberveil (2026-06-12):
+
+- A clean `gmake` exit 0 does NOT mean an island's scripts are done: the map-builder's
+  stub generator (build_*_scripts_stubs.py) emits compilable placeholder labels for
+  every map.json-referenced script. When resuming a cut-off session, `grep -rn TODO`
+  across the island's scripts.inc is the real completeness check, then verify trigger
+  wiring by dumping every map.json's coord/object/bg events against the scripts.

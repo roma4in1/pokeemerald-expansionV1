@@ -4,6 +4,7 @@ HavenIsle_Harbor_MapScripts::
 HavenIsleHarbor_EventScript_Sailor::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Sailor
 	goto_if_set FLAG_BOAT_SLOOP_UNLOCKED, HavenIsleHarbor_EventScript_SailorSloop
 	msgbox HavenIsleHarbor_Text_SailorTips, MSGBOX_DEFAULT
 	release
@@ -28,23 +29,12 @@ HavenIsleHarbor_EventScript_TennysonKey::
 	end
 
 HavenIsleHarbor_EventScript_TennysonReady::
-	msgbox HavenIsleHarbor_Text_TennysonReady, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, HavenIsleHarbor_EventScript_TennysonStay
 	@ Safety net: never downgrade the tier, but guarantee at least Sloop here.
-	goto_if_ne VAR_BOAT_TIER, 0, HavenIsleHarbor_EventScript_SetSail
+	goto_if_ne VAR_BOAT_TIER, 0, HavenIsleHarbor_EventScript_TennysonMenu
 	setvar VAR_BOAT_TIER, 1
-HavenIsleHarbor_EventScript_SetSail::
-	msgbox HavenIsleHarbor_Text_TennysonCastOff, MSGBOX_DEFAULT
-	closemessage
-	warp MAP_IRONHOLD_GATEMARK_PORT, 10, 14
-	waitstate
-	releaseall
-	end
-
-HavenIsleHarbor_EventScript_TennysonStay::
-	msgbox HavenIsleHarbor_Text_TennysonStay, MSGBOX_DEFAULT
-	releaseall
-	end
+HavenIsleHarbor_EventScript_TennysonMenu::
+	setvar VAR_TEMP_1, PELAGIOS_ISLAND_HAVEN
+	goto Pelagios_EventScript_BoardTennyson
 
 HavenIsleHarbor_EventScript_VillageSign::
 	msgbox HavenIsleHarbor_Text_VillageSign, MSGBOX_SIGN
@@ -91,24 +81,6 @@ HavenIsleHarbor_Text_TennysonWithKey:
 	.string "and twenty years of careful hands.\p"
 	.string "She isn't rigged for open water.\n"
 	.string "Not yet.$"
-
-HavenIsleHarbor_Text_TennysonReady:
-	.string "The TENNYSON rides high under her\n"
-	.string "new sloop rigging, lines creaking\l"
-	.string "softly in the wind.\p"
-	.string "Set sail for IRONHOLD?$"
-
-HavenIsleHarbor_Text_TennysonCastOff:
-	.string "You cast off the mooring lines.\p"
-	.string "The TENNYSON leans into the wind\n"
-	.string "like she's been waiting years for\l"
-	.string "permission.\p"
-	.string "Haven Isle shrinks behind you…\n"
-	.string "and the iron coast rises ahead.$"
-
-HavenIsleHarbor_Text_TennysonStay:
-	.string "You rest a hand on the gunwale.\p"
-	.string "No rush. She's waited this long.$"
 
 HavenIsleHarbor_Text_VillageSign:
 	.string "TIDEMARK VILLAGE - 1 AHEAD\p"

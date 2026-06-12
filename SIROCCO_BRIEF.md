@@ -856,59 +856,63 @@ Battle backgrounds:
 ## Sirocco Isle — Task Checklist
 
 ### pelagios-systems-engineer (first)
-- [ ] Add all Sirocco flags to include/constants/flags.h
-- [ ] Confirm VAR_SIROCCO_PROGRESS exists (capacity refactor)
-- [ ] Confirm VAR_DAGAN_RELATIONSHIP exists
-- [ ] Add ITEM_SEAL_SHARD_SIROCCO stub to items.h
-- [ ] Add all trainer entries to trainers.party
-  (TRAINER_GILTCLAW_SIROCCO_1 through _10 + 4 gym leaders)
-- [ ] Add gym leader trainer entries:
-  - Silt (next available ID after Ironhold gym leaders)
-  - Crag
-  - Miria
-  - Dagan
-- [ ] Add Sirocco map group stub to map_groups.json
-- [ ] Compile and fix errors
+- [x] Add all Sirocco flags to include/constants/flags.h (0x4E4-0x4EE; hidden item 0x267)
+- [x] Confirm VAR_SIROCCO_PROGRESS exists (capacity refactor) — 0x4101, not re-added
+- [x] Confirm VAR_DAGAN_RELATIONSHIP exists — 0x40FB, not re-added
+- [x] Add ITEM_SEAL_SHARD_SIROCCO stub to items.h — ID 885 (+ src/data/items.h)
+- [x] Add all trainer entries to trainers.party
+  (TRAINER_GILTCLAW_SIROCCO_1-10 + TRAVELER_1 + 4 gym leaders, IDs 873-887)
+- [x] Add gym leader trainer entries:
+  - Silt — TRAINER_LEADER_SIROCCO_SILT 884
+  - Crag — TRAINER_LEADER_SIROCCO_CRAG 885
+  - Miria — TRAINER_LEADER_SIROCCO_MIRIA 886
+  - Dagan — TRAINER_LEADER_SIROCCO_DAGAN 887
+- [~] Add Sirocco map group stub to map_groups.json — SKIPPED (empty map groups can't
+  be expressed in generated groups.inc; map-builder registers MAP_GROUP_SIROCCO with
+  the first real map, same established pattern as Haven/Ironhold)
+- [x] Compile and fix errors — gmake exit 0, no errors
 
 ### pelagios-map-builder (second)
-- [ ] Sirocco_DustmouthPort
-- [ ] Sirocco_DustmouthPort_Inn + Interior
-- [ ] Sirocco_DustmouthPort_BlackMarket
-- [ ] Sirocco_DesertRoute1
-- [ ] Sirocco_MiradenOasis
-- [ ] Sirocco_MiradenOasis_PokemonCenter
-- [ ] Sirocco_MiradenOasis_Shop
-- [ ] Sirocco_DexCamp
-- [ ] Sirocco_DesertRoute2
-- [ ] Sirocco_BuriedCity_Exterior
-- [ ] Sirocco_BuriedCity_Interior1
-- [ ] Sirocco_BuriedCity_Interior2
-- [ ] Sirocco_BuriedCity_SealChamber
-- [ ] Sirocco_GiltClawTerritory
-- [ ] Sirocco_DaganPalace_Exterior
-- [ ] Sirocco_DaganPalace_Interior1
-- [ ] Sirocco_DaganPalace_Interior2
-- [ ] Wild encounter tables (all 5 outdoor areas)
-- [ ] Heal location (DustmouthPort Inn)
-- [ ] Reference: use Desert tileset for outdoor maps,
+- [x] Sirocco_DustmouthPort
+- [x] Sirocco_DustmouthPort_Inn + Interior
+- [x] Sirocco_DustmouthPort_BlackMarket
+- [x] Sirocco_DesertRoute1
+- [x] Sirocco_MiradenOasis
+- [x] Sirocco_MiradenOasis_PokemonCenter
+- [x] Sirocco_MiradenOasis_Shop
+- [x] Sirocco_DexCamp
+- [x] Sirocco_DesertRoute2
+- [x] Sirocco_BuriedCity_Exterior
+- [x] Sirocco_BuriedCity_Interior1
+- [x] Sirocco_BuriedCity_Interior2
+- [x] Sirocco_BuriedCity_SealChamber
+- [x] Sirocco_GiltClawTerritory
+- [x] Sirocco_DaganPalace_Exterior
+- [x] Sirocco_DaganPalace_Interior1
+- [x] Sirocco_DaganPalace_Interior2
+- [x] Wild encounter tables (all 5 outdoor areas)
+- [x] Heal location (DustmouthPort Inn)
+- [x] Reference: use Desert tileset for outdoor maps,
      Cave tileset for BuriedCity interiors,
      Building tileset for palace interiors
-- [ ] Compile after every 4-5 maps
+- [x] Compile after every 4-5 maps
 
-### pelagios-script-writer (third)
-- [ ] Arrival script + camera pan
-- [ ] Dex meeting script (flag-gated)
-- [ ] BuriedCity discovery script
-- [ ] BuriedCity_Interior2 mural vision + cipher unlock
-- [ ] SealChamber discovery cutscene
-- [ ] Dagan escape scene (post-battle scripted exit)
-- [ ] Island resolution script + conditional Galleon check
-- [ ] Warden's Journal cipher 3 unlock
-- [ ] All gym leader pre/post battle dialogue
-- [ ] All NPC dialogue per guidelines above
-- [ ] All trainer pre/post battle dialogue
-- [ ] Post-resolution NPC dialogue variants
-- [ ] Dex recurring dialogue variants (with/without journal)
+### pelagios-script-writer (third) — DONE 2026-06-12, gmake exit 0
+- [x] Arrival script + camera pan
+- [x] Dex meeting script (flag-gated)
+- [x] BuriedCity discovery script
+- [x] BuriedCity_Interior2 mural vision + cipher unlock (cipher 3: FLAG_CIPHER_3_FOUND)
+- [x] SealChamber discovery cutscene
+- [x] Dagan escape scene (post-battle scripted exit, VAR_DAGAN_RELATIONSHIP 0-2)
+- [x] Island resolution script + conditional Galleon check (Sirocco side; Emberveil's
+      SealChamber must mirror it)
+- [x] Warden's Journal cipher 3 unlock (at the mural, brief text verbatim)
+- [x] All gym leader pre/post battle dialogue (TM subs: Rock Tomb for Stone Edge,
+      Thief for Crunch; Mire Badge narrative-only - badge flags end at BADGE08)
+- [x] All NPC dialogue per guidelines above
+- [x] All trainer pre/post battle dialogue (brief verbatim)
+- [x] Post-resolution NPC dialogue variants
+- [x] Dex recurring dialogue variants (with/without journal)
 
 ### pelagios-build-debugger (last)
 - [ ] Full compile passes with zero errors

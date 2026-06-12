@@ -9,11 +9,14 @@ Ironhold_IronholdCity_MapScripts::
 @ -------------------------------------------------------------------
 IronholdCity_EventScript_Petra::
 	goto_if_defeated TRAINER_LEADER_IRONHOLD_PETRA, IronholdCity_EventScript_PetraDefeated
+	setspeaker Pelagios_Speaker_Petra
 	trainerbattle_single TRAINER_LEADER_IRONHOLD_PETRA, IronholdCity_Text_PetraIntro, IronholdCity_Text_PetraDefeat, IronholdCity_EventScript_PetraVictory
 	end
 
 IronholdCity_EventScript_PetraVictory::
+	setspeaker Pelagios_Speaker_Petra
 	msgbox IronholdCity_Text_PetraPostBattle, MSGBOX_DEFAULT
+	setspeaker 0
 	playfanfare MUS_OBTAIN_BADGE
 	message IronholdCity_Text_ReceivedIronBadge
 	waitmessage
@@ -23,6 +26,7 @@ IronholdCity_EventScript_PetraVictory::
 	setvar VAR_IRONHOLD_PROGRESS, 2
 	giveitem ITEM_TM_BULK_UP
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setspeaker Pelagios_Speaker_Petra
 	msgbox IronholdCity_Text_PetraExplainTM, MSGBOX_DEFAULT
 	release
 	end
@@ -30,6 +34,7 @@ IronholdCity_EventScript_PetraVictory::
 IronholdCity_EventScript_PetraDefeated::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Petra
 	goto_if_set FLAG_IRONHOLD_RESOLVED, IronholdCity_EventScript_PetraResolved
 	msgbox IronholdCity_Text_PetraPostBadge, MSGBOX_DEFAULT
 	release
@@ -37,6 +42,8 @@ IronholdCity_EventScript_PetraDefeated::
 
 IronholdCity_EventScript_PetraResolved::
 	msgbox IronholdCity_Text_PetraResolved, MSGBOX_DEFAULT
+	setspeaker 0
+	msgbox IronholdCity_Text_PetraResolvedBow, MSGBOX_DEFAULT
 	release
 	end
 
@@ -46,6 +53,7 @@ IronholdCity_EventScript_PetraResolved::
 IronholdCity_EventScript_Elder::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Elder
 	goto_if_set FLAG_IRONHOLD_RESOLVED, IronholdCity_EventScript_ElderResolved
 	msgbox IronholdCity_Text_Elder, MSGBOX_DEFAULT
 	release
@@ -59,6 +67,7 @@ IronholdCity_EventScript_ElderResolved::
 IronholdCity_EventScript_Child::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Child
 	msgbox IronholdCity_Text_Child, MSGBOX_DEFAULT
 	release
 	end
@@ -67,11 +76,14 @@ IronholdCity_EventScript_Citizen::
 	lock
 	faceplayer
 	goto_if_set FLAG_IRONHOLD_RESOLVED, IronholdCity_EventScript_CitizenResolved
+	msgbox IronholdCity_Text_CitizenLeansIn, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Citizen
 	msgbox IronholdCity_Text_Citizen, MSGBOX_DEFAULT
 	release
 	end
 
 IronholdCity_EventScript_CitizenResolved::
+	setspeaker Pelagios_Speaker_Citizen
 	msgbox IronholdCity_Text_CitizenResolved, MSGBOX_DEFAULT
 	release
 	end
@@ -80,6 +92,7 @@ IronholdCity_EventScript_CitizenResolved::
 IronholdCity_EventScript_CovenantOfficer::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Officer
 	msgbox IronholdCity_Text_CovenantOfficer, MSGBOX_DEFAULT
 	closemessage
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceUp
@@ -90,6 +103,7 @@ IronholdCity_EventScript_CovenantOfficer::
 IronholdCity_EventScript_SoldierPatrolA::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Soldier
 	msgbox IronholdCity_Text_SoldierPatrolA, MSGBOX_DEFAULT
 	release
 	end
@@ -97,6 +111,7 @@ IronholdCity_EventScript_SoldierPatrolA::
 IronholdCity_EventScript_SoldierPatrolB::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Soldier
 	msgbox IronholdCity_Text_SoldierPatrolB, MSGBOX_DEFAULT
 	release
 	end
@@ -106,6 +121,7 @@ IronholdCity_EventScript_SoldierPatrolB::
 IronholdCity_EventScript_HQGuard::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Guard
 	msgbox IronholdCity_Text_HQGuard, MSGBOX_DEFAULT
 	release
 	end
@@ -170,7 +186,9 @@ IronholdCity_Text_PetraResolved:
 	.string "The siphon's offline. I can feel\n"
 	.string "it - the POKéMON in the city are\l"
 	.string "calmer already.\p"
-	.string "Whatever you did up there…\p"
+	.string "Whatever you did up there…$"
+
+IronholdCity_Text_PetraResolvedBow:
 	.string "She doesn't finish the sentence.\n"
 	.string "She just bows her head, briefly,\l"
 	.string "like an apology.$"
@@ -199,8 +217,10 @@ IronholdCity_Text_Child:
 	.string "to want.\p"
 	.string "But he says it quietly.$"
 
+IronholdCity_Text_CitizenLeansIn:
+	.string "He leans in, voice low.$"
+
 IronholdCity_Text_Citizen:
-	.string "He leans in, voice low.\p"
 	.string "Don't look at the summit at\n"
 	.string "night. The glow started three\l"
 	.string "months ago.\p"

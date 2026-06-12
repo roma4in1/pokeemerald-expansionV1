@@ -1,0 +1,230 @@
+{
+  "id": "MAP_SIROCCO_MIRADEN_OASIS",
+  "name": "Sirocco_MiradenOasis",
+  "layout": "LAYOUT_SIROCCO_MIRADEN_OASIS",
+  "music": "MUS_LILYCOVE",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_SIROCCO_MIRADEN_OASIS",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_SIROCCO_DESERT_ROUTE1",
+      "offset": 3,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_SIROCCO_DESERT_ROUTE2",
+      "offset": 3,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_SIROCCO_GILT_CLAW_TERRITORY",
+      "offset": 4,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_SIROCCO_SILT",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 7,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SiroccoMiradenOasis_EventScript_Silt",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_SIROCCO_CRAG",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 20,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SiroccoMiradenOasis_EventScript_Crag",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
+      "x": 16,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SiroccoMiradenOasis_EventScript_Child",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "x": 9,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SiroccoMiradenOasis_EventScript_OldWoman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 18,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SiroccoMiradenOasis_EventScript_WaterDistributor",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
+      "x": 6,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SiroccoMiradenOasis_EventScript_Scholar",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "x": 13,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SiroccoMiradenOasis_EventScript_Elder",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_SIROCCO_NORTH_BLOCKER",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 13,
+      "y": 1,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SiroccoMiradenOasis_EventScript_NorthBlocker",
+      "flag": "FLAG_SIROCCO_NORTH_TERRITORY_OPEN"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SIROCCO_MIRADEN_OASIS_POKEMON_CENTER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SIROCCO_MIRADEN_OASIS_SHOP",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 1,
+      "elevation": 3,
+      "var": "VAR_SIROCCO_PROGRESS",
+      "var_value": "1",
+      "script": "SiroccoMiradenOasis_EventScript_NorthGate"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 1,
+      "elevation": 3,
+      "var": "VAR_SIROCCO_PROGRESS",
+      "var_value": "1",
+      "script": "SiroccoMiradenOasis_EventScript_NorthGate"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 1,
+      "elevation": 3,
+      "var": "VAR_SIROCCO_PROGRESS",
+      "var_value": "2",
+      "script": "SiroccoMiradenOasis_EventScript_NorthGate"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 1,
+      "elevation": 3,
+      "var": "VAR_SIROCCO_PROGRESS",
+      "var_value": "2",
+      "script": "SiroccoMiradenOasis_EventScript_NorthGate"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SiroccoMiradenOasis_EventScript_Gym1Sign"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SiroccoMiradenOasis_EventScript_Gym2Sign"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SiroccoMiradenOasis_EventScript_CenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SiroccoMiradenOasis_EventScript_ShopSign"
+    }
+  ]
+}

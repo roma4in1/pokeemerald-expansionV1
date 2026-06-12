@@ -5,6 +5,7 @@ Ironhold_IronholdCity_Armory_MapScripts::
 IronholdArmory_EventScript_Apprentice::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Apprentice
 	goto_if_set FLAG_IRONHOLD_GYM2_CLEAR, IronholdArmory_EventScript_ApprenticeAfter
 	goto_if_set FLAG_IRONHOLD_GYM1_CLEAR, IronholdArmory_EventScript_ApprenticeReady
 	msgbox IronholdArmory_Text_ApprenticeNotYet, MSGBOX_DEFAULT

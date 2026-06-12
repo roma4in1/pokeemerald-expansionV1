@@ -169,6 +169,10 @@ enum
     MULTI_HOF_VICTORIES_QUIT,
     MULTI_EGGS_VICTORIES_QUIT,
     MULTI_HOF_EGGS_VICTORIES_QUIT,
+    // Pelagios — Tennyson destination menu, one list per boat tier.
+    MULTI_BOAT_SLOOP,       // tier 1: Haven, Ironhold
+    MULTI_BOAT_BRIGANTINE,  // tier 2: + Sirocco, Emberveil
+    MULTI_BOAT_GALLEON,     // tier 3: + Schism, Thalvern, Gildhaven (stub entries)
 };
 
 #define MULTI_NONE 255

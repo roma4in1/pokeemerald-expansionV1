@@ -11,9 +11,11 @@ SollisLab_EventScript_FirstEntry::
 	delay 20
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
+	setspeaker Pelagios_Speaker_Cass
 	msgbox SollisLab_Text_CassBeatYou, MSGBOX_DEFAULT
 	applymovement LOCALID_LAB_SOLLIS, Common_Movement_FaceDown
 	waitmovement 0
+	setspeaker Pelagios_Speaker_Sollis
 	msgbox SollisLab_Text_SollisIntro, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_PELAGIOS_INTRO_STATE, 4
@@ -23,6 +25,7 @@ SollisLab_EventScript_FirstEntry::
 SollisLab_EventScript_Sollis::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Sollis
 	goto_if_set FLAG_HAVEN_ISLE_COMPLETE, SollisLab_EventScript_SollisIronholdReminder
 	goto_if_eq VAR_HAVEN_RUINS_STATE, 3, SollisLab_EventScript_SollisWardenTalk
 	goto_if_eq VAR_HAVEN_RUINS_STATE, 2, SollisLab_EventScript_SollisInvestigate
@@ -43,7 +46,9 @@ SollisLab_EventScript_SollisInvestigate::
 
 SollisLab_EventScript_SollisWardenTalk::
 	msgbox SollisLab_Text_SollisWardenTalk, MSGBOX_DEFAULT
+	setspeaker 0
 	giveitem ITEM_NAVIGATORS_LOG
+	setspeaker Pelagios_Speaker_Sollis
 	msgbox SollisLab_Text_SollisSloop, MSGBOX_DEFAULT
 	setflag FLAG_HAVEN_ISLE_COMPLETE
 	setflag FLAG_BOAT_SLOOP_UNLOCKED
@@ -59,6 +64,7 @@ SollisLab_EventScript_SollisIronholdReminder::
 SollisLab_EventScript_Cass::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Cass
 	msgbox SollisLab_Text_CassWaiting, MSGBOX_DEFAULT
 	release
 	end
@@ -74,6 +80,8 @@ SollisLab_EventScript_Totodile::
 	playmoncry SPECIES_TOTODILE, CRY_MODE_NORMAL
 	goto_if_unset FLAG_STARTER_CHOSEN, SollisLab_EventScript_TotodileOffer
 	msgbox SollisLab_Text_TotodileLeftover, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Sollis
+	msgbox SollisLab_Text_TotodileLeftoverSollis, MSGBOX_DEFAULT
 	release
 	end
 
@@ -92,12 +100,18 @@ SollisLab_EventScript_TotodileOffer::
 	setvar VAR_PELAGIOS_STARTER, 1
 	setflag FLAG_HIDE_SOLLIS_LAB_TOTODILE
 	removeobject LOCALID_LAB_TOTODILE
+	setspeaker Pelagios_Speaker_Sollis
 	msgbox SollisLab_Text_GiveNickname, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SollisLab_EventScript_TotodileChosen
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
 SollisLab_EventScript_TotodileChosen::
+	setspeaker Pelagios_Speaker_Cass
 	msgbox SollisLab_Text_CassTakesChimchar, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Sollis
+	msgbox SollisLab_Text_SollisDeliverChimchar, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Cass
+	msgbox SollisLab_Text_CassFirstBattleDeal, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_HIDE_SOLLIS_LAB_CHIMCHAR
 	removeobject LOCALID_LAB_CHIMCHAR
@@ -111,6 +125,8 @@ SollisLab_EventScript_Chimchar::
 	playmoncry SPECIES_CHIMCHAR, CRY_MODE_NORMAL
 	goto_if_unset FLAG_STARTER_CHOSEN, SollisLab_EventScript_ChimcharOffer
 	msgbox SollisLab_Text_ChimcharLeftover, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Sollis
+	msgbox SollisLab_Text_ChimcharLeftoverSollis, MSGBOX_DEFAULT
 	release
 	end
 
@@ -129,12 +145,18 @@ SollisLab_EventScript_ChimcharOffer::
 	setvar VAR_PELAGIOS_STARTER, 2
 	setflag FLAG_HIDE_SOLLIS_LAB_CHIMCHAR
 	removeobject LOCALID_LAB_CHIMCHAR
+	setspeaker Pelagios_Speaker_Sollis
 	msgbox SollisLab_Text_GiveNickname, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SollisLab_EventScript_ChimcharChosen
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
 SollisLab_EventScript_ChimcharChosen::
+	setspeaker Pelagios_Speaker_Cass
 	msgbox SollisLab_Text_CassTakesRowlet, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Sollis
+	msgbox SollisLab_Text_SollisDeliverRowlet, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Cass
+	msgbox SollisLab_Text_CassFirstBattleDeal, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_HIDE_SOLLIS_LAB_ROWLET
 	removeobject LOCALID_LAB_ROWLET
@@ -148,6 +170,8 @@ SollisLab_EventScript_Rowlet::
 	playmoncry SPECIES_ROWLET, CRY_MODE_NORMAL
 	goto_if_unset FLAG_STARTER_CHOSEN, SollisLab_EventScript_RowletOffer
 	msgbox SollisLab_Text_RowletLeftover, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Sollis
+	msgbox SollisLab_Text_RowletLeftoverSollis, MSGBOX_DEFAULT
 	release
 	end
 
@@ -166,12 +190,18 @@ SollisLab_EventScript_RowletOffer::
 	setvar VAR_PELAGIOS_STARTER, 3
 	setflag FLAG_HIDE_SOLLIS_LAB_ROWLET
 	removeobject LOCALID_LAB_ROWLET
+	setspeaker Pelagios_Speaker_Sollis
 	msgbox SollisLab_Text_GiveNickname, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SollisLab_EventScript_RowletChosen
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
 SollisLab_EventScript_RowletChosen::
+	setspeaker Pelagios_Speaker_Cass
 	msgbox SollisLab_Text_CassTakesTotodile, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Sollis
+	msgbox SollisLab_Text_SollisDeliverTotodile, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Cass
+	msgbox SollisLab_Text_CassFirstBattleDeal, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_HIDE_SOLLIS_LAB_TOTODILE
 	removeobject LOCALID_LAB_TOTODILE
@@ -180,6 +210,8 @@ SollisLab_EventScript_RowletChosen::
 
 SollisLab_EventScript_DeclineStarter::
 	msgbox SollisLab_Text_DeclineStarter, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Sollis
+	msgbox SollisLab_Text_DeclineStarterSollis, MSGBOX_DEFAULT
 	release
 	end
 
@@ -190,9 +222,12 @@ SollisLab_EventScript_AfterChoice::
 	setflag FLAG_HIDE_SOLLIS_LAB_CASS
 	applymovement LOCALID_LAB_SOLLIS, Common_Movement_FaceDown
 	waitmovement 0
+	setspeaker Pelagios_Speaker_Sollis
 	msgbox SollisLab_Text_SollisJournal, MSGBOX_DEFAULT
+	setspeaker 0
 	giveitem ITEM_WARDENS_JOURNAL
 	setflag FLAG_JOURNAL_OBTAINED
+	setspeaker Pelagios_Speaker_Sollis
 	msgbox SollisLab_Text_SollisAfterJournal, MSGBOX_DEFAULT
 	setvar VAR_PELAGIOS_INTRO_STATE, 5
 	setvar VAR_HAVEN_RUINS_STATE, 1
@@ -227,13 +262,13 @@ SollisLab_EventScript_DeskAfter::
 @ ---------------------------------------------------------------------------
 
 SollisLab_Text_CassBeatYou:
-	.string "CASS: Ha! Slowpoke!\p"
+	.string "Ha! Slowpoke!\p"
 	.string "I've been here for AGES. Years,\n"
 	.string "possibly. I have a beard now.$"
 
 SollisLab_Text_SollisIntro:
-	.string "SOLLIS: And there's the other one.\n"
-	.string "Good. Close the door, the TOTODILE\l"
+	.string "And there's the other one. Good.\n"
+	.string "Close the door, the TOTODILE\l"
 	.string "bolts for the beach if you don't.\p"
 	.string "{PLAYER}. Cass. You both know why\n"
 	.string "I asked you here, more or less.\p"
@@ -252,21 +287,21 @@ SollisLab_Text_SollisIntro:
 	.string "Whichever one answers… is yours.$"
 
 SollisLab_Text_SollisChooseHint:
-	.string "SOLLIS: Don't overthink it.\p"
+	.string "Don't overthink it.\p"
 	.string "Walk up to one of them and see\n"
 	.string "what happens. They've had six\l"
 	.string "months to make up their minds.$"
 
 SollisLab_Text_SollisExplore:
-	.string "SOLLIS: Take today. Walk the island,\n"
-	.string "say your goodbyes, let your partner\l"
+	.string "Take today. Walk the island, say\n"
+	.string "your goodbyes, let your partner\l"
 	.string "stretch its legs.\p"
 	.string "The coastal routes are good training.\n"
 	.string "Gentle, mostly.\p"
 	.string "…Mostly.$"
 
 SollisLab_Text_SollisInvestigate:
-	.string "SOLLIS: You felt it too, didn't you.\n"
+	.string "You felt it too, didn't you.\n"
 	.string "The whole island shivered.\p"
 	.string "My instruments all point the same\n"
 	.string "way - the old ruins, north of\l"
@@ -277,9 +312,9 @@ SollisLab_Text_SollisInvestigate:
 	.string "Be careful, {PLAYER}.$"
 
 SollisLab_Text_SollisWardenTalk:
-	.string "SOLLIS: A wild RALTS, terrified.\n"
-	.string "A flash of light. And the floor\l"
-	.string "tile still warm.\p"
+	.string "A wild RALTS, terrified. A flash\n"
+	.string "of light. And the floor tile\l"
+	.string "still warm.\p"
 	.string "…Sit down, {PLAYER}. There's a\n"
 	.string "word you need to learn.\p"
 	.string "WARDEN.\p"
@@ -304,7 +339,7 @@ SollisLab_Text_SollisWardenTalk:
 	.string "I think you know who that is.$"
 
 SollisLab_Text_SollisSloop:
-	.string "SOLLIS: That chart was the WARDEN's.\n"
+	.string "That chart was the WARDEN's.\n"
 	.string "With it, the TENNYSON will hold a\l"
 	.string "course through open water.\p"
 	.string "I've asked the harbor hands to rig\n"
@@ -316,7 +351,7 @@ SollisLab_Text_SollisSloop:
 	.string "landed on you all at once like this.$"
 
 SollisLab_Text_SollisIronholdReminder:
-	.string "SOLLIS: The TENNYSON is rigged and\n"
+	.string "The TENNYSON is rigged and\n"
 	.string "waiting at the harbor.\p"
 	.string "IRONHOLD is occupied ground, so\n"
 	.string "keep your head down and your\l"
@@ -327,8 +362,7 @@ SollisLab_Text_SollisIronholdReminder:
 	.string "ESPECIALLY those.$"
 
 SollisLab_Text_CassWaiting:
-	.string "CASS: I already know which one\n"
-	.string "I want.\p"
+	.string "I already know which one I want.\p"
 	.string "…Okay, no, I don't. They're all\n"
 	.string "perfect. This is the hardest thing\l"
 	.string "I've ever done.\p"
@@ -352,9 +386,11 @@ SollisLab_Text_ReceivedTotodile:
 
 SollisLab_Text_TotodileLeftover:
 	.string "TOTODILE patrols the doorway with\n"
-	.string "tremendous self-importance.\p"
-	.string "SOLLIS: It's decided it guards the\n"
-	.string "lab now. I've stopped arguing.$"
+	.string "tremendous self-importance.$"
+
+SollisLab_Text_TotodileLeftoverSollis:
+	.string "It's decided it guards the lab\n"
+	.string "now. I've stopped arguing.$"
 
 SollisLab_Text_ChimcharFlavor:
 	.string "The CHIMCHAR peers down at you\n"
@@ -374,8 +410,10 @@ SollisLab_Text_ReceivedChimchar:
 
 SollisLab_Text_ChimcharLeftover:
 	.string "CHIMCHAR has reorganized the top\n"
-	.string "shelf into a nest of field notes.\p"
-	.string "SOLLIS: Those were alphabetized.\n"
+	.string "shelf into a nest of field notes.$"
+
+SollisLab_Text_ChimcharLeftoverSollis:
+	.string "Those were alphabetized.\n"
 	.string "…Were.$"
 
 SollisLab_Text_RowletFlavor:
@@ -397,59 +435,66 @@ SollisLab_Text_ReceivedRowlet:
 
 SollisLab_Text_RowletLeftover:
 	.string "ROWLET has relocated to the desk\n"
-	.string "lamp and become spherical.\p"
-	.string "SOLLIS: It does that when it's\n"
-	.string "content. Or judging you. The two\l"
-	.string "are indistinguishable.$"
+	.string "lamp and become spherical.$"
+
+SollisLab_Text_RowletLeftoverSollis:
+	.string "It does that when it's content.\n"
+	.string "Or judging you. The two are\l"
+	.string "indistinguishable.$"
 
 SollisLab_Text_GiveNickname:
-	.string "SOLLIS: Going to give it a nickname?$"
+	.string "Going to give it a nickname?$"
 
 SollisLab_Text_DeclineStarter:
-	.string "It tilts its head, unbothered.\p"
-	.string "SOLLIS: No rush. They've waited\n"
-	.string "six months. They can wait six\l"
-	.string "more minutes.$"
+	.string "It tilts its head, unbothered.$"
+
+SollisLab_Text_DeclineStarterSollis:
+	.string "No rush. They've waited six\n"
+	.string "months. They can wait six more\l"
+	.string "minutes.$"
 
 SollisLab_Text_CassTakesChimchar:
-	.string "CASS: TOTODILE?! That's the one\n"
-	.string "I- okay. Okay! Fine!\p"
+	.string "TOTODILE?! That's the one I-\n"
+	.string "okay. Okay! Fine!\p"
 	.string "The CHIMCHAR's been eyeing me\n"
 	.string "anyway. We have an understanding.\l"
-	.string "A fiery, chaotic understanding.\p"
-	.string "SOLLIS: I'll bring it down to your\n"
-	.string "house tonight, Cass. With gloves.\p"
-	.string "CASS: {PLAYER} - first battle, the\n"
-	.string "moment we're both ready. Deal?\l"
-	.string "Deal. You can't undeal it now!$"
+	.string "A fiery, chaotic understanding.$"
+
+SollisLab_Text_SollisDeliverChimchar:
+	.string "I'll bring it down to your\n"
+	.string "house tonight, Cass. With gloves.$"
 
 SollisLab_Text_CassTakesRowlet:
-	.string "CASS: The CHIMCHAR? Bold choice.\n"
+	.string "The CHIMCHAR? Bold choice.\n"
 	.string "Spicy choice.\p"
 	.string "Then I call the ROWLET! Look at it.\n"
 	.string "It's a tiny round gentleman and\l"
-	.string "we are going to be unstoppable.\p"
-	.string "SOLLIS: I'll bring it to your house\n"
-	.string "tonight, Cass. If it agrees to wake up.\p"
-	.string "CASS: {PLAYER} - first battle, the\n"
-	.string "moment we're both ready. Deal?\l"
-	.string "Deal. You can't undeal it now!$"
+	.string "we are going to be unstoppable.$"
+
+SollisLab_Text_SollisDeliverRowlet:
+	.string "I'll bring it to your house\n"
+	.string "tonight, Cass. If it agrees to\l"
+	.string "wake up.$"
 
 SollisLab_Text_CassTakesTotodile:
-	.string "CASS: The ROWLET, huh… yeah.\n"
+	.string "The ROWLET, huh… yeah.\n"
 	.string "Yeah, it picked you ages ago,\l"
 	.string "honestly.\p"
 	.string "Which means the TOTODILE is MINE!\n"
-	.string "The chompy one! YES!\p"
-	.string "SOLLIS: I'll bring it to your house\n"
+	.string "The chompy one! YES!$"
+
+SollisLab_Text_SollisDeliverTotodile:
+	.string "I'll bring it to your house\n"
 	.string "tonight, Cass. Count your fingers\l"
-	.string "after every meal.\p"
-	.string "CASS: {PLAYER} - first battle, the\n"
+	.string "after every meal.$"
+
+SollisLab_Text_CassFirstBattleDeal:
+	.string "{PLAYER} - first battle, the\n"
 	.string "moment we're both ready. Deal?\l"
 	.string "Deal. You can't undeal it now!$"
 
 SollisLab_Text_SollisJournal:
-	.string "SOLLIS: Before you go.\p"
+	.string "Before you go.\p"
 	.string "There's something here that\n"
 	.string "belongs to you.\p"
 	.string "The WARDEN left it in my keeping.\n"
@@ -459,7 +504,7 @@ SollisLab_Text_SollisJournal:
 	.string "boat.$"
 
 SollisLab_Text_SollisAfterJournal:
-	.string "SOLLIS: Most of it reads like an\n"
+	.string "Most of it reads like an\n"
 	.string "ordinary logbook. Weather, tides,\l"
 	.string "repairs.\p"
 	.string "But some pages are written in\n"

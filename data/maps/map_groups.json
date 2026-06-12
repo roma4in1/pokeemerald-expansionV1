@@ -76,7 +76,9 @@
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
     "gMapGroup_HavenIsle",
-    "gMapGroup_Ironhold"
+    "gMapGroup_Ironhold",
+    "gMapGroup_Sirocco",
+    "gMapGroup_Emberveil"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1199,5 +1201,42 @@
     "Ironhold_SummitFortress_Interior1",
     "Ironhold_SummitFortress_Interior2",
     "Ironhold_SummitFortress_SealChamber"
+  ],
+  "gMapGroup_Sirocco": [
+    "Sirocco_DustmouthPort",
+    "Sirocco_DustmouthPort_Inn",
+    "Sirocco_DustmouthPort_Inn_Interior",
+    "Sirocco_DustmouthPort_BlackMarket",
+    "Sirocco_DesertRoute1",
+    "Sirocco_MiradenOasis",
+    "Sirocco_MiradenOasis_PokemonCenter",
+    "Sirocco_MiradenOasis_Shop",
+    "Sirocco_DexCamp",
+    "Sirocco_DesertRoute2",
+    "Sirocco_BuriedCity_Exterior",
+    "Sirocco_BuriedCity_Interior1",
+    "Sirocco_BuriedCity_Interior2",
+    "Sirocco_BuriedCity_SealChamber",
+    "Sirocco_GiltClawTerritory",
+    "Sirocco_DaganPalace_Exterior",
+    "Sirocco_DaganPalace_Interior1",
+    "Sirocco_DaganPalace_Interior2"
+  ],
+  "gMapGroup_Emberveil": [
+    "Emberveil_AshmouthPort",
+    "Emberveil_AshmouthPort_Inn",
+    "Emberveil_AshmouthPort_Inn_Interior",
+    "Emberveil_LavaRoute1",
+    "Emberveil_AshFields",
+    "Emberveil_CinderholdCity",
+    "Emberveil_CinderholdCity_PokemonCenter",
+    "Emberveil_CinderholdCity_TempleHall",
+    "Emberveil_CinderholdCity_TempleHall_Interior",
+    "Emberveil_LavaRoute2",
+    "Emberveil_CalderaApproach",
+    "Emberveil_CalderaRuins",
+    "Emberveil_VolcanoAscent",
+    "Emberveil_VolcanoSummit",
+    "Emberveil_SealChamber"
   ]
 }

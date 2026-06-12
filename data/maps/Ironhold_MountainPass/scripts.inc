@@ -4,12 +4,14 @@ Ironhold_MountainPass_MapScripts::
 @ Hiker Crag - TRAINER_HIKER_IRONHOLD_1 (sight-initiated)
 IronholdMountainPass_EventScript_HikerCrag::
 	trainerbattle_single TRAINER_HIKER_IRONHOLD_1, IronholdMountainPass_Text_CragIntro, IronholdMountainPass_Text_CragDefeat
+	setspeaker Pelagios_Speaker_Crag
 	msgbox IronholdMountainPass_Text_CragPost, MSGBOX_AUTOCLOSE
 	end
 
 @ Soldier Venn - TRAINER_COVENANT_IRONHOLD_1 (sight-initiated)
 IronholdMountainPass_EventScript_SoldierVenn::
 	trainerbattle_single TRAINER_COVENANT_IRONHOLD_1, IronholdMountainPass_Text_VennIntro, IronholdMountainPass_Text_VennDefeat
+	setspeaker Pelagios_Speaker_Venn
 	msgbox IronholdMountainPass_Text_VennPost, MSGBOX_AUTOCLOSE
 	end
 

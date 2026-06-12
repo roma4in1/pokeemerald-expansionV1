@@ -1678,6 +1678,58 @@
     {
       "id": "MAPSEC_IRONHOLD_SUMMIT",
       "name": "IRONHOLD SUMMIT"
+    },
+    {
+      "id": "MAPSEC_SIROCCO_DUSTMOUTH_PORT",
+      "name": "DUSTMOUTH PORT"
+    },
+    {
+      "id": "MAPSEC_SIROCCO_DESERT_ROUTE_1",
+      "name": "DESERT ROUTE 1"
+    },
+    {
+      "id": "MAPSEC_SIROCCO_MIRADEN_OASIS",
+      "name": "MIRADEN OASIS"
+    },
+    {
+      "id": "MAPSEC_SIROCCO_DESERT_ROUTE_2",
+      "name": "DESERT ROUTE 2"
+    },
+    {
+      "id": "MAPSEC_SIROCCO_BURIED_CITY",
+      "name": "BURIED CITY"
+    },
+    {
+      "id": "MAPSEC_SIROCCO_DAGAN_PALACE",
+      "name": "GILT CLAW LANDS"
+    },
+    {
+      "id": "MAPSEC_EMBERVEIL_ASHMOUTH_PORT",
+      "name": "ASHMOUTH PORT"
+    },
+    {
+      "id": "MAPSEC_EMBERVEIL_LAVA_ROUTE1",
+      "name": "LAVA ROUTE 1"
+    },
+    {
+      "id": "MAPSEC_EMBERVEIL_LAVA_ROUTE2",
+      "name": "LAVA ROUTE 2"
+    },
+    {
+      "id": "MAPSEC_EMBERVEIL_ASH_FIELDS",
+      "name": "ASH FIELDS"
+    },
+    {
+      "id": "MAPSEC_EMBERVEIL_CINDERHOLD_CITY",
+      "name": "CINDERHOLD CITY"
+    },
+    {
+      "id": "MAPSEC_EMBERVEIL_CALDERA",
+      "name": "CALDERA"
+    },
+    {
+      "id": "MAPSEC_EMBERVEIL_VOLCANO",
+      "name": "EMBERVEIL VOLCANO"
     }
   ]
 }

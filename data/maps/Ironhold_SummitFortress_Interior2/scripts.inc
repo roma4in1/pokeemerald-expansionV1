@@ -20,18 +20,21 @@ Ironhold_SummitFortress_Interior2_MapScripts::
 IronholdFortressInterior2_EventScript_Sever::
 	goto_if_defeated TRAINER_LEADER_IRONHOLD_SEVER, IronholdFortressInterior2_EventScript_SeverDefeated
 	goto_if_unset FLAG_IRONHOLD_GYM3_CLEAR, IronholdFortressInterior2_EventScript_SeverNotYet
+	setspeaker Pelagios_Speaker_Sever
 	trainerbattle_single TRAINER_LEADER_IRONHOLD_SEVER, IronholdFortressInterior2_Text_SeverIntro, IronholdFortressInterior2_Text_SeverDefeat, IronholdFortressInterior2_EventScript_SeverKeyScene
 	end
 
 IronholdFortressInterior2_EventScript_SeverNotYet::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Sever
 	msgbox IronholdFortressInterior2_Text_SeverNotYet, MSGBOX_DEFAULT
 	release
 	end
 
 IronholdFortressInterior2_EventScript_SeverKeyScene::
-	@ No badge speech. The handover is wordless.
+	@ No badge speech. The handover is wordless (narration - no namebox).
+	setspeaker 0
 	msgbox IronholdFortressInterior2_Text_WordlessHandover, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_BADGE
 	message IronholdFortressInterior2_Text_ReceivedCovenantBadge
@@ -57,6 +60,7 @@ IronholdFortressInterior2_EventScript_SeverKeyScene::
 	applymovement LOCALID_IRONHOLD_SEVER, IronholdFortressInterior2_Movement_SeverFaceSouth
 	waitmovement 0
 	copyobjectxytoperm LOCALID_IRONHOLD_SEVER
+	setspeaker Pelagios_Speaker_Sever
 	msgbox IronholdFortressInterior2_Text_SeverKeyLine, MSGBOX_DEFAULT
 	closemessage
 	delay 30

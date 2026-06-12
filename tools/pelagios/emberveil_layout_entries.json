@@ -1,0 +1,101 @@
+[
+  {
+    "id": "LAYOUT_EMBERVEIL_ASHMOUTH_PORT",
+    "name": "Emberveil_AshmouthPort_Layout",
+    "width": 20,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lavaridge",
+    "border_filepath": "data/layouts/Emberveil_AshmouthPort/border.bin",
+    "blockdata_filepath": "data/layouts/Emberveil_AshmouthPort/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_EMBERVEIL_LAVA_ROUTE1",
+    "name": "Emberveil_LavaRoute1_Layout",
+    "width": 20,
+    "height": 28,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lavaridge",
+    "border_filepath": "data/layouts/Emberveil_LavaRoute1/border.bin",
+    "blockdata_filepath": "data/layouts/Emberveil_LavaRoute1/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_EMBERVEIL_ASH_FIELDS",
+    "name": "Emberveil_AshFields_Layout",
+    "width": 24,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lavaridge",
+    "border_filepath": "data/layouts/Emberveil_AshFields/border.bin",
+    "blockdata_filepath": "data/layouts/Emberveil_AshFields/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_EMBERVEIL_CINDERHOLD_CITY",
+    "name": "Emberveil_CinderholdCity_Layout",
+    "width": 28,
+    "height": 24,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lavaridge",
+    "border_filepath": "data/layouts/Emberveil_CinderholdCity/border.bin",
+    "blockdata_filepath": "data/layouts/Emberveil_CinderholdCity/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_EMBERVEIL_LAVA_ROUTE2",
+    "name": "Emberveil_LavaRoute2_Layout",
+    "width": 24,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lavaridge",
+    "border_filepath": "data/layouts/Emberveil_LavaRoute2/border.bin",
+    "blockdata_filepath": "data/layouts/Emberveil_LavaRoute2/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_EMBERVEIL_CALDERA_APPROACH",
+    "name": "Emberveil_CalderaApproach_Layout",
+    "width": 22,
+    "height": 22,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lavaridge",
+    "border_filepath": "data/layouts/Emberveil_CalderaApproach/border.bin",
+    "blockdata_filepath": "data/layouts/Emberveil_CalderaApproach/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_EMBERVEIL_CALDERA_RUINS",
+    "name": "Emberveil_CalderaRuins_Layout",
+    "width": 20,
+    "height": 24,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lavaridge",
+    "border_filepath": "data/layouts/Emberveil_CalderaRuins/border.bin",
+    "blockdata_filepath": "data/layouts/Emberveil_CalderaRuins/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_EMBERVEIL_VOLCANO_ASCENT",
+    "name": "Emberveil_VolcanoAscent_Layout",
+    "width": 18,
+    "height": 30,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lavaridge",
+    "border_filepath": "data/layouts/Emberveil_VolcanoAscent/border.bin",
+    "blockdata_filepath": "data/layouts/Emberveil_VolcanoAscent/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_EMBERVEIL_VOLCANO_SUMMIT",
+    "name": "Emberveil_VolcanoSummit_Layout",
+    "width": 20,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lavaridge",
+    "border_filepath": "data/layouts/Emberveil_VolcanoSummit/border.bin",
+    "blockdata_filepath": "data/layouts/Emberveil_VolcanoSummit/map.bin",
+    "layout_version": "emerald"
+  }
+]

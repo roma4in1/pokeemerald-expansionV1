@@ -12,11 +12,14 @@ Ironhold_SummitFortress_Interior1_MapScripts::
 @ -------------------------------------------------------------------
 IronholdFortressInterior1_EventScript_Rook::
 	goto_if_defeated TRAINER_LEADER_IRONHOLD_ROOK, IronholdFortressInterior1_EventScript_RookDefeated
+	setspeaker Pelagios_Speaker_Rook
 	trainerbattle_single TRAINER_LEADER_IRONHOLD_ROOK, IronholdFortressInterior1_Text_RookIntro, IronholdFortressInterior1_Text_RookDefeat, IronholdFortressInterior1_EventScript_RookVictory
 	end
 
 IronholdFortressInterior1_EventScript_RookVictory::
+	setspeaker Pelagios_Speaker_Rook
 	msgbox IronholdFortressInterior1_Text_RookPostBattle, MSGBOX_DEFAULT
+	setspeaker 0
 	playfanfare MUS_OBTAIN_BADGE
 	message IronholdFortressInterior1_Text_ReceivedGarrisonBadge
 	waitmessage
@@ -26,6 +29,7 @@ IronholdFortressInterior1_EventScript_RookVictory::
 	setvar VAR_IRONHOLD_PROGRESS, 4
 	giveitem ITEM_TM_BRICK_BREAK
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setspeaker Pelagios_Speaker_Rook
 	msgbox IronholdFortressInterior1_Text_RookExplainTM, MSGBOX_DEFAULT
 	release
 	end
@@ -33,6 +37,7 @@ IronholdFortressInterior1_EventScript_RookVictory::
 IronholdFortressInterior1_EventScript_RookDefeated::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Rook
 	goto_if_set FLAG_IRONHOLD_RESOLVED, IronholdFortressInterior1_EventScript_RookResolved
 	msgbox IronholdFortressInterior1_Text_RookPostBadge, MSGBOX_DEFAULT
 	release
@@ -48,11 +53,13 @@ IronholdFortressInterior1_EventScript_RookResolved::
 @ -------------------------------------------------------------------
 IronholdFortressInterior1_EventScript_StationedA::
 	trainerbattle_single TRAINER_COVENANT_IRONHOLD_7, IronholdFortressInterior1_Text_OstinIntro, IronholdFortressInterior1_Text_OstinDefeat
+	setspeaker Pelagios_Speaker_Ostin
 	msgbox IronholdFortressInterior1_Text_OstinPost, MSGBOX_AUTOCLOSE
 	end
 
 IronholdFortressInterior1_EventScript_StationedB::
 	trainerbattle_single TRAINER_COVENANT_IRONHOLD_8, IronholdFortressInterior1_Text_WrennaIntro, IronholdFortressInterior1_Text_WrennaDefeat
+	setspeaker Pelagios_Speaker_Wrenna
 	msgbox IronholdFortressInterior1_Text_WrennaPost, MSGBOX_AUTOCLOSE
 	end
 

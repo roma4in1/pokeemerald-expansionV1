@@ -48,6 +48,8 @@ AncientRuinsInterior1_EventScript_RaltsScene::
 	closemessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
+	msgbox AncientRuinsInterior1_Text_PokenavBuzz, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Sollis
 	msgbox AncientRuinsInterior1_Text_SollisCall, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_HAVEN_RUINS_VISITED
@@ -104,9 +106,11 @@ AncientRuinsInterior1_Text_RaltsGone:
 	.string "didn't come from inside these walls.\p"
 	.string "It came from underneath them.$"
 
+AncientRuinsInterior1_Text_PokenavBuzz:
+	.string "…Your POKéNAV buzzes.$"
+
 AncientRuinsInterior1_Text_SollisCall:
-	.string "…Your POKéNAV buzzes.\p"
-	.string "SOLLIS: {PLAYER}! My instruments\n"
+	.string "{PLAYER}! My instruments\n"
 	.string "just went off the chart - that\l"
 	.string "came from the ruins!\p"
 	.string "Are you alright? What did you see?\p"

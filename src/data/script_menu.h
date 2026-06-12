@@ -1127,6 +1127,40 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+// Pelagios — Tennyson destination menus, one fixed list per boat tier.
+// Island order is kept identical across the tiers so higher tiers simply
+// append new destinations; the boarding script dispatches per tier on the
+// returned index. Cancel is always the last entry. To add an island, append
+// it to MultichoiceList_BoatGalleon (and the relevant lower tier if it
+// unlocks earlier) and add a matching dispatch case in pelagios_boat.inc.
+static const struct MenuAction MultichoiceList_BoatSloop[] =
+{
+    {COMPOUND_STRING("HAVEN ISLE")},
+    {COMPOUND_STRING("IRONHOLD")},
+    {gText_Cancel},
+};
+
+static const struct MenuAction MultichoiceList_BoatBrigantine[] =
+{
+    {COMPOUND_STRING("HAVEN ISLE")},
+    {COMPOUND_STRING("IRONHOLD")},
+    {COMPOUND_STRING("SIROCCO ISLE")},
+    {COMPOUND_STRING("EMBERVEIL")},
+    {gText_Cancel},
+};
+
+static const struct MenuAction MultichoiceList_BoatGalleon[] =
+{
+    {COMPOUND_STRING("HAVEN ISLE")},
+    {COMPOUND_STRING("IRONHOLD")},
+    {COMPOUND_STRING("SIROCCO ISLE")},
+    {COMPOUND_STRING("EMBERVEIL")},
+    {COMPOUND_STRING("SCHISM ISLE")},
+    {COMPOUND_STRING("THALVERN")},
+    {COMPOUND_STRING("GILDHAVEN")},
+    {gText_Cancel},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -1294,6 +1328,9 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HOF_VICTORIES_QUIT]                         = MULTICHOICE(sMultichoiceList_HOF_Victories_Quit),
     [MULTI_EGGS_VICTORIES_QUIT]                        = MULTICHOICE(sMultichoiceList_Eggs_Victories_Quit),
     [MULTI_HOF_EGGS_VICTORIES_QUIT]                    = MULTICHOICE(sMultichoiceList_HOF_Eggs_Victories_Quit),
+    [MULTI_BOAT_SLOOP]                                 = MULTICHOICE(MultichoiceList_BoatSloop),
+    [MULTI_BOAT_BRIGANTINE]                            = MULTICHOICE(MultichoiceList_BoatBrigantine),
+    [MULTI_BOAT_GALLEON]                               = MULTICHOICE(MultichoiceList_BoatGalleon),
 };
 
 const u8 *const gStdStrings[] =

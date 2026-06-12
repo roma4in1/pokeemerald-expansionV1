@@ -1,0 +1,68 @@
+{
+  "id": "MAP_EMBERVEIL_CALDERA_RUINS",
+  "name": "Emberveil_CalderaRuins",
+  "layout": "LAYOUT_EMBERVEIL_CALDERA_RUINS",
+  "music": "MUS_MT_PYRE",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_EMBERVEIL_CALDERA",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_EMBERVEIL_CALDERA_APPROACH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_EMBERVEIL_VOLCANO_ASCENT",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_EMBERVEIL_VOLCANO_ASCENT",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "EmberveilCalderaRuins_EventScript_Panel1"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "EmberveilCalderaRuins_EventScript_Panel2"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "EmberveilCalderaRuins_EventScript_Panel3"
+    }
+  ]
+}

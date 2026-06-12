@@ -4,6 +4,7 @@ HavenIsle_PlayerHouse_1F_MapScripts::
 HavenIslePlayerHouse_1F_EventScript_Mom::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Mom
 	goto_if_set FLAG_HAVEN_ISLE_COMPLETE, HavenIslePlayerHouse_1F_EventScript_MomFarewell
 	goto_if_set FLAG_STARTER_CHOSEN, HavenIslePlayerHouse_1F_EventScript_MomAfterStarter
 	goto_if_eq VAR_PELAGIOS_INTRO_STATE, 2, HavenIslePlayerHouse_1F_EventScript_MomReminder
@@ -28,7 +29,7 @@ HavenIslePlayerHouse_1F_EventScript_MomFarewell::
 	end
 
 HavenIslePlayerHouse_1F_Text_MomIntro:
-	.string "MOM: There you are.\p"
+	.string "There you are.\p"
 	.string "PROFESSOR SOLLIS came by at dawn,\n"
 	.string "asking for you. She wouldn't say why,\l"
 	.string "but she had that look about her.\p"
@@ -42,13 +43,13 @@ HavenIslePlayerHouse_1F_Text_MomIntro:
 	.string "Maybe it's time somebody did.$"
 
 HavenIslePlayerHouse_1F_Text_MomReminder:
-	.string "MOM: Go on, now. PROFESSOR SOLLIS\n"
+	.string "Go on, now. PROFESSOR SOLLIS\n"
 	.string "is waiting at the lab.\p"
 	.string "East side of the village. You can't\n"
 	.string "miss it.$"
 
 HavenIslePlayerHouse_1F_Text_MomAfterStarter:
-	.string "MOM: Oh! Look at the little thing.\p"
+	.string "Oh! Look at the little thing.\p"
 	.string "It has your eyes. Don't ask me how,\n"
 	.string "but it does.\p"
 	.string "Your parent always said a WARDEN's\n"
@@ -56,7 +57,7 @@ HavenIslePlayerHouse_1F_Text_MomAfterStarter:
 	.string "I suppose some things are still true.$"
 
 HavenIslePlayerHouse_1F_Text_MomFarewell:
-	.string "MOM: So. Ironhold.\p"
+	.string "So. Ironhold.\p"
 	.string "…I'm not going to pretend I'm not\n"
 	.string "scared. But I won't stop you.\p"
 	.string "The sea is in this family, {PLAYER}.\n"

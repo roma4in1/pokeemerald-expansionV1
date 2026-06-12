@@ -4,9 +4,11 @@ HavenIsle_Mart_MapScripts::
 HavenIsleMart_EventScript_Clerk::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Clerk
 	message gText_HowMayIServeYou
 	waitmessage
 	pokemart HavenIsleMart_Pokemart
+	setspeaker Pelagios_Speaker_Clerk
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
@@ -24,6 +26,7 @@ HavenIsleMart_Pokemart:
 	end
 
 HavenIsleMart_EventScript_Woman::
+	setspeaker Pelagios_Speaker_Woman
 	msgbox HavenIsleMart_Text_Woman, MSGBOX_NPC
 	end
 

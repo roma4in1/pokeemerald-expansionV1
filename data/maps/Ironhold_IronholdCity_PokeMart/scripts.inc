@@ -6,9 +6,11 @@ Ironhold_IronholdCity_PokeMart_MapScripts::
 IronholdMart_EventScript_Clerk::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Clerk
 	message IronholdMart_Text_Greeting
 	waitmessage
 	pokemart IronholdMart_Pokemart
+	setspeaker Pelagios_Speaker_Clerk
 	msgbox IronholdMart_Text_Farewell, MSGBOX_DEFAULT
 	release
 	end

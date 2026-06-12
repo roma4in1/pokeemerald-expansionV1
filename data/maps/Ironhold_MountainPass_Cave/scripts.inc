@@ -4,6 +4,7 @@ Ironhold_MountainPass_Cave_MapScripts::
 @ Scout Hale - TRAINER_COVENANT_IRONHOLD_2 (sight-initiated)
 IronholdMountainPassCave_EventScript_ScoutHale::
 	trainerbattle_single TRAINER_COVENANT_IRONHOLD_2, IronholdMountainPassCave_Text_HaleIntro, IronholdMountainPassCave_Text_HaleDefeat
+	setspeaker Pelagios_Speaker_Hale
 	msgbox IronholdMountainPassCave_Text_HalePost, MSGBOX_AUTOCLOSE
 	end
 

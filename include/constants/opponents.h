@@ -884,14 +884,47 @@
 #define TRAINER_COVENANT_IRONHOLD_8         871 // Private Wrenna — Fortress Interior1 stationed
 #define TRAINER_COVENANT_IRONHOLD_9         872 // Elite Guard Senna — Fortress gate, 2nd elite
 
+// Pelagios — Sirocco Isle trainers (873-886). Generic Gilt Claw trainers (873-882),
+// then the 4 gym leaders (883-886). Parties from SIROCCO_BRIEF.md verbatim.
+#define TRAINER_GILTCLAW_SIROCCO_1          873 // Enforcer Rael — DesertRoute1
+#define TRAINER_TRAVELER_SIROCCO_1          874 // Traveler Yoss — DesertRoute1
+#define TRAINER_GILTCLAW_SIROCCO_2          875 // Enforcer Wex — DesertRoute2
+#define TRAINER_GILTCLAW_SIROCCO_3          876 // Grunt Pell — BuriedCity_Exterior
+#define TRAINER_GILTCLAW_SIROCCO_4          877 // Grunt Sera — BuriedCity_Exterior
+#define TRAINER_GILTCLAW_SIROCCO_5          878 // Elite Enforcer Voss — GiltClawTerritory
+#define TRAINER_GILTCLAW_SIROCCO_6          879 // Elite Enforcer Mave — GiltClawTerritory
+#define TRAINER_GILTCLAW_SIROCCO_7          880 // Palace Guard Thorn — DaganPalace_Exterior
+#define TRAINER_GILTCLAW_SIROCCO_8          881 // Palace Guard Fen — DaganPalace_Exterior
+#define TRAINER_GILTCLAW_SIROCCO_9          882 // Inner Guard Rusk — DaganPalace_Interior1
+#define TRAINER_GILTCLAW_SIROCCO_10         883 // Inner Guard Lace — DaganPalace_Interior1
+#define TRAINER_LEADER_SIROCCO_SILT         884 // Gym 1 — Ground (Dust Badge)
+#define TRAINER_LEADER_SIROCCO_CRAG         885 // Gym 2 — Rock (Stone Badge)
+#define TRAINER_LEADER_SIROCCO_MIRIA        886 // Gym 3 — Ground/Rock (Gilt Badge)
+#define TRAINER_LEADER_SIROCCO_DAGAN        887 // Gym 4 — Ground/Rock (Mire Badge)
+
+// Pelagios — Emberveil trainers (888-899). 8 cult members then 4 gym leaders.
+// Parties from EMBERVEIL_BRIEF.md verbatim.
+#define TRAINER_CULTMEMBER_EMBERVEIL_1      888 // Initiate Sera — LavaRoute1
+#define TRAINER_CULTMEMBER_EMBERVEIL_2      889 // Initiate Bren — LavaRoute1
+#define TRAINER_CULTMEMBER_EMBERVEIL_3      890 // Devotee Mira — AshFields
+#define TRAINER_CULTMEMBER_EMBERVEIL_4      891 // Acolyte Rem — LavaRoute2
+#define TRAINER_CULTMEMBER_EMBERVEIL_5      892 // Acolyte Voss — LavaRoute2
+#define TRAINER_CULTMEMBER_EMBERVEIL_6      893 // Acolyte Tane — LavaRoute2
+#define TRAINER_CULTMEMBER_EMBERVEIL_7      894 // Elder Disciple Horne — VolcanoAscent
+#define TRAINER_CULTMEMBER_EMBERVEIL_8      895 // Elder Disciple Cael — VolcanoAscent
+#define TRAINER_LEADER_EMBERVEIL_CINDER     896 // Gym 1 — Fire (Ember Badge)
+#define TRAINER_LEADER_EMBERVEIL_SLAG       897 // Gym 2 — Fire/Ground (Forge Badge)
+#define TRAINER_LEADER_EMBERVEIL_VEX        898 // Gym 3 — Fire/Flying (Caldera Badge)
+#define TRAINER_LEADER_EMBERVEIL_SOLACE     899 // Gym 4 — Fire (Pyrath Badge)
+
 // Trainer flag space was expanded on 2026-06-11: MAX_TRAINERS_COUNT_EMERALD raised
 // from 864 to 1024 (+160 slots). Trainer defeat flags now occupy 0x500-0x8FF.
 // SYSTEM_FLAGS is derived from TRAINER_FLAGS_END (flags.h), so the entire system/
 // daily flag block floats up automatically with no per-flag collisions.
-// Headroom after the 5 summit garrison trainers: TRAINERS_COUNT_EMERALD 873, so
-// 1024-873 = 151 free trainer slots remain for future islands. SAVE-BREAKING (dev).
+// Headroom after Emberveil (888-899, 12 trainers): TRAINERS_COUNT_EMERALD 900, so
+// 1024-900 = 124 free trainer slots remain for future islands. SAVE-BREAKING (dev).
 
-#define TRAINERS_COUNT_EMERALD     873
+#define TRAINERS_COUNT_EMERALD     900
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

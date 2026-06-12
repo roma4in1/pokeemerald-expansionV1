@@ -14,6 +14,7 @@ TidemarkVillage_EventScript_CassIntercept::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
+	setspeaker Pelagios_Speaker_Cass
 	msgbox TidemarkVillage_Text_CassIntercept, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_TIDEMARK_CASS, TidemarkVillage_Movement_CassRunToLab
@@ -27,6 +28,7 @@ TidemarkVillage_EventScript_CassIntercept::
 TidemarkVillage_EventScript_Cass::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Cass
 	msgbox TidemarkVillage_Text_CassIntercept, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_TIDEMARK_CASS, TidemarkVillage_Movement_CassRunToLab
@@ -90,6 +92,7 @@ TidemarkVillage_EventScript_BlockEast::
 TidemarkVillage_EventScript_OldWoman::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_OldWoman
 	goto_if_set FLAG_STARTER_CHOSEN, TidemarkVillage_EventScript_OldWomanAfter
 	msgbox TidemarkVillage_Text_OldWomanBefore, MSGBOX_DEFAULT
 	release
@@ -101,10 +104,12 @@ TidemarkVillage_EventScript_OldWomanAfter::
 	end
 
 TidemarkVillage_EventScript_Child::
+	setspeaker Pelagios_Speaker_Child
 	msgbox TidemarkVillage_Text_Child, MSGBOX_NPC
 	end
 
 TidemarkVillage_EventScript_Sailor::
+	setspeaker Pelagios_Speaker_Sailor
 	msgbox TidemarkVillage_Text_Sailor, MSGBOX_NPC
 	end
 
@@ -117,7 +122,7 @@ TidemarkVillage_EventScript_LabSign::
 	end
 
 TidemarkVillage_Text_CassIntercept:
-	.string "CASS: {PLAYER}! There you are!\p"
+	.string "{PLAYER}! There you are!\p"
 	.string "SOLLIS sent for you too, right?\n"
 	.string "She sent for ME at sunrise. SUNRISE!\p"
 	.string "You know what that means? It means\n"

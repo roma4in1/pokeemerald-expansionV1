@@ -9,6 +9,7 @@ HavenIsle_PlayerHouse_2F_OnFrame:
 HavenIsle_PlayerHouse_2F_EventScript_MomCalls::
 	lockall
 	delay 30
+	setspeaker Pelagios_Speaker_Mom
 	msgbox HavenIsle_PlayerHouse_2F_Text_MomCalls, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_PELAGIOS_INTRO_STATE, 1
@@ -41,7 +42,7 @@ HavenIslePlayerHouse_2F_EventScript_Notebook::
 	end
 
 HavenIsle_PlayerHouse_2F_Text_MomCalls:
-	.string "MOM: {PLAYER}! Are you up yet?\p"
+	.string "{PLAYER}! Are you up yet?\p"
 	.string "Come downstairs, sweetheart.\n"
 	.string "There's something I need to tell you!$"
 

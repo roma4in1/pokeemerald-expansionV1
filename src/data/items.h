@@ -16010,6 +16010,54 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_Powder,
         .iconPalette = gItemIconPalette_EnergyPowder,
     },
+
+    [ITEM_SEAL_SHARD_SIROCCO] =
+    {
+        .name = ITEM_NAME("Seal Shard"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A fragment of\n"
+            "crystallized legendary\n"
+            "energy. Sirocco."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BlueOrb,
+        .iconPalette = gItemIconPalette_BlueOrb,
+    },
+
+    [ITEM_WARDEN_NOTES] =
+    {
+        .name = ITEM_NAME("Warden's Notes"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Your parent's\n"
+            "research notes. A\n"
+            "ritual diagram."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Powder,
+        .iconPalette = gItemIconPalette_EnergyPowder,
+    },
+
+    [ITEM_SEAL_SHARD_EMBERVEIL] =
+    {
+        .name = ITEM_NAME("Seal Shard"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A fragment of\n"
+            "crystallized legendary\n"
+            "energy. Emberveil."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_RedOrb,
+        .iconPalette = gItemIconPalette_RedOrb,
+    },
 };
 
 #undef ITEM_NAME

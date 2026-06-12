@@ -11,12 +11,14 @@ IronholdSummitApproach_EventScript_EliteSorn::
 @ Soldier Bryn - TRAINER_COVENANT_IRONHOLD_5 (sight-initiated)
 IronholdSummitApproach_EventScript_Patrol2::
 	trainerbattle_single TRAINER_COVENANT_IRONHOLD_5, IronholdSummitApproach_Text_BrynIntro, IronholdSummitApproach_Text_BrynDefeat
+	setspeaker Pelagios_Speaker_Bryn
 	msgbox IronholdSummitApproach_Text_BrynPost, MSGBOX_AUTOCLOSE
 	end
 
 @ Soldier Karst - TRAINER_COVENANT_IRONHOLD_6 (sight-initiated)
 IronholdSummitApproach_EventScript_Patrol3::
 	trainerbattle_single TRAINER_COVENANT_IRONHOLD_6, IronholdSummitApproach_Text_KarstIntro, IronholdSummitApproach_Text_KarstDefeat
+	setspeaker Pelagios_Speaker_Karst
 	msgbox IronholdSummitApproach_Text_KarstPost, MSGBOX_AUTOCLOSE
 	end
 

@@ -668,10 +668,15 @@
 #define FLAG_HIDDEN_ITEM_IRONHOLD_ANTIDOTE                   (FLAG_HIDDEN_ITEMS_START + 0x71) // 0x265 (was FLAG_UNUSED_0x265)
 #define FLAG_HIDDEN_ITEM_IRONHOLD_IRON                       (FLAG_HIDDEN_ITEMS_START + 0x72) // 0x266 (was FLAG_UNUSED_0x266)
 
+// Pelagios — Sirocco hidden items (hidden-items range; next free was +0x73 = 0x267)
+#define FLAG_HIDDEN_ITEM_SIROCCO_BERRY                       (FLAG_HIDDEN_ITEMS_START + 0x73) // 0x267 (Rawst Berry, DesertRoute1)
+
+// Pelagios — Emberveil hidden items (hidden-items range; next free was +0x74 = 0x268)
+#define FLAG_HIDDEN_ITEM_EMBERVEIL_BERRY1                    (FLAG_HIDDEN_ITEMS_START + 0x74) // 0x268 (Rawst Berry, LavaRoute1)
+#define FLAG_HIDDEN_ITEM_EMBERVEIL_BERRY2                    (FLAG_HIDDEN_ITEMS_START + 0x75) // 0x269 (Rawst Berry, LavaRoute1 second)
+
 #define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
+#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag
@@ -1224,16 +1229,26 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
+// =====================================================================
+// Pokémon Pelagios — STORY BLOCK 2 (0x493-0x4A6, 20 contiguous flags)
+// Story block 1 (0x4A7-0x4EF) is FULL. This block is the overflow region
+// for Emberveil and later islands. Safe: well below trainer flags (0x500),
+// SYSTEM_FLAGS (0x900+), and the hidden-items range. It reuses vanilla
+// FLAG_UNUSED_0x493..0x4A6 slots immediately preceding story block 1.
+// Emberveil claims 0x493-0x49C (10 flags). Free: 0x49D-0x4A6 (10 flags).
+// =====================================================================
+// Emberveil progression (overflow; FLAG_EMBERVEIL_ARRIVED is at 0x4EF in block 1,
+// FLAG_EMBERVEIL_RESOLVED at 0x4AE, FLAG_SOLACE_ALT_ENDING at 0x4B9 — reused, not redefined)
+#define FLAG_EMBERVEIL_GYM1_CLEAR                                   0x493 // Cinder defeated
+#define FLAG_EMBERVEIL_GYM2_CLEAR                                   0x494 // Slag defeated
+#define FLAG_EMBERVEIL_GYM3_CLEAR                                   0x495 // Vex defeated
+#define FLAG_EMBERVEIL_GYM4_CLEAR                                   0x496 // Solace defeated/convinced
+#define FLAG_LAVA_BOOTS_OBTAINED                                    0x497 // ITEM_LAVA_BOOTS received from Slag
+#define FLAG_WARDEN_NOTES_EMBERVEIL                                 0x498 // Hidden notes found in CalderaRuins (Path B)
+#define FLAG_EMBERVEIL_PATH_B                                       0x499 // True resolution achieved (commune ritual)
+#define FLAG_EMBERVEIL_SEAL_FOUND                                   0x49A // Player entered SealChamber
+#define FLAG_EMBERVEIL_CIPHER_FOUND                                 0x49B // Warden's Journal cipher 4 collected
+#define FLAG_SOLACE_TOLD_TRUTH                                      0x49C // Player told Solace the truth (Path A)
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
@@ -1317,18 +1332,26 @@
 #define FLAG_GRAPPLE_HOOK_OBTAINED                          0x4E1 // ITEM_GRAPPLE_HOOK received from Forge
 #define FLAG_DOCUMENT_FRAGMENT_OBTAINED                     0x4E2 // Resistance document received
 #define FLAG_HIDE_IRONHOLD_SEVER_GATE                       0x4E3 // Hides Sever's gate cameo until both summit guards fall
-#define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
-#define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
-#define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
-#define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
-#define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
-#define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
-#define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
-#define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
-#define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
-#define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
+
+// Pelagios — Sirocco Isle Progression Flags (0x4E4-0x4EE)
+// 11 story flags. FLAG_SIROCCO_RESOLVED already lives at 0x4AD (set earlier); the
+// hidden-item Rawst Berry flag is NOT here — it lives in the hidden-items range (0x267).
+#define FLAG_SIROCCO_ARRIVED                                       0x4E4 // Player docked at Dustmouth
+#define FLAG_SIROCCO_GYM1_CLEAR                                    0x4E5 // Silt defeated
+#define FLAG_SIROCCO_GYM2_CLEAR                                    0x4E6 // Crag defeated
+#define FLAG_SIROCCO_GYM3_CLEAR                                    0x4E7 // Miria defeated
+#define FLAG_SIROCCO_GYM4_CLEAR                                    0x4E8 // Dagan defeated (battle only)
+#define FLAG_SIROCCO_DAGAN_ESCAPED                                 0x4E9 // Dagan's escape scene played
+#define FLAG_SIROCCO_DEX_MET                                       0x4EA // Player spoke to Dex at camp
+#define FLAG_SIROCCO_BURIED_CITY_FOUND                             0x4EB // Player entered the Buried City
+#define FLAG_SIROCCO_SEAL_FOUND                                    0x4EC // Player found the Gilt Claw apparatus
+#define FLAG_SIROCCO_CIPHER_FOUND                                  0x4ED // Warden's Journal cipher 3 collected
+#define FLAG_SIROCCO_NORTH_TERRITORY_OPEN                          0x4EE // GiltClawTerritory unblocked (Gym 2 cleared)
+
+// Pelagios — Emberveil arrival flag fills the LAST free slot of story block 1.
+// Block 1 (0x4A7-0x4EF) is now FULL. All other Emberveil story flags live in
+// Pelagios story block 2 (0x493-0x49C) — see above near the FLAG_UNUSED runs.
+#define FLAG_EMBERVEIL_ARRIVED                                      0x4EF // Player docked at AshmouthPort
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
@@ -1384,6 +1407,33 @@
 #define FLAG_BADGE07_GET                      (SYSTEM_FLAGS + 0xD)
 #define FLAG_BADGE08_GET                      (SYSTEM_FLAGS + 0xE)
 #define NUM_BADGES                            (1 + FLAG_BADGE08_GET - FLAG_BADGE01_GET)
+
+// =========================================================================
+// PELAGIOS BADGE POLICY — NARRATIVE-ONLY BADGES (decided 2026-06-12)
+// -------------------------------------------------------------------------
+// The engine provides exactly 8 badge flags (FLAG_BADGE01_GET..FLAG_BADGE08_GET;
+// NUM_BADGES == 8) and these are FULLY CONSUMED:
+//   Ironhold: BADGE02 (Petra), BADGE03 (Forge), BADGE04 (Rook), BADGE05 (Sever)
+//   Sirocco:  BADGE06 (Silt),  BADGE07 (Crag),  BADGE08 (Miria)
+//   (BADGE01 is reserved for a future island per IRONHOLD_BRIEF.md numbering.)
+// There is NO FLAG_BADGE09 and the saveblock has no room for one without a
+// Trainer-Card / badge-bit refactor.
+//
+// DECISION: Pelagios adopts NARRATIVE-ONLY badges region-wide. Beyond the
+// vanilla 8 (which stay as assigned above), gyms do NOT set any FLAG_BADGE*_GET.
+// Instead, EACH gym sets a per-island clear flag FLAG_<ISLAND>_GYM<N>_CLEAR
+// (e.g. FLAG_EMBERVEIL_GYM1_CLEAR), and the badge-receipt FANFARE + "received
+// the X BADGE" text still play for player feedback. All progression GATING
+// (leader refusals, door guards, route blockers) keys off these GYM*_CLEAR
+// flags or VAR_<ISLAND>_PROGRESS — NEVER off FLAG_BADGE*_GET. So gating is
+// unaffected by the badge-flag cap.
+//
+// Consequence: the vanilla Trainer Card badge counter tops out at 8 and will
+// NOT reflect Emberveil-and-later badges. A custom "Island Journal" UI
+// (tracking per-island gym clears + seal shards) is planned POST-LAUNCH to
+// replace the Trainer Card badge display. Do NOT add engine logic that keys
+// off badge COUNT for any Pelagios system.
+// =========================================================================
 
 // Towns and Cities
 #define FLAG_VISITED_LITTLEROOT_TOWN                (SYSTEM_FLAGS + 0xF)

@@ -375,6 +375,22 @@
       "y": 8,
       "respawn_map": "MAP_IRONHOLD_GATEMARK_PORT_INN",
       "respawn_npc": "LOCALID_IRONHOLD_INNKEEPER"
+    },
+    {
+      "id": "HEAL_LOCATION_EMBERVEIL_ASHMOUTH_PORT",
+      "map": "MAP_EMBERVEIL_ASHMOUTH_PORT",
+      "x": 4,
+      "y": 8,
+      "respawn_map": "MAP_EMBERVEIL_ASHMOUTH_PORT_INN",
+      "respawn_npc": "LOCALID_EMBERVEIL_INNKEEPER"
+    },
+    {
+      "id": "HEAL_LOCATION_SIROCCO_DUSTMOUTH_PORT",
+      "map": "MAP_SIROCCO_DUSTMOUTH_PORT",
+      "x": 4,
+      "y": 8,
+      "respawn_map": "MAP_SIROCCO_DUSTMOUTH_PORT_INN",
+      "respawn_npc": "LOCALID_SIROCCO_INNKEEPER"
     }
   ]
 }

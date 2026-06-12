@@ -5,6 +5,7 @@ Ironhold_GatemarkPort_Inn_Interior_MapScripts::
 IronholdGatemarkPortInnInterior_EventScript_Traveler::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Traveler
 	goto_if_set FLAG_IRONHOLD_RESOLVED, IronholdGatemarkPortInnInterior_EventScript_TravelerResolved
 	msgbox IronholdGatemarkPortInnInterior_Text_Traveler, MSGBOX_DEFAULT
 	release

@@ -37106,6 +37106,696 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_EMBERVEIL_LAVA_ROUTE1",
+          "base_label": "gEmberveilLavaRoute1",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 14,
+                "max_level": 17,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 14,
+                "max_level": 17,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 14,
+                "max_level": 17,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 14,
+                "max_level": 17,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 14,
+                "max_level": 17,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 15,
+                "max_level": 18,
+                "species": "SPECIES_HOUNDOUR"
+              },
+              {
+                "min_level": 15,
+                "max_level": 18,
+                "species": "SPECIES_HOUNDOUR"
+              },
+              {
+                "min_level": 15,
+                "max_level": 18,
+                "species": "SPECIES_HOUNDOUR"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_MAGBY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_EMBERVEIL_ASH_FIELDS",
+          "base_label": "gEmberveilAshFields",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_HOUNDOUR"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_HOUNDOUR"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_HOUNDOUR"
+              },
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_LITWICK"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_EMBERVEIL_LAVA_ROUTE2",
+          "base_label": "gEmberveilLavaRoute2",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_TURTONATOR"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_TURTONATOR"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_TURTONATOR"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_LARVESTA"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_LARVESTA"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_LARVESTA"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_LARVESTA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_EMBERVEIL_CALDERA_APPROACH",
+          "base_label": "gEmberveilCalderaApproach",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_TURTONATOR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_TURTONATOR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_TURTONATOR"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_LARVESTA"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_LARVESTA"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_LARVESTA"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_LARVESTA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_EMBERVEIL_CALDERA_RUINS",
+          "base_label": "gEmberveilCalderaRuins",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_LAMPENT"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_LAMPENT"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_LAMPENT"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_LAMPENT"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_HEATRAN"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_HEATRAN"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SIROCCO_DESERT_ROUTE1",
+          "base_label": "gSiroccoDesertRoute1",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SANDSHREW"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_CACNEA"
+              },
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_CACNEA"
+              },
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_CACNEA"
+              },
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_HIPPOPOTAS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_HIPPOPOTAS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_HIPPOPOTAS"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_SIGILYPH"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SIROCCO_DESERT_ROUTE2",
+          "base_label": "gSiroccoDesertRoute2",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_SKORUPI"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_SKORUPI"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_SKORUPI"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_SILICOBRA"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_SILICOBRA"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_SILICOBRA"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_SILICOBRA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SIROCCO_BURIED_CITY_EXTERIOR",
+          "base_label": "gSiroccoBuriedCityExterior",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_VIBRAVA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SIROCCO_BURIED_CITY_INTERIOR1",
+          "base_label": "gSiroccoBuriedCityInterior1",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_CLAYDOL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_CLAYDOL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_CLAYDOL"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GOLURK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GOLURK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GOLURK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GOLURK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GOLURK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GOLURK"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SIROCCO_GILT_CLAW_TERRITORY",
+          "base_label": "gSiroccoGiltClawTerritory",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_SANDACONDA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_SANDACONDA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_SANDACONDA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_KROKOROK"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_KROKOROK"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_KROKOROK"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GABITE"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GABITE"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GABITE"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GABITE"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GABITE"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_GABITE"
+              }
+            ]
+          }
         }
       ]
     },

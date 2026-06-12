@@ -18,10 +18,16 @@ IronholdGatemarkPort_EventScript_Arrival::
 	waitmovement 0
 	applymovement LOCALID_IRONHOLD_DOCK_GUARD, IronholdGatemarkPort_Movement_GuardApproach
 	waitmovement 0
+	setspeaker Pelagios_Speaker_Guard
 	msgbox IronholdGatemarkPort_Text_ArrivalHalt, MSGBOX_DEFAULT
 	checkitem ITEM_NAVIGATORS_LOG
 	goto_if_eq VAR_RESULT, FALSE, IronholdGatemarkPort_EventScript_ArrivalNoLog
+	setspeaker 0
 	msgbox IronholdGatemarkPort_Text_ArrivalLogCheck, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Guard
+	msgbox IronholdGatemarkPort_Text_ArrivalLogPass, MSGBOX_DEFAULT
+	setspeaker 0
+	msgbox IronholdGatemarkPort_Text_ArrivalLogReturned, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_IRONHOLD_DOCK_GUARD, IronholdGatemarkPort_Movement_GuardReturn
 	waitmovement 0
@@ -41,6 +47,7 @@ IronholdGatemarkPort_EventScript_Arrival::
 	end
 
 IronholdGatemarkPort_EventScript_ArrivalNoLog::
+	@ Speaker is still the guard (set before the checkitem branch).
 	msgbox IronholdGatemarkPort_Text_ArrivalNoLog, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, IronholdGatemarkPort_Movement_PlayerTurnedBack
@@ -99,6 +106,7 @@ IronholdGatemarkPort_Movement_CameraPanDown:
 IronholdGatemarkPort_EventScript_DockGuard::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Guard
 	goto_if_set FLAG_IRONHOLD_RESOLVED, IronholdGatemarkPort_EventScript_DockGuardResolved
 	msgbox IronholdGatemarkPort_Text_DockGuard, MSGBOX_DEFAULT
 	release
@@ -115,6 +123,7 @@ IronholdGatemarkPort_EventScript_DockGuardResolved::
 IronholdGatemarkPort_EventScript_Sailor::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Sailor
 	msgbox IronholdGatemarkPort_Text_Sailor, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, IronholdGatemarkPort_EventScript_SailorNotAlone
 	msgbox IronholdGatemarkPort_Text_SailorAlone, MSGBOX_DEFAULT
@@ -132,9 +141,11 @@ IronholdGatemarkPort_EventScript_SailorNotAlone::
 IronholdGatemarkPort_EventScript_Merchant::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Merchant
 	message IronholdGatemarkPort_Text_MerchantGreeting
 	waitmessage
 	pokemart IronholdGatemarkPort_Pokemart
+	setspeaker Pelagios_Speaker_Merchant
 	msgbox IronholdGatemarkPort_Text_MerchantFarewell, MSGBOX_DEFAULT
 	release
 	end
@@ -159,6 +170,7 @@ IronholdGatemarkPort_Pokemart:
 IronholdGatemarkPort_EventScript_DisguisedFisherman::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Fisherman
 	goto_if_set FLAG_IRONHOLD_RESOLVED, IronholdGatemarkPort_EventScript_FishermanResolved
 	goto_if_set FLAG_IRONHOLD_RESISTANCE_MET, IronholdGatemarkPort_EventScript_FishermanMet
 	goto_if_set FLAG_IRONHOLD_GYM1_CLEAR, IronholdGatemarkPort_EventScript_FishermanHint
@@ -168,6 +180,10 @@ IronholdGatemarkPort_EventScript_DisguisedFisherman::
 
 IronholdGatemarkPort_EventScript_FishermanHint::
 	msgbox IronholdGatemarkPort_Text_FishermanHint, MSGBOX_DEFAULT
+	setspeaker 0
+	msgbox IronholdGatemarkPort_Text_FishermanHintAside, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Fisherman
+	msgbox IronholdGatemarkPort_Text_FishermanHintHouse, MSGBOX_DEFAULT
 	release
 	end
 
@@ -189,28 +205,13 @@ IronholdGatemarkPort_EventScript_FishermanResolved::
 @ -------------------------------------------------------------------
 IronholdGatemarkPort_EventScript_Tennyson::
 	lockall
+	setvar VAR_TEMP_1, PELAGIOS_ISLAND_IRONHOLD
 	goto_if_set FLAG_IRONHOLD_RESOLVED, IronholdGatemarkPort_EventScript_TennysonBrigantine
-	msgbox IronholdGatemarkPort_Text_TennysonSail, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, IronholdGatemarkPort_EventScript_TennysonStay
-	goto IronholdGatemarkPort_EventScript_TennysonSailHome
+	goto Pelagios_EventScript_BoardTennyson
 
 IronholdGatemarkPort_EventScript_TennysonBrigantine::
-	msgbox IronholdGatemarkPort_Text_TennysonBrigantine, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, IronholdGatemarkPort_EventScript_TennysonStay
-	goto IronholdGatemarkPort_EventScript_TennysonSailHome
-
-IronholdGatemarkPort_EventScript_TennysonSailHome::
-	msgbox IronholdGatemarkPort_Text_TennysonCastOff, MSGBOX_DEFAULT
-	closemessage
-	warp MAP_HAVEN_ISLE_HARBOR, 13, 9  @ sand tile in front of the Tennyson's berth
-	waitstate
-	releaseall
-	end
-
-IronholdGatemarkPort_EventScript_TennysonStay::
-	msgbox IronholdGatemarkPort_Text_TennysonStay, MSGBOX_DEFAULT
-	releaseall
-	end
+	msgbox IronholdGatemarkPort_Text_TennysonBrigantine, MSGBOX_DEFAULT
+	goto Pelagios_EventScript_BoardTennyson
 
 @ -------------------------------------------------------------------
 @ Signs
@@ -246,8 +247,12 @@ IronholdGatemarkPort_Text_ArrivalLogCheck:
 	.string "He reads the name on the inside\n"
 	.string "cover twice. His thumb hovers\l"
 	.string "over the registry stamp without\l"
-	.string "landing.\p"
-	.string "“…Warden's log. You may pass.”\p"
+	.string "landing.$"
+
+IronholdGatemarkPort_Text_ArrivalLogPass:
+	.string "…Warden's log. You may pass.$"
+
+IronholdGatemarkPort_Text_ArrivalLogReturned:
 	.string "He hands it back without meeting\n"
 	.string "your eyes.$"
 
@@ -308,15 +313,19 @@ IronholdGatemarkPort_Text_FishermanBland:
 
 IronholdGatemarkPort_Text_FishermanHint:
 	.string "…You're the one who took the\n"
-	.string "town hall match off PETRA.\p"
+	.string "town hall match off PETRA.$"
+
+IronholdGatemarkPort_Text_FishermanHintAside:
 	.string "He keeps his voice low, eyes on\n"
-	.string "his line.\p"
-	.string "“There's a house in the city.\n"
+	.string "his line.$"
+
+IronholdGatemarkPort_Text_FishermanHintHouse:
+	.string "There's a house in the city.\n"
 	.string "South side, under the HQ placard.\l"
 	.string "The soldier they kept posted\l"
-	.string "outside just got rotated north.”\p"
-	.string "“Some friends of mine would like\n"
-	.string "a word. Downstairs.”$"
+	.string "outside just got rotated north.\p"
+	.string "Some friends of mine would like\n"
+	.string "a word. Downstairs.$"
 
 IronholdGatemarkPort_Text_FishermanMet:
 	.string "You found them, then.\p"
@@ -332,30 +341,13 @@ IronholdGatemarkPort_Text_FishermanResolved:
 	.string "…The WARDEN would've liked you,\n"
 	.string "I think. I mean that.$"
 
-IronholdGatemarkPort_Text_TennysonSail:
-	.string "The TENNYSON sits low and patient\n"
-	.string "among the grey Covenant hulls,\l"
-	.string "like a gull among gunboats.\p"
-	.string "Sail back to HAVEN ISLE?$"
-
 IronholdGatemarkPort_Text_TennysonBrigantine:
 	.string "The TENNYSON rides proud under\n"
 	.string "her new brigantine rigging - the\l"
 	.string "dockworkers refit her overnight\l"
 	.string "and wouldn't take payment.\p"
 	.string "The open straits beyond IRONHOLD\n"
-	.string "wait for the next chapter of\l"
-	.string "PELAGIOS.\p"
-	.string "Sail back to HAVEN ISLE?$"
-
-IronholdGatemarkPort_Text_TennysonCastOff:
-	.string "You cast off the mooring lines.\p"
-	.string "The TENNYSON leans into the swell\n"
-	.string "like she knows the way home.$"
-
-IronholdGatemarkPort_Text_TennysonStay:
-	.string "You rest a hand on the gunwale.\p"
-	.string "Not yet. There's work ashore.$"
+	.string "are yours to cross now.$"
 
 IronholdGatemarkPort_Text_GarrisonSign:
 	.string "NORTH GATE\p"

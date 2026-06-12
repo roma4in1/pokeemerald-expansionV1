@@ -1,0 +1,58 @@
+{
+  "id": "MAP_SIROCCO_DAGAN_PALACE_INTERIOR2",
+  "name": "Sirocco_DaganPalace_Interior2",
+  "layout": "LAYOUT_MOSSDEEP_CITY_SPACE_CENTER_2F",
+  "music": "MUS_GYM",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_SIROCCO_DAGAN_PALACE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_SIROCCO_DAGAN",
+      "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
+      "x": 8,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SiroccoDaganPalaceInterior2_EventScript_Dagan",
+      "flag": "FLAG_SIROCCO_DAGAN_ESCAPED"
+    },
+    {
+      "local_id": "LOCALID_SIROCCO_MIRIA_POST",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
+      "x": 8,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SiroccoDaganPalaceInterior2_EventScript_MiriaPost",
+      "flag": "FLAG_TEMP_1"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 13,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_SIROCCO_DAGAN_PALACE_INTERIOR1",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

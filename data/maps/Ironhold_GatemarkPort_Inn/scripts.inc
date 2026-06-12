@@ -10,11 +10,17 @@ Ironhold_GatemarkPort_Inn_OnTransition:
 IronholdGatemarkPortInn_EventScript_Innkeeper::
 	lock
 	faceplayer
+	setspeaker Pelagios_Speaker_Innkeeper
+	msgbox IronholdGatemarkPortInn_Text_Greeting, MSGBOX_DEFAULT
+	setspeaker 0
+	msgbox IronholdGatemarkPortInn_Text_GlancesAtWindow, MSGBOX_DEFAULT
+	setspeaker Pelagios_Speaker_Innkeeper
 	msgbox IronholdGatemarkPortInn_Text_RoomOffer, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, IronholdGatemarkPortInn_EventScript_NoRest
 	msgbox IronholdGatemarkPortInn_Text_RoomsYours, MSGBOX_DEFAULT
 	closemessage
 	call Common_EventScript_OutOfCenterPartyHeal
+	setspeaker Pelagios_Speaker_Innkeeper
 	msgbox IronholdGatemarkPortInn_Text_AfterRest, MSGBOX_DEFAULT
 	release
 	end
@@ -24,11 +30,15 @@ IronholdGatemarkPortInn_EventScript_NoRest::
 	release
 	end
 
-IronholdGatemarkPortInn_Text_RoomOffer:
+IronholdGatemarkPortInn_Text_Greeting:
 	.string "Evening. Or morning. The fog makes\n"
-	.string "it hard to tell, here.\p"
+	.string "it hard to tell, here.$"
+
+IronholdGatemarkPortInn_Text_GlancesAtWindow:
 	.string "She glances at the window before\n"
-	.string "she finishes the thought.\p"
+	.string "she finishes the thought.$"
+
+IronholdGatemarkPortInn_Text_RoomOffer:
 	.string "Need a room? Your POKéMON can\n"
 	.string "rest too.$"
 
