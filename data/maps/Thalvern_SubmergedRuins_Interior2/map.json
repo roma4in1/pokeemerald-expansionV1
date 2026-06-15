@@ -1,0 +1,117 @@
+{
+  "id": "MAP_THALVERN_SUBMERGED_RUINS_INTERIOR2",
+  "name": "Thalvern_SubmergedRuins_Interior2",
+  "layout": "LAYOUT_THALVERN_SUBMERGED_RUINS_INTERIOR2",
+  "music": "MUS_SEALED_CHAMBER",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_THALVERN_SUBMERGED_RUINS",
+  "requires_flash": false,
+  "weather": "WEATHER_RAIN",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_THALVERN_RUINS2_BLOCKER",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 16,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ThalvernSubmergedRuinsInterior2_EventScript_Blocker",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 6,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ThalvernSubmergedRuinsInterior2_EventScript_Researcher",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_THALVERN_RUINS2_LENS",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+      "x": 13,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ThalvernSubmergedRuinsInterior2_EventScript_LensDefect",
+      "flag": "FLAG_THALVERN_GYM3_CLEAR"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_THALVERN_SUBMERGED_RUINS_INTERIOR1",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 11,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_THALVERN_SUBMERGED_RUINS_INTERIOR1",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_THALVERN_SUBMERGED_RUINS_INTERIOR3",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_THALVERN_SUBMERGED_RUINS_INTERIOR3",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "ThalvernSubmergedRuinsInterior2_EventScript_CentralMural"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "ThalvernSubmergedRuinsInterior2_EventScript_SideMuralWest"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "ThalvernSubmergedRuinsInterior2_EventScript_SideMuralEast"
+    }
+  ]
+}

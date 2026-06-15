@@ -1,0 +1,47 @@
+{
+  "id": "MAP_ASHENVEIL_DEAD_CITY_EXTERIOR",
+  "name": "Ashenveil_DeadCity_Exterior",
+  "layout": "LAYOUT_ASHENVEIL_DEAD_CITY_EXTERIOR",
+  "music": "MUS_MT_PYRE",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ASHENVEIL_DEAD_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ASHENVEIL_ASH_FIELDS1",
+      "offset": 5,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ASHENVEIL_THE_MEMORIAL",
+      "offset": 6,
+      "direction": "up"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_ASHENVEIL_DEAD_CITY_RUINS1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_ASHENVEIL_DEAD_CITY_RUINS2",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

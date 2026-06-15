@@ -1155,9 +1155,18 @@ static const struct MenuAction MultichoiceList_BoatGalleon[] =
     {COMPOUND_STRING("IRONHOLD")},
     {COMPOUND_STRING("SIROCCO ISLE")},
     {COMPOUND_STRING("EMBERVEIL")},
-    {COMPOUND_STRING("SCHISM ISLE")},
+    {COMPOUND_STRING("SCHISM (NORTH)")},
+    {COMPOUND_STRING("SCHISM (SOUTH)")},
     {COMPOUND_STRING("THALVERN")},
     {COMPOUND_STRING("GILDHAVEN")},
+    {COMPOUND_STRING("PRIMALIS")},
+    {COMPOUND_STRING("ASHENVEIL")},
+    // AETHERON is always listed but its sail handler refuses until
+    // FLAG_SEA_CHART_FOUND is set (the Sea Chart, not boat tier, gates it).
+    {COMPOUND_STRING("AETHERON")},
+    // CONVERGENCE (Final Island) is always listed but its sail handler refuses
+    // until FLAG_AETHERON_RESOLVED is set (the way opens after Aetheron resolves).
+    {COMPOUND_STRING("CONVERGENCE")},
     {gText_Cancel},
 };
 

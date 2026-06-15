@@ -3040,7 +3040,11 @@ bool8 ScrCmd_warpspinenter(struct ScriptContext *ctx)
 bool8 ScrCmd_setmonmetlocation(struct ScriptContext *ctx)
 {
     u16 partyIndex = VarGet(ScriptReadHalfword(ctx));
-    u8 location = ScriptReadByte(ctx);
+    // PELAGIOS: metLocation is u16 now and SetMonData(MON_DATA_MET_LOCATION) reads
+    // 2 bytes (SET16) - 'location' MUST be >= 2 bytes wide or SET16 reads stack
+    // garbage. The script opcode still encodes only a byte (vanilla 0-255 range);
+    // widening the local just makes the 2-byte read safe.
+    metloc_u8_t location = ScriptReadByte(ctx);
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
 

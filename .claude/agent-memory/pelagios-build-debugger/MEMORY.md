@@ -1,1 +1,4 @@
 - [Charmap: no em dashes](feedback_charmap-no-emdash.md) — em/en dashes break script preproc; use ASCII hyphen in dialogue
+- [Map-header alignment](mapheader_alignment.md) — mapjson.cpp must emit `.align 2` before each header label AND `.2byte` region_map_section, else black-screen boot freeze (unaligned mapLayout ptr)
+- [Undressed outdoor layouts](project_undressed-outdoor-layouts.md) — island outdoor map.bin has NO building metatiles; "flat ground" is undressed (content gap), not a tileset bug. How to decode map.bin metatile IDs + safely add buildings
+- [Generators are source of truth](feedback_generators-are-source-of-truth.md) — fix tools/pelagios/build_*.py and regenerate; never hand-edit map.bin/map.json (would be clobbered)

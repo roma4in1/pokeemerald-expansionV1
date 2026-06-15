@@ -1,0 +1,140 @@
+{
+  "id": "MAP_SCHISM_SEAL_CHAMBER_SOUTH",
+  "name": "Schism_SealChamber_South",
+  "layout": "LAYOUT_SEALED_CHAMBER_INNER_ROOM",
+  "music": "MUS_SEALED_CHAMBER",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_SCHISM_POISON_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_SCHISM_TOXARA",
+      "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
+      "x": 10,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_SCHISM_APPARATUS_SOUTH",
+      "graphics_id": "OBJ_EVENT_GFX_CABLE_CAR",
+      "x": 10,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SchismSealChamberSouth_EventScript_Apparatus",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_SCHISM_POISON_CITY",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "5",
+      "script": "SchismSealChamberSouth_EventScript_Discovery"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "5",
+      "script": "SchismSealChamberSouth_EventScript_Discovery"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "5",
+      "script": "SchismSealChamberSouth_EventScript_Discovery"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "6",
+      "script": "SchismSealChamberSouth_EventScript_Discovery"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "6",
+      "script": "SchismSealChamberSouth_EventScript_Discovery"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "6",
+      "script": "SchismSealChamberSouth_EventScript_Discovery"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "7",
+      "script": "SchismSealChamberSouth_EventScript_Discovery"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "7",
+      "script": "SchismSealChamberSouth_EventScript_Discovery"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "7",
+      "script": "SchismSealChamberSouth_EventScript_Discovery"
+    }
+  ],
+  "bg_events": []
+}

@@ -1,0 +1,123 @@
+[
+  {
+    "id": "LAYOUT_THALVERN_TIDESPIRE_PORT",
+    "name": "Thalvern_TidespirePort_Layout",
+    "width": 20,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_TidespirePort/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_TidespirePort/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_THALVERN_FLOATING_MARKET",
+    "name": "Thalvern_FloatingMarket_Layout",
+    "width": 28,
+    "height": 24,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_FloatingMarket/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_FloatingMarket/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_THALVERN_DEX_CAMP",
+    "name": "Thalvern_DexCamp_Layout",
+    "width": 16,
+    "height": 14,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_DexCamp/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_DexCamp/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_THALVERN_COASTAL_ROUTE",
+    "name": "Thalvern_CoastalRoute_Layout",
+    "width": 20,
+    "height": 34,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_CoastalRoute/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_CoastalRoute/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_THALVERN_SUBMERGED_RUINS_EXTERIOR",
+    "name": "Thalvern_SubmergedRuins_Exterior_Layout",
+    "width": 24,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_SubmergedRuins_Exterior/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_SubmergedRuins_Exterior/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_THALVERN_SUBMERGED_RUINS_INTERIOR1",
+    "name": "Thalvern_SubmergedRuins_Interior1_Layout",
+    "width": 22,
+    "height": 22,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_SubmergedRuins_Interior1/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_SubmergedRuins_Interior1/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_THALVERN_SUBMERGED_RUINS_INTERIOR2",
+    "name": "Thalvern_SubmergedRuins_Interior2_Layout",
+    "width": 22,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_SubmergedRuins_Interior2/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_SubmergedRuins_Interior2/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_THALVERN_SUBMERGED_RUINS_INTERIOR3",
+    "name": "Thalvern_SubmergedRuins_Interior3_Layout",
+    "width": 18,
+    "height": 16,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_SubmergedRuins_Interior3/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_SubmergedRuins_Interior3/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_THALVERN_THRONE_ROOM",
+    "name": "Thalvern_ThroneRoom_Layout",
+    "width": 28,
+    "height": 40,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_ThroneRoom/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_ThroneRoom/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_THALVERN_COVENANT_SITE",
+    "name": "Thalvern_CovenantSite_Layout",
+    "width": 22,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_CovenantSite/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_CovenantSite/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_THALVERN_DEEP_APPROACH",
+    "name": "Thalvern_DeepApproach_Layout",
+    "width": 18,
+    "height": 28,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosUnderwater",
+    "border_filepath": "data/layouts/Thalvern_DeepApproach/border.bin",
+    "blockdata_filepath": "data/layouts/Thalvern_DeepApproach/map.bin",
+    "layout_version": "emerald"
+  }
+]

@@ -210,6 +210,25 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
 
+// Pelagios custom secondary tilesets
+const u16 gMetatiles_PelagiosCoastal[] = INCBIN_U16("data/tilesets/secondary/pelagios_coastal/metatiles.bin");
+const u16 gMetatileAttributes_PelagiosCoastal[] = INCBIN_U16("data/tilesets/secondary/pelagios_coastal/metatile_attributes.bin");
+
+const u16 gMetatiles_PelagiosDesert[] = INCBIN_U16("data/tilesets/secondary/pelagios_desert/metatiles.bin");
+const u16 gMetatileAttributes_PelagiosDesert[] = INCBIN_U16("data/tilesets/secondary/pelagios_desert/metatile_attributes.bin");
+
+const u16 gMetatiles_PelagiosVolcanic[] = INCBIN_U16("data/tilesets/secondary/pelagios_volcanic/metatiles.bin");
+const u16 gMetatileAttributes_PelagiosVolcanic[] = INCBIN_U16("data/tilesets/secondary/pelagios_volcanic/metatile_attributes.bin");
+
+const u16 gMetatiles_PelagiosIce[] = INCBIN_U16("data/tilesets/secondary/pelagios_ice/metatiles.bin");
+const u16 gMetatileAttributes_PelagiosIce[] = INCBIN_U16("data/tilesets/secondary/pelagios_ice/metatile_attributes.bin");
+
+const u16 gMetatiles_PelagiosPoison[] = INCBIN_U16("data/tilesets/secondary/pelagios_poison/metatiles.bin");
+const u16 gMetatileAttributes_PelagiosPoison[] = INCBIN_U16("data/tilesets/secondary/pelagios_poison/metatile_attributes.bin");
+
+const u16 gMetatiles_PelagiosUnderwater[] = INCBIN_U16("data/tilesets/secondary/pelagios_underwater/metatiles.bin");
+const u16 gMetatileAttributes_PelagiosUnderwater[] = INCBIN_U16("data/tilesets/secondary/pelagios_underwater/metatile_attributes.bin");
+
 #else
 
 const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");

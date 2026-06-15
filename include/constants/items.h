@@ -1067,6 +1067,24 @@ enum __attribute__((packed)) Item
     ITEM_SEAL_SHARD_SIROCCO = 885,
     ITEM_WARDEN_NOTES = 886,
     ITEM_SEAL_SHARD_EMBERVEIL = 887,
+    ITEM_SCAR_PASS_ICE = 888,
+    ITEM_SCAR_PASS_POISON = 889,
+    ITEM_SEAL_SHARD_GLACITH = 890,
+    ITEM_SEAL_SHARD_TOXARA = 891,
+    ITEM_COVENANT_ACCESS_CARD = 892, // Thalvern — Lens gives it; bypasses CovenantSite blockade
+    ITEM_SEAL_SHARD_THALVERN = 893,  // Thalvern — Feraligatr Mega Evolution trigger (Mega wiring is future systems work)
+    ITEM_DEX_NOTES = 894,            // Thalvern — Dex's decoded notes (PATH B only); lore key item
+    ITEM_VANE_MANOR_KEY = 895,       // Gildhaven — Lace gives it post-Gym3; unlocks VaneManor + Exchange passage
+    ITEM_SEAL_SHARD_GILDHAVEN = 896, // Gildhaven — Fairy/Dark energy fragment (stub; Mega wiring is future systems work)
+    ITEM_PRIMALIS_TOKEN = 897,       // Primalis — Elder Mako's carved bone token; proof of Zoan trust, used on the Final Island
+    ITEM_SEAL_SHARD_PRIMALIS = 898,  // Primalis — Grass/Dragon energy fragment (stub; Mega wiring is future systems work)
+    // Ashenveil — ITEM_PHANTOM_LANTERN (881) pre-existed in the Haven key-item batch (reused).
+    ITEM_SEA_CHART = 899,            // Ashenveil — chart found in MorthasGrove (Cass left it); FLAG_SEA_CHART_FOUND ACTIVATES Aetheron in the boat menu
+    ITEM_SEAL_SHARD_ASHENVEIL = 900, // Ashenveil — Decidueye Mega Evolution trigger (stub; Mega wiring is future systems work)
+    // Aetheron — ITEM_STORM_COMPASS (880) pre-existed in the Haven key-item batch (reused; replaces Fly, field-effect wiring is future systems work).
+    ITEM_SEAL_SHARD_AETHERON = 901,  // Aetheron — Stormveil (Electric/Flying) Mega Evolution trigger (stub; Mega wiring is future systems work)
+    ITEM_CASS_DOCUMENTS = 902,       // Aetheron — Ashenveil evacuation records Cass carried since Gildhaven; lore/examine key item
+    ITEM_WARDENS_RESEARCH = 903,     // Convergence — the Warden's complete research; Sollis gives it at the gathering; lore/examine key item (the third option, fully documented)
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

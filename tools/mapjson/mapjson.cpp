@@ -143,7 +143,16 @@ string generate_map_header_text(Json map_data, Json layouts_data) {
     string mapName = json_to_string(map_data, "name");
     text << get_generated_warning("data/maps/" + mapName + "/map.json", true);
 
-    text << mapName << ":\n"
+    // Force 4-byte alignment of every map header. struct MapHeader begins with a
+    // pointer (mapLayout at 0x00) and the C code dereferences each header via an
+    // unaligned-intolerant 32-bit LDR. Headers are emitted back-to-back with no
+    // padding in headers.inc; since the MAPSEC-width fix the emitted header is
+    // 0x1D bytes (odd) instead of the old 0x1C (a multiple of 4), so without this
+    // each subsequent header drifts to a non-4-aligned address and mapLayout is
+    // read as a rotated (garbage) pointer on ARMv4T -> black tilemap at map load.
+    // ".align 2" is 2^2 = 4-byte alignment in GAS/ARM.
+    text << "\t.align 2\n"
+         << mapName << ":\n"
          << "\t.4byte " << json_to_string(layout, "name") << "\n";
 
     if (map_data.object_items().find("shared_events_map") != map_data.object_items().end())
@@ -164,7 +173,11 @@ string generate_map_header_text(Json map_data, Json layouts_data) {
 
     text << "\t.2byte " << json_to_string(map_data, "music") << "\n"
          << "\t.2byte " << json_to_string(layout, "id") << "\n"
-         << "\t.byte "  << json_to_string(map_data, "region_map_section") << "\n"
+         // region_map_section is a u16 (mapsec_u8_t was widened to u16 for Pelagios;
+         // see include/gametypes.h). Emitting .2byte both prevents truncation of
+         // MAPSEC ids >= 256 AND keeps the asm layout aligned with struct MapHeader
+         // (the trailing fields shift +1 byte vs the old 1-byte emission).
+         << "\t.2byte " << json_to_string(map_data, "region_map_section") << "\n"
          << "\t.byte "  << json_to_string(map_data, "requires_flash") << "\n"
          << "\t.byte "  << json_to_string(map_data, "weather") << "\n"
          << "\t.byte "  << json_to_string(map_data, "map_type") << "\n";

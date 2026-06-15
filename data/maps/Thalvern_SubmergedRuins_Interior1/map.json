@@ -1,0 +1,74 @@
+{
+  "id": "MAP_THALVERN_SUBMERGED_RUINS_INTERIOR1",
+  "name": "Thalvern_SubmergedRuins_Interior1",
+  "layout": "LAYOUT_THALVERN_SUBMERGED_RUINS_INTERIOR1",
+  "music": "MUS_SEALED_CHAMBER",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_THALVERN_SUBMERGED_RUINS",
+  "requires_flash": false,
+  "weather": "WEATHER_RAIN",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_THALVERN_PSALM",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 10,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ThalvernSubmergedRuinsInterior1_EventScript_Psalm",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_THALVERN_SUBMERGED_RUINS_EXTERIOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_THALVERN_SUBMERGED_RUINS_EXTERIOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_THALVERN_SUBMERGED_RUINS_INTERIOR2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_THALVERN_SUBMERGED_RUINS_INTERIOR2",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "ThalvernSubmergedRuinsInterior1_EventScript_PuzzleSign"
+    }
+  ]
+}

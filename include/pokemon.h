@@ -1,6 +1,7 @@
 #ifndef GUARD_POKEMON_H
 #define GUARD_POKEMON_H
 
+#include "gametypes.h" // metloc_u8_t (metLocation width)
 #include "contest_effect.h"
 #include "sprite.h"
 #include "wild_encounter_ow.h"
@@ -183,12 +184,28 @@ struct PokemonSubstruct2
 
 struct PokemonSubstruct3
 {
-    u8 pokerus;
-    u8 metLocation;
-    u16 metLevel:7;
-    u16 metGame:4;
-    u16 dynamaxLevel:4;
-    u16 otGender:1;
+    // PELAGIOS (2026-06-14): metLocation widened from 8 bits to a 9-bit field to
+    // clear the MAPSEC u8 ceiling (MAPSEC_NONE was 255, the u8 max, as of
+    // Gildhaven). 9 bits gives 0-511, so MAPSEC ids may now grow up to 508 with
+    // the three METLOC_* sentinels relocated to 0x1FD/0x1FE/0x1FF (the top of the
+    // 9-bit range; see region_map_sections.constants.json.txt). The extra bit was
+    // reclaimed from the former `unused_0B:1` in this substruct, so the substruct
+    // stays EXACTLY 12 bytes (96 bits) and BoxPokemon does NOT grow - critical,
+    // because the PC box storage save region is already at its flash budget and
+    // cannot absorb a wider BoxPokemon. This repacks the substruct into three
+    // explicit 32-bit words; SAVE-BREAKING (the bit layout changed) but accepted
+    // in the current dev phase. `metloc_u8_t` (gametypes.h) is u16 so every
+    // metLocation *handler* variable is wide enough; only the stored field is 9 bits.
+
+    // --- word 0 (32 bits) ---
+    u32 metLocation:9; // MAPSEC id (0-508) or a METLOC_* sentinel (509-511)
+    u32 pokerus:8;
+    u32 metLevel:7;
+    u32 metGame:4;
+    u32 dynamaxLevel:4;
+
+    // --- word 1 (32 bits) ---
+    u32 otGender:1;
     u32 hpIV:5;
     u32 attackIV:5;
     u32 defenseIV:5;
@@ -196,6 +213,8 @@ struct PokemonSubstruct3
     u32 spAttackIV:5;
     u32 spDefenseIV:5;
     u32 isEgg:1;
+
+    // --- word 2 (32 bits) ---
     u32 gigantamaxFactor:1;
     u32 coolRibbon:3;     // Stores the highest contest rank achieved in the Cool category.
     u32 beautyRibbon:3;   // Stores the highest contest rank achieved in the Beauty category.
@@ -215,7 +234,7 @@ struct PokemonSubstruct3
     u32 earthRibbon:1;    // Given to teams that have beaten Mt. Battle's 100-battle challenge in Colosseum/XD.
     u32 worldRibbon:1;    // Distributed during Pokémon Festa '04 and '05 to tournament winners.
     u32 isShadow:1;
-    u32 unused_0B:1;
+    // PELAGIOS: former `unused_0B:1` reclaimed to widen metLocation 8 -> 9 bits.
     u32 abilityNum:2;
 
     // The functionality of this bit changed in FRLG:

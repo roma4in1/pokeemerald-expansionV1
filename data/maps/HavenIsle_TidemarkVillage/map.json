@@ -3,7 +3,6 @@
   "name": "HavenIsle_TidemarkVillage",
   "layout": "LAYOUT_HAVEN_ISLE_TIDEMARK_VILLAGE",
   "music": "MUS_LITTLEROOT",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_TIDEMARK_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -229,5 +228,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "TidemarkVillage_EventScript_LabSign"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

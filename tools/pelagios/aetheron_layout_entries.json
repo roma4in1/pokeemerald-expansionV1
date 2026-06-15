@@ -1,0 +1,68 @@
+[
+  {
+    "id": "LAYOUT_AETHERON_KNOCK_UP_STREAM",
+    "name": "Aetheron_KnockUpStream_Layout",
+    "width": 16,
+    "height": 14,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Aetheron_KnockUpStream/border.bin",
+    "blockdata_filepath": "data/layouts/Aetheron_KnockUpStream/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_AETHERON_CLOUD_LANDING",
+    "name": "Aetheron_CloudLanding_Layout",
+    "width": 20,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Aetheron_CloudLanding/border.bin",
+    "blockdata_filepath": "data/layouts/Aetheron_CloudLanding/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_AETHERON_SKY_ROUTE",
+    "name": "Aetheron_SkyRoute_Layout",
+    "width": 18,
+    "height": 32,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Aetheron_SkyRoute/border.bin",
+    "blockdata_filepath": "data/layouts/Aetheron_SkyRoute/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_AETHERON_AETHER_VILLAGE",
+    "name": "Aetheron_AetherVillage_Layout",
+    "width": 24,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Aetheron_AetherVillage/border.bin",
+    "blockdata_filepath": "data/layouts/Aetheron_AetherVillage/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_AETHERON_COVENANT_INSTALLATION",
+    "name": "Aetheron_CovenantInstallation_Layout",
+    "width": 22,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Mauville",
+    "border_filepath": "data/layouts/Aetheron_CovenantInstallation/border.bin",
+    "blockdata_filepath": "data/layouts/Aetheron_CovenantInstallation/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_AETHERON_STORM_PEAK",
+    "name": "Aetheron_StormPeak_Layout",
+    "width": 18,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Aetheron_StormPeak/border.bin",
+    "blockdata_filepath": "data/layouts/Aetheron_StormPeak/map.bin",
+    "layout_version": "emerald"
+  }
+]

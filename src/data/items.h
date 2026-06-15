@@ -15942,7 +15942,7 @@ const struct ItemInfo gItemsInfo[] =
             "harbor instantly."),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_StormCompass,
         .iconPic = gItemIcon_TownMap,
         .iconPalette = gItemIconPalette_TownMap,
     },
@@ -16057,6 +16057,264 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_RedOrb,
         .iconPalette = gItemIconPalette_RedOrb,
+    },
+
+    [ITEM_SCAR_PASS_ICE] =
+    {
+        .name = ITEM_NAME("Ice Faction Pass"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "EIRA's mark. Grants\n"
+            "passage through the\n"
+            "Scar from the north."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Powder,
+        .iconPalette = gItemIconPalette_EnergyPowder,
+    },
+
+    [ITEM_SCAR_PASS_POISON] =
+    {
+        .name = ITEM_NAME("Poison Faction Pass"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "DRENN's mark. Grants\n"
+            "passage through the\n"
+            "Scar from the south."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Powder,
+        .iconPalette = gItemIconPalette_EnergyPowder,
+    },
+
+    [ITEM_SEAL_SHARD_GLACITH] =
+    {
+        .name = ITEM_NAME("Seal Shard"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Crystallized energy\n"
+            "from GLACITH's seal.\n"
+            "Ice-cold to the touch."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BlueOrb,
+        .iconPalette = gItemIconPalette_BlueOrb,
+    },
+
+    [ITEM_SEAL_SHARD_TOXARA] =
+    {
+        .name = ITEM_NAME("Seal Shard"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Crystallized energy\n"
+            "from TOXARA's seal.\n"
+            "Faintly corrosive."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BlueOrb,
+        .iconPalette = gItemIconPalette_BlueOrb,
+    },
+
+    [ITEM_COVENANT_ACCESS_CARD] =
+    {
+        .name = ITEM_NAME("Access Card"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A COVENANT keycard.\n"
+            "Bypasses the blockade\n"
+            "at the sunken site."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Powder,
+        .iconPalette = gItemIconPalette_EnergyPowder,
+    },
+
+    [ITEM_SEAL_SHARD_THALVERN] =
+    {
+        .name = ITEM_NAME("Seal Shard"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Crystallized energy\n"
+            "from PELAGIOS's seal.\n"
+            "It resonates faintly."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BlueOrb,
+        .iconPalette = gItemIconPalette_BlueOrb,
+    },
+
+    [ITEM_DEX_NOTES] =
+    {
+        .name = ITEM_NAME("Dex's Notes"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "DEX's decoded notes.\n"
+            "Years of work on the\n"
+            "ancient cipher."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Powder,
+        .iconPalette = gItemIconPalette_EnergyPowder,
+    },
+
+    [ITEM_VANE_MANOR_KEY] =
+    {
+        .name = ITEM_NAME("Manor Key"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A key to VANE MANOR.\n"
+            "LACE gave it to you.\n"
+            "It opens the study."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BasementKey,
+        .iconPalette = gItemIconPalette_OldKey,
+    },
+
+    [ITEM_SEAL_SHARD_GILDHAVEN] =
+    {
+        .name = ITEM_NAME("Seal Shard"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Crystallized energy\n"
+            "from MIRATH's seal.\n"
+            "It glints like gold."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_RedOrb,
+        .iconPalette = gItemIconPalette_RedOrb,
+    },
+
+    [ITEM_PRIMALIS_TOKEN] =
+    {
+        .name = ITEM_NAME("Primal Token"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "ELDER MAKO's mark.\n"
+            "Proof of trust from\n"
+            "the ZOAN community."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_ContestPass,
+        .iconPalette = gItemIconPalette_ContestPass,
+    },
+
+    [ITEM_SEAL_SHARD_PRIMALIS] =
+    {
+        .name = ITEM_NAME("Seal Shard"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Crystallized energy\n"
+            "from VERDATH's seal.\n"
+            "It pulses like a heart."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_RedOrb,
+        .iconPalette = gItemIconPalette_RedOrb,
+    },
+
+    [ITEM_SEA_CHART] =
+    {
+        .name = ITEM_NAME("Sea Chart"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "A chart of open sea.\n"
+            "A note reads: 'The\n"
+            "stream rises here.'"),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_TownMap,
+        .iconPalette = gItemIconPalette_TownMap,
+    },
+
+    [ITEM_SEAL_SHARD_ASHENVEIL] =
+    {
+        .name = ITEM_NAME("Seal Shard"),
+        .price = 0,
+        .importance = 1,
+        // DECIDUEYE Mega Evolution trigger (Mega wiring is future systems work).
+        .description = COMPOUND_STRING(
+            "Crystallized memory\n"
+            "from MORTHAS's seal.\n"
+            "Cold and still."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_RedOrb,
+        .iconPalette = gItemIconPalette_RedOrb,
+    },
+
+    [ITEM_SEAL_SHARD_AETHERON] =
+    {
+        .name = ITEM_NAME("Seal Shard"),
+        .price = 0,
+        .importance = 1,
+        // STORMVEIL (Electric/Flying) Mega Evolution trigger (Mega wiring is future systems work).
+        .description = COMPOUND_STRING(
+            "Crystallized storm\n"
+            "energy from the seal.\n"
+            "Crackles faintly."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_RedOrb,
+        .iconPalette = gItemIconPalette_RedOrb,
+    },
+
+    [ITEM_CASS_DOCUMENTS] =
+    {
+        .name = ITEM_NAME("Cass Documents"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Covenant memo CASS\n"
+            "kept since Gildhaven.\n"
+            "ASHENVEIL's truth."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Powder,
+        .iconPalette = gItemIconPalette_EnergyPowder,
+    },
+
+    [ITEM_WARDENS_RESEARCH] =
+    {
+        .name = ITEM_NAME("Warden Research"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Your parent's full\n"
+            "research. The third\n"
+            "option, documented."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Powder,
+        .iconPalette = gItemIconPalette_EnergyPowder,
     },
 };
 

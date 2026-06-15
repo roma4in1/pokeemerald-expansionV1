@@ -1592,8 +1592,12 @@ static u32 GetBattlerMonData(enum BattlerId battler, struct Pokemon *party, u32 
         size = 1;
         break;
     case REQUEST_MET_LOCATION_BATTLE:
-        dst[0] = GetMonData(&party[monId], MON_DATA_MET_LOCATION);
-        size = 1;
+        // PELAGIOS: metLocation is u16 now - emit both bytes so the SET16 read on
+        // the receiving controller (SetMonData MON_DATA_MET_LOCATION) round-trips.
+        data16 = GetMonData(&party[monId], MON_DATA_MET_LOCATION);
+        dst[0] = data16;
+        dst[1] = data16 >> 8;
+        size = 2;
         break;
     case REQUEST_MET_LEVEL_BATTLE:
         dst[0] = GetMonData(&party[monId], MON_DATA_MET_LEVEL);

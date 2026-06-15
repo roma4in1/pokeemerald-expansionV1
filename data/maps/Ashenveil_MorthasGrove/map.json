@@ -1,0 +1,70 @@
+{
+  "id": "MAP_ASHENVEIL_MORTHAS_GROVE",
+  "name": "Ashenveil_MorthasGrove",
+  "layout": "LAYOUT_ASHENVEIL_MORTHAS_GROVE",
+  "music": "MUS_SEALED_CHAMBER",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ASHENVEIL_MORTHAS_GROVE",
+  "requires_flash": false,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ASHENVEIL_THE_MEMORIAL",
+      "offset": 2,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_ASHENVEIL_MORTHAS",
+      "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
+      "x": 10,
+      "y": 8,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AshenveilMorthasGrove_EventScript_Morthas",
+      "flag": "FLAG_MORTHAS_ENCOUNTERED"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 13,
+      "elevation": 3,
+      "var": "VAR_ASHENVEIL_PROGRESS",
+      "var_value": "5",
+      "script": "AshenveilMorthasGrove_EventScript_MorthasApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 13,
+      "elevation": 3,
+      "var": "VAR_ASHENVEIL_PROGRESS",
+      "var_value": "5",
+      "script": "AshenveilMorthasGrove_EventScript_MorthasApproach"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AshenveilMorthasGrove_EventScript_SeaChartStone"
+    }
+  ]
+}

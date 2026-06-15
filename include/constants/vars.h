@@ -293,7 +293,7 @@
 #define VAR_ASHENVEIL_PROGRESS                   0x4107 // Ashenveil story progress
 #define VAR_AETHERON_PROGRESS                    0x4108 // Aetheron story progress
 #define VAR_CONVERGENCE_PROGRESS                 0x4109 // Convergence (final island) story progress
-#define VAR_PELAGIOS_RESERVED_0x410A             0x410A // Reserved for Pelagios future use
+#define VAR_SCHISM_CEASEFIRE_PROGRESS            0x410A // Schism ceasefire: 0=none, 1=skeptical, 2=willing, 3=done (was reserved spare)
 #define VAR_PELAGIOS_RESERVED_0x410B             0x410B // Reserved for Pelagios future use
 #define VAR_PELAGIOS_RESERVED_0x410C             0x410C // Reserved for Pelagios future use
 #define VAR_PELAGIOS_RESERVED_0x410D             0x410D // Reserved for Pelagios future use
@@ -301,8 +301,9 @@
 #define VAR_PELAGIOS_RESERVED_0x410F             0x410F // Reserved for Pelagios future use
 
 // NOTE: 0x410F is now the LAST general-purpose var slot. VARS_END is 0x410F.
-// Six reserved slots (0x410A-0x410F) remain for Pelagios. Any var beyond 0x410F
-// requires another VARS_END expansion (saveblock impact) — STOP and flag this.
+// Schism claimed 0x410A for VAR_SCHISM_CEASEFIRE_PROGRESS. FIVE reserved slots
+// (0x410B-0x410F) remain for Pelagios. Any var beyond 0x410F requires another
+// VARS_END expansion (saveblock impact) — STOP and flag this.
 #define VARS_END                                         0x410F
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
 

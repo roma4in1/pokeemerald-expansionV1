@@ -1,0 +1,46 @@
+[
+  {
+    "id": "LAYOUT_GILDHAVEN_GOLDPORT_HARBOR",
+    "name": "Gildhaven_GoldportHarbor_Layout",
+    "width": 20,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lilycove",
+    "border_filepath": "data/layouts/Gildhaven_GoldportHarbor/border.bin",
+    "blockdata_filepath": "data/layouts/Gildhaven_GoldportHarbor/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_GILDHAVEN_MERCHANT_DISTRICT",
+    "name": "Gildhaven_MerchantDistrict_Layout",
+    "width": 28,
+    "height": 24,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lilycove",
+    "border_filepath": "data/layouts/Gildhaven_MerchantDistrict/border.bin",
+    "blockdata_filepath": "data/layouts/Gildhaven_MerchantDistrict/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_GILDHAVEN_NOBLE_QUARTER",
+    "name": "Gildhaven_NobleQuarter_Layout",
+    "width": 24,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lilycove",
+    "border_filepath": "data/layouts/Gildhaven_NobleQuarter/border.bin",
+    "blockdata_filepath": "data/layouts/Gildhaven_NobleQuarter/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_GILDHAVEN_THE_EXCHANGE_EXTERIOR",
+    "name": "Gildhaven_TheExchange_Exterior_Layout",
+    "width": 20,
+    "height": 16,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Lilycove",
+    "border_filepath": "data/layouts/Gildhaven_TheExchange_Exterior/border.bin",
+    "blockdata_filepath": "data/layouts/Gildhaven_TheExchange_Exterior/map.bin",
+    "layout_version": "emerald"
+  }
+]

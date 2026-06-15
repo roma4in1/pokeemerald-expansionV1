@@ -166,3 +166,109 @@ Pelagios_Speaker_Scholar::
 	.string "SCHOLAR$"
 Pelagios_Speaker_Broker::
 	.string "BROKER$"
+
+@ Schism Isle - story characters and gym leaders
+Pelagios_Speaker_Eira::
+	.string "EIRA$"
+Pelagios_Speaker_Drenn::
+	.string "DRENN$"
+Pelagios_Speaker_Sleet::
+	.string "SLEET$"
+Pelagios_Speaker_Murk::
+	.string "MURK$"
+
+@ Schism Isle - named trainers
+Pelagios_Speaker_Heln::
+	.string "HELN$"
+Pelagios_Speaker_Vera::
+	.string "VERA$"
+Pelagios_Speaker_Osk::
+	.string "OSK$"
+Pelagios_Speaker_Siv::
+	.string "SIV$"
+
+@ Schism Isle - generic roles. (SOLDIER, GUARD, TRAVELER already exist
+@ above and are reused here; FEN already defined under Sirocco named
+@ trainers and is reused for Wader Fen's namebox.)
+Pelagios_Speaker_Wader::
+	.string "WADER$"
+Pelagios_Speaker_Painter::
+	.string "PAINTER$"
+Pelagios_Speaker_Researcher::
+	.string "RESEARCHER$"
+
+@ Thalvern Isle - story characters and gym leaders.
+@ (DEX already defined under Sirocco - reused here. FISHERMAN, MERCHANT,
+@ ELDER, CHILD, INNKEEPER, SCHOLAR, OFFICER, CAEL, RESEARCHER all exist
+@ above and are reused.)
+Pelagios_Speaker_Tide::
+	.string "TIDE$"
+Pelagios_Speaker_Psalm::
+	.string "PSALM$"
+Pelagios_Speaker_Lens::
+	.string "THE LENS$"
+Pelagios_Speaker_Numa::
+	.string "NUMA VESS$"
+
+@ Thalvern Isle - generic roles + named trainers
+Pelagios_Speaker_Porter::
+	.string "PORTER$"
+Pelagios_Speaker_Vendor::
+	.string "VENDOR$"
+Pelagios_Speaker_Wren::
+	.string "WREN$"
+Pelagios_Speaker_Holt::
+	.string "HOLT$"
+Pelagios_Speaker_Sael::
+	.string "SAEL$"
+Pelagios_Speaker_Pelagios::
+	.string "PELAGIOS$"
+
+@ Gildhaven Isle - gym leaders + generic roles
+Pelagios_Speaker_Glint::
+	.string "GLINT$"
+Pelagios_Speaker_Shade::
+	.string "SHADE$"
+Pelagios_Speaker_Serel::
+	.string "SEREL VANE$"
+Pelagios_Speaker_Official::
+	.string "OFFICIAL$"
+Pelagios_Speaker_Resident::
+	.string "RESIDENT$"
+Pelagios_Speaker_Butler::
+	.string "BUTLER$"
+
+@ Primalis Isle - gym leaders + generic roles
+@ (THORN, ELDER, HISTORIAN, LENS, DEX, SERA, VEX, RAEL, CAEL reused
+@  from the blocks above - do not redefine.)
+Pelagios_Speaker_Mako::
+	.string "ELDER MAKO$"
+Pelagios_Speaker_Fern::
+	.string "FERN$"
+Pelagios_Speaker_Scale::
+	.string "SCALE$"
+Pelagios_Speaker_Guardian::
+	.string "GUARDIAN$"
+Pelagios_Speaker_Villager::
+	.string "VILLAGER$"
+
+@ Ashenveil Isle - the Dead Island. Dorne (the Marshal, named here by surname
+@ for the memorial scene) + Orin (sole researcher). MORTHAS has NO speaker
+@ entry by design - it never speaks; its vision text is narration (setspeaker 0).
+Pelagios_Speaker_Dorne::
+	.string "DORNE$"
+Pelagios_Speaker_Orin::
+	.string "ORIN$"
+
+@ Aetheron Isle - the Sky Island. Gym leaders Gale (community elder) and Arc
+@ (Covenant defector engineer). VOSS reused from the block above (the Commander
+@ shares the "VOSS" namebox string). CASS reused (the rival - never redefined).
+@ DOCKHAND + TECHNICIAN are generic role names for the cloud-community NPCs.
+Pelagios_Speaker_Gale::
+	.string "GALE$"
+Pelagios_Speaker_Arc::
+	.string "ARC$"
+Pelagios_Speaker_Dockhand::
+	.string "DOCKHAND$"
+Pelagios_Speaker_Technician::
+	.string "TECHNICIAN$"

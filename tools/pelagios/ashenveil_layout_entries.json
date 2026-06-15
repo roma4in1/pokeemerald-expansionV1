@@ -1,0 +1,57 @@
+[
+  {
+    "id": "LAYOUT_ASHENVEIL_GREYPORT",
+    "name": "Ashenveil_Greyport_Layout",
+    "width": 20,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Ashenveil_Greyport/border.bin",
+    "blockdata_filepath": "data/layouts/Ashenveil_Greyport/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_ASHENVEIL_ASH_FIELDS1",
+    "name": "Ashenveil_AshFields1_Layout",
+    "width": 22,
+    "height": 32,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Ashenveil_AshFields1/border.bin",
+    "blockdata_filepath": "data/layouts/Ashenveil_AshFields1/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_ASHENVEIL_DEAD_CITY_EXTERIOR",
+    "name": "Ashenveil_DeadCity_Exterior_Layout",
+    "width": 32,
+    "height": 30,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Ashenveil_DeadCity_Exterior/border.bin",
+    "blockdata_filepath": "data/layouts/Ashenveil_DeadCity_Exterior/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_ASHENVEIL_THE_MEMORIAL",
+    "name": "Ashenveil_TheMemorial_Layout",
+    "width": 20,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Ashenveil_TheMemorial/border.bin",
+    "blockdata_filepath": "data/layouts/Ashenveil_TheMemorial/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_ASHENVEIL_MORTHAS_GROVE",
+    "name": "Ashenveil_MorthasGrove_Layout",
+    "width": 22,
+    "height": 22,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Slateport",
+    "border_filepath": "data/layouts/Ashenveil_MorthasGrove/border.bin",
+    "blockdata_filepath": "data/layouts/Ashenveil_MorthasGrove/map.bin",
+    "layout_version": "emerald"
+  }
+]

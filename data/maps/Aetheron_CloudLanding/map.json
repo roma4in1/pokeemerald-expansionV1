@@ -1,0 +1,137 @@
+{
+  "id": "MAP_AETHERON_CLOUD_LANDING",
+  "name": "Aetheron_CloudLanding",
+  "layout": "LAYOUT_AETHERON_CLOUD_LANDING",
+  "music": "MUS_SOOTOPOLIS",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_AETHERON_CLOUD_LANDING",
+  "requires_flash": false,
+  "weather": "WEATHER_RAIN_THUNDERSTORM",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_AETHERON_SKY_ROUTE",
+      "offset": 0,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_AETHERON_DOCKHAND",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 11,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AetheronCloudLanding_EventScript_Dockhand",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_AETHERON_CLOUD_COMMUNITY",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 14,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AetheronCloudLanding_EventScript_CommunityMember",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_AETHERON_TENNYSON",
+      "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
+      "x": 12,
+      "y": 15,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_AETHERON_CLOUD_LANDING_INN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_AETHERON_KNOCK_UP_STREAM",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 12,
+      "elevation": 3,
+      "var": "VAR_AETHERON_PROGRESS",
+      "var_value": "0",
+      "script": "AetheronCloudLanding_EventScript_Arrival"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 12,
+      "elevation": 3,
+      "var": "VAR_AETHERON_PROGRESS",
+      "var_value": "0",
+      "script": "AetheronCloudLanding_EventScript_Arrival"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AetheronCloudLanding_EventScript_Tennyson"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AetheronCloudLanding_EventScript_Tennyson"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AetheronCloudLanding_EventScript_Tennyson"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AetheronCloudLanding_EventScript_Tennyson"
+    }
+  ]
+}

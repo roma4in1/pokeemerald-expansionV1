@@ -108,6 +108,52 @@ def walled(w, h, north_gap=(), south_gap=(), west_gap=(), east_gap=(), wall=S_WA
     return g
 
 # =====================================================================
+#  BUILDING STAMPS (verbatim Slateport blockdata blocks) ---------------
+# =====================================================================
+# Copied as full metatile WORDS (id|collision|elevation) straight out of
+# LAYOUT_SLATEPORT_CITY, so every tile is guaranteed valid for the
+# General/Slateport pair AND internally tile-consistent. The DOOR tile is
+# the bottom-centre walkable column; stamp so that door lands on a warp.
+# Building A (5 wide x 6 tall) -- has a door (rows 3-5, centre col walkable):
+BLD_A = [
+    [0x3270, 0x3271, 0x3271, 0x3271, 0x3272],
+    [0x3278, 0x3279, 0x3279, 0x3279, 0x327a],
+    [0x0663, 0x3001, 0x3001, 0x3001, 0x0664],
+    [0x3001, 0x3208, 0x3209, 0x320a, 0x3001],
+    [0x3001, 0x3210, 0x3211, 0x3212, 0x3001],
+    [0x3001, 0x3210, 0x3211, 0x3212, 0x3001],
+]
+BLD_A_DOOR = (5, 2)   # (row, col) of the door tile within BLD_A (bottom-centre)
+
+# Building B (7 wide x 5 tall) -- bigger roofed hall, NO door (decorative
+# facade; place where no warp is needed, e.g. flanking the plaza):
+BLD_B = [
+    [0x0549, 0x0771, 0x0772, 0x0773, 0x0774, 0x0775, 0x0549],
+    [0x3001, 0x0779, 0x077a, 0x077b, 0x077c, 0x077d, 0x3001],
+    [0x3643, 0x0781, 0x0782, 0x0783, 0x0784, 0x0785, 0x3643],
+    [0x3643, 0x0789, 0x078a, 0x078b, 0x078c, 0x078d, 0x3643],
+    [0x3643, 0x0791, 0x0792, 0x0793, 0x0794, 0x0795, 0x3643],
+]
+
+def stamp(grid, blk, top, left):
+    """Paint blk into grid at (top,left). Bounds-checked; skips if OOB."""
+    h, w = len(grid), len(grid[0])
+    bh, bw = len(blk), len(blk[0])
+    if top < 0 or left < 0 or top + bh > h or left + bw > w:
+        raise ValueError(f'building stamp {bh}x{bw} at ({top},{left}) is OOB for {h}x{w}')
+    for dy in range(bh):
+        for dx in range(bw):
+            grid[top + dy][left + dx] = blk[dy][dx]
+
+def stamp_door_on_warp(grid, warp_x, warp_y):
+    """Place BLD_A so its door tile lands exactly on (warp_x, warp_y); the
+    building rises NORTH of the warp so the door is enterable from the south."""
+    dr, dc = BLD_A_DOOR
+    top = warp_y - dr
+    left = warp_x - dc
+    stamp(grid, BLD_A, top, left)
+
+# =====================================================================
 #  OUTDOOR LAYOUTS (General/Slateport)  -- new composed blockdata
 # =====================================================================
 
@@ -137,6 +183,9 @@ g[16][10] = S_W_N
 # checkpoint gate: stone pillars flanking the north exit
 g[1][8] = S_WALL
 g[1][11] = S_WALL
+# Inn building: door aligned to the inn warp at (4,8) so the harbor reads as a
+# port building, not a warp tile on bare stone. Rises north of the warp.
+stamp_door_on_warp(g, 4, 8)
 # signs
 g[2][12] = S_SIGN   # "Ironhold City - Covenant Garrison HQ"
 g[11][6] = S_SIGN   # berth sign
@@ -165,6 +214,10 @@ g[8][3] = S_WALL  # resistance graffiti (bg event points here)
 # rubble blocking the west exit until Grapple Hook - stone blocks in the gap
 g[9][1] = S_WALL
 g[10][1] = S_WALL
+# decorative building facade (door-less) so the district reads as a built-up
+# quarter, not bare ground. Placed clear of the grass patches (2..6/17..21),
+# graffiti wall (3,8), NPCs (9,8)/(16,11), exits and rubble.
+stamp(g, BLD_B, 2, 9)     # central-north hall block (cols 9..15, rows 2..6)
 results['Ironhold_OuterDistrict'] = write_layout('Ironhold_OuterDistrict', g, BORDER_STONE)
 reg_layout('LAYOUT_IRONHOLD_OUTER_DISTRICT', 'Ironhold_OuterDistrict', W, H,
            'gTileset_General', 'gTileset_Slateport')
@@ -184,10 +237,28 @@ g[1][12] = S_WALL
 g[1][15] = S_WALL
 # building doormat ground left walkable; buildings are warp tiles (no stamp needed,
 # the warp coords below define entrances). Place signs near key buildings.
-g[4][6]  = S_SIGN    # Gym sign (Petra / town hall, north end)
-g[10][6] = S_SIGN    # Armory sign
-g[10][20] = S_SIGN   # PokeCenter/Mart sign
-g[16][20] = S_SIGN   # Sever HQ sign
+# --- building dressing -------------------------------------------------
+# Stamp recognizable Slateport buildings so the city reads as a town, not bare
+# ground. Door tiles align to the existing warp coords (mapjson warps are at
+# (6,11),(20,11),(23,11),(20,17)); each building rises NORTH of its warp so the
+# door is enterable from the south. Buildings (20,11) and (23,11) are only 3
+# tiles apart while BLD_A is 5 wide, so (23,11) gets a door-only patch instead of
+# a full overlapping stamp. All metatile words are verbatim-valid Slateport.
+stamp_door_on_warp(g, 6, 11)    # north-west building (Gym / town hall)
+stamp_door_on_warp(g, 20, 11)   # east building (PokeCenter)
+stamp_door_on_warp(g, 20, 17)   # south-east building (Sever HQ)
+# (23,11): just give it a doorway facade (avoid overlapping the (20,11) stamp)
+g[10][23] = 0x0664              # door-frame post
+g[9][23]  = 0x3279             # wall above the door (Mart annex)
+g[8][23]  = 0x3271             # roof
+# a couple of decorative (door-less) hall facades in the open plaza
+stamp(g, BLD_B, 18, 2)         # west plaza hall
+stamp(g, BLD_B, 3, 19)         # north-east plaza hall
+# sign metatiles sit on plaza ground LEFT of each building door (match mapjson)
+g[4][6]   = S_SIGN   # Gym sign (Petra / town hall, north end - no building here)
+g[11][3]  = S_SIGN   # Armory sign  (left of building @ warp 6,11)
+g[11][17] = S_SIGN   # PokeCenter sign (left of building @ warp 20,11)
+g[17][17] = S_SIGN   # Sever HQ sign (left of building @ warp 20,17)
 results['Ironhold_IronholdCity'] = write_layout('Ironhold_IronholdCity', g, BORDER_STONE)
 reg_layout('LAYOUT_IRONHOLD_IRONHOLD_CITY', 'Ironhold_IronholdCity', W, H,
            'gTileset_General', 'gTileset_Slateport')

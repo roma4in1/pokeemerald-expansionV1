@@ -917,14 +917,69 @@
 #define TRAINER_LEADER_EMBERVEIL_VEX        898 // Gym 3 — Fire/Flying (Caldera Badge)
 #define TRAINER_LEADER_EMBERVEIL_SOLACE     899 // Gym 4 — Fire (Pyrath Badge)
 
+// Pelagios — Schism Isle trainers (900-909). 6 faction scouts/guards then 4 gym
+// leaders. Parties from SCHISM_BRIEF.md verbatim (pre-evolution parenthetical
+// substitutions where the brief uses them — none on Schism). Pics are vanilla
+// placeholders per the brief's character sprite notes.
+#define TRAINER_ICEFACTION_SCHISM_1         900 // Scout Heln — FrozenTundra
+#define TRAINER_ICEFACTION_SCHISM_2         901 // Scout Vera — FrozenTundra
+#define TRAINER_POISONFACTION_SCHISM_1      902 // Wader Osk — ToxicSwamp
+#define TRAINER_POISONFACTION_SCHISM_2      903 // Wader Fen — ToxicSwamp
+#define TRAINER_ICEFACTION_SCHISM_3         904 // Guard Rael — IceCave
+#define TRAINER_POISONFACTION_SCHISM_3      905 // Researcher Siv — PoisonCity_Laboratory_Interior
+#define TRAINER_LEADER_SCHISM_SLEET         906 // Gym 1 — Ice (Frost Badge, narrative-only)
+#define TRAINER_LEADER_SCHISM_EIRA          907 // Gym 2 — Ice (Commander Badge, narrative-only)
+#define TRAINER_LEADER_SCHISM_MURK          908 // Gym 3 — Poison/Ghost (Venom Badge, narrative-only)
+#define TRAINER_LEADER_SCHISM_DRENN         909 // Gym 4 — Poison/Dragon (Drenn Badge, narrative-only)
+
+// Thalvern Isle (910-916, 7 trainers: 4 generics + 3 gym leaders — Thalvern has ONLY 3 gyms)
+#define TRAINER_SCHOLAR_THALVERN_1          910 // Scholar Wren — CoastalRoute
+#define TRAINER_COVENANT_THALVERN_1         911 // Researcher Holt — CoastalRoute
+#define TRAINER_COVENANT_THALVERN_2         912 // Researcher Sael — DeepApproach
+#define TRAINER_COVENANT_THALVERN_3         913 // Senior Researcher Cael — DeepApproach
+#define TRAINER_LEADER_THALVERN_TIDE        914 // Gym 1 — Water (Tide Badge, narrative-only)
+#define TRAINER_LEADER_THALVERN_PSALM       915 // Gym 2 — Psychic (Vision Badge, narrative-only)
+#define TRAINER_LEADER_THALVERN_LENS        916 // Gym 3 — Water/Psychic (Depth Badge, narrative-only)
+#define TRAINER_GUARD_GILDHAVEN_1           917 // Exchange Guard Rael — TheExchange_Exterior
+#define TRAINER_GUARD_GILDHAVEN_2           918 // Exchange Guard Sera — TheExchange_Exterior
+#define TRAINER_GUARD_GILDHAVEN_3           919 // Elite Guard Morn — TheExchange_Interior1
+#define TRAINER_GUARD_GILDHAVEN_4           920 // Elite Guard Daven — TheExchange_Interior1
+#define TRAINER_LEADER_GILDHAVEN_GLINT      921 // Gym 1 — Fairy (Gilt Badge, narrative-only)
+#define TRAINER_LEADER_GILDHAVEN_SHADE      922 // Gym 2 — Dark (Shadow Badge, narrative-only)
+#define TRAINER_LEADER_GILDHAVEN_LACE       923 // Gym 3 — Fairy/Dark (Vane Badge, narrative-only)
+#define TRAINER_LEADER_GILDHAVEN_SEREL      924 // Gym 4 — Fairy/Dark (Exchange Badge, narrative-only)
+
+// --- Primalis Isle (925-932, 8 trainers: 4 Zoan guardians + 4 gym leaders) ---
+#define TRAINER_ZOAN_PRIMALIS_1             925 // Guardian Sera — JungleRoute1
+#define TRAINER_ZOAN_PRIMALIS_2             926 // Guardian Vex — JungleRoute1
+#define TRAINER_ZOAN_PRIMALIS_3             927 // Guardian Rael — JungleInterior
+#define TRAINER_ZOAN_PRIMALIS_4             928 // Guardian Cael — JungleInterior
+#define TRAINER_LEADER_PRIMALIS_FERN        929 // Gym 1 — Grass (Verdant Badge, narrative-only)
+#define TRAINER_LEADER_PRIMALIS_SCALE       930 // Gym 2 — Dragon (Scale Badge, narrative-only)
+#define TRAINER_LEADER_PRIMALIS_THORN       931 // Gym 3 — Grass/Dragon (Thorn Badge, narrative-only)
+#define TRAINER_LEADER_PRIMALIS_MAKO        932 // Gym 4 — Elder Mako, Dragon/Water (Elder Badge, narrative-only)
+
+// --- Aetheron Isle (Sky Island — 933-939, 7 trainers: 2 community guardians +
+//     2 Covenant officers + 3 gym leaders) ---
+#define TRAINER_GUARDIAN_AETHERON_1         933 // Guardian Sael — SkyRoute
+#define TRAINER_GUARDIAN_AETHERON_2         934 // Guardian Renn — SkyRoute
+#define TRAINER_COVENANT_AETHERON_1         935 // Covenant Officer Mael — CovenantInstallation
+#define TRAINER_COVENANT_AETHERON_2         936 // Covenant Officer Sera — CovenantInstallation_Interior
+#define TRAINER_LEADER_AETHERON_GALE        937 // Gym 1 — Flying (Storm Badge, narrative-only)
+#define TRAINER_LEADER_AETHERON_ARC         938 // Gym 2 — Electric (Volt Badge, narrative-only)
+#define TRAINER_LEADER_AETHERON_VOSS        939 // Gym 3 — Electric/Steel (Command Badge, narrative-only)
+
+// --- Convergence (FINAL ISLAND — 940, 1 trainer: Dorne only; no gyms, no generics) ---
+#define TRAINER_LEADER_DORNE                940 // Marshal Vael Dorne — the game's FINAL battle (Ending 1 / STOP path only)
+
 // Trainer flag space was expanded on 2026-06-11: MAX_TRAINERS_COUNT_EMERALD raised
 // from 864 to 1024 (+160 slots). Trainer defeat flags now occupy 0x500-0x8FF.
 // SYSTEM_FLAGS is derived from TRAINER_FLAGS_END (flags.h), so the entire system/
 // daily flag block floats up automatically with no per-flag collisions.
-// Headroom after Emberveil (888-899, 12 trainers): TRAINERS_COUNT_EMERALD 900, so
-// 1024-900 = 124 free trainer slots remain for future islands. SAVE-BREAKING (dev).
+// Headroom after Convergence (Dorne, 940): TRAINERS_COUNT_EMERALD 941, so
+// 1024-941 = 83 free trainer slots remain. SAVE-BREAKING (dev).
 
-#define TRAINERS_COUNT_EMERALD     900
+#define TRAINERS_COUNT_EMERALD     941
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

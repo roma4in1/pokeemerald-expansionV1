@@ -13,10 +13,28 @@ BEFORE building (grep the include/ tree):
   There is NO `MAP_BATTLE_SCENE_BUILDING` or `_CAVE` (the IRONHOLD_BRIEF named these but
   they don't exist). Use _GYM for gym battle maps, _NORMAL otherwise.
 - weather: WEATHER_SHADE is the overcast value (NOT `WEATHER_CLOUDS`). WEATHER_SUNNY_CLOUDS=1.
+  There is NO `WEATHER_THUNDERSTORM` (Aetheron's brief names it); the real heavy-storm
+  symbol is **WEATHER_RAIN_THUNDERSTORM** (5). WEATHER_RAIN=3 for plain rain.
 - music: many routes share MUS_ROUTE110; MUS_ROUTE111 does NOT exist as a symbol.
+  MUS_SOOTOPOLIS (not _CITY), MUS_AQUA_MAGMA_HIDEOUT (not MUS_TEAM_AQUA_MAGMA_HIDEOUT).
 - regional-form species use the suffixed form: SPECIES_GEODUDE_ALOLA (not _ALOLAN),
   SPECIES_FARFETCHD_GALAR (not _GALARIAN).
 - object gfx: OBJ_EVENT_GFX_OLD_MAN_1 exists; OBJ_EVENT_GFX_MAUVILLE_OLD_MAN_1 does not.
+  Scientist gfx are SCIENTIST_1 / SCIENTIST_2 / SCIENTIST - there is NO
+  OBJ_EVENT_GFX_SCIENTIST_M (the briefs write "SCIENTIST_M placeholder"; use _1).
+- Alolan Grimer is SPECIES_GRIMER_ALOLA (not _ALOLAN) - same _ALOLA/_GALAR suffix
+  rule as the form species above.
+
+REUSED-LAYOUT LINK CONSTRAINT (Gildhaven, 2026-06-14): FRLG-region vanilla layouts do
+NOT link into the Emerald build. A map referencing LAYOUT_POKEMON_MANSION_1F failed at
+link with `undefined reference to PokemonMansion_1F_Layout` — the layout's blockdata
+symbol is only emitted when an FRLG-region map uses it. Same risk for any Kanto/FRLG
+interior (Celadon Dept Store, Kanto gyms, Pokemon Mansion). FIX: reuse a HOENN-region
+vanilla interior instead (e.g. MOSSDEEP_CITY_SPACE_CENTER_1F/2F = multi-room wealthy
+palace, the Sirocco DaganPalace precedent; LILYCOVE_CITY_LILYCOVE_MUSEUM_1F/2F = grand
+hall). Quick pre-check: `grep -rln '"LAYOUT_X"' data/maps/*/map.json | grep -v _Frlg` —
+if zero non-Frlg maps use it, it won't link. Match warp coords to the existing user of
+that layout (the bounds differ; FRLG mansions are 38x35+, the Hoenn swaps are ~16x10).
 
 bg_hidden_item_event REQUIRES a flag >= FLAG_HIDDEN_ITEMS_START (asm/macros/map.inc has a
 `.if \flag < FLAG_HIDDEN_ITEMS_START / .error` guard). A custom FLAG_ITEM_* in the wrong

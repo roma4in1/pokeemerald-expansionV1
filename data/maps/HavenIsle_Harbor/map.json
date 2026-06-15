@@ -3,7 +3,6 @@
   "name": "HavenIsle_Harbor",
   "layout": "LAYOUT_HAVEN_ISLE_HARBOR",
   "music": "MUS_SLATEPORT",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_HAVEN_ISLE_HARBOR",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -92,5 +91,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "HavenIsleHarbor_EventScript_Tennyson"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

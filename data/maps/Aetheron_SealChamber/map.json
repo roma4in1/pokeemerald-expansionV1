@@ -1,0 +1,100 @@
+{
+  "id": "MAP_AETHERON_SEAL_CHAMBER",
+  "name": "Aetheron_SealChamber",
+  "layout": "LAYOUT_SEALED_CHAMBER_INNER_ROOM",
+  "music": "MUS_SEALED_CHAMBER",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_AETHERON_STORM_PEAK",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_AETHERON_STORMVEIL",
+      "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
+      "x": 10,
+      "y": 5,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_AETHERON_SEAL_APPARATUS",
+      "graphics_id": "OBJ_EVENT_GFX_CABLE_CAR",
+      "x": 10,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AetheronSealChamber_EventScript_Apparatus",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_AETHERON_CASS_CHAMBER",
+      "graphics_id": "OBJ_EVENT_GFX_RIVAL_MAY_NORMAL",
+      "x": 12,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AetheronSealChamber_EventScript_CassChamber",
+      "flag": "FLAG_AETHERON_CASS_SEEN"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_AETHERON_STORM_PEAK",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_AETHERON_PROGRESS",
+      "var_value": "5",
+      "script": "AetheronSealChamber_EventScript_Discovery"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_AETHERON_PROGRESS",
+      "var_value": "5",
+      "script": "AetheronSealChamber_EventScript_Discovery"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AetheronSealChamber_EventScript_StormCompass"
+    }
+  ]
+}

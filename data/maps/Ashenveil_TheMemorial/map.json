@@ -1,0 +1,99 @@
+{
+  "id": "MAP_ASHENVEIL_THE_MEMORIAL",
+  "name": "Ashenveil_TheMemorial",
+  "layout": "LAYOUT_ASHENVEIL_THE_MEMORIAL",
+  "music": "MUS_MT_PYRE_EXTERIOR",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ASHENVEIL_MEMORIAL",
+  "requires_flash": false,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ASHENVEIL_DEAD_CITY_EXTERIOR",
+      "offset": -6,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ASHENVEIL_MORTHAS_GROVE",
+      "offset": -2,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_ASHENVEIL_DORNE",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 14,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AshenveilTheMemorial_EventScript_Dorne",
+      "flag": "FLAG_ASHENVEIL_DORNE_MET"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_ASHENVEIL_PROGRESS",
+      "var_value": "3",
+      "script": "AshenveilTheMemorial_EventScript_DorneScene"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_ASHENVEIL_PROGRESS",
+      "var_value": "3",
+      "script": "AshenveilTheMemorial_EventScript_DorneScene"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "AshenveilTheMemorial_EventScript_Grave1"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "AshenveilTheMemorial_EventScript_Grave2"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "AshenveilTheMemorial_EventScript_Grave3"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "AshenveilTheMemorial_EventScript_GraveNewest"
+    }
+  ]
+}

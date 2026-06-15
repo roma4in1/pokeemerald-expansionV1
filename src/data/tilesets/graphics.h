@@ -1635,6 +1635,140 @@ const u16 gTilesetPalettes_UnionRoom[][16] =
 
 const u32 gTilesetTiles_UnionRoom[] = INCGFX_U32("data/tilesets/secondary/union_room/tiles.png", ".4bpp.fastSmol");
 
+// Pelagios custom secondary tilesets
+
+const u32 gTilesetTiles_PelagiosCoastal[] = INCGFX_U32("data/tilesets/secondary/pelagios_coastal/tiles.png", ".4bpp.fastSmol", "-num_tiles 413 -Wnum_tiles");
+
+const u16 gTilesetPalettes_PelagiosCoastal[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_coastal/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_PelagiosDesert[] = INCGFX_U32("data/tilesets/secondary/pelagios_desert/tiles.png", ".4bpp.fastSmol", "-num_tiles 336 -Wnum_tiles");
+
+const u16 gTilesetPalettes_PelagiosDesert[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_desert/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_PelagiosVolcanic[] = INCGFX_U32("data/tilesets/secondary/pelagios_volcanic/tiles.png", ".4bpp.fastSmol", "-num_tiles 294 -Wnum_tiles");
+
+const u16 gTilesetPalettes_PelagiosVolcanic[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_volcanic/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_PelagiosIce[] = INCGFX_U32("data/tilesets/secondary/pelagios_ice/tiles.png", ".4bpp.fastSmol", "-num_tiles 255 -Wnum_tiles");
+
+const u16 gTilesetPalettes_PelagiosIce[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_ice/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_PelagiosPoison[] = INCGFX_U32("data/tilesets/secondary/pelagios_poison/tiles.png", ".4bpp.fastSmol", "-num_tiles 197 -Wnum_tiles");
+
+const u16 gTilesetPalettes_PelagiosPoison[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_poison/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_PelagiosUnderwater[] = INCGFX_U32("data/tilesets/secondary/pelagios_underwater/tiles.png", ".4bpp.fastSmol", "-num_tiles 229 -Wnum_tiles");
+
+const u16 gTilesetPalettes_PelagiosUnderwater[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/pelagios_underwater/palettes/15.pal", ".gbapal"),
+};
+
 #if IS_FRLG
 
 const u32 gTilesetTiles_Building_Frlg[] = INCGFX_U32("data/tilesets/primary/building_frlg/tiles.png", ".4bpp.smol");

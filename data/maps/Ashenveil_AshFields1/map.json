@@ -1,0 +1,93 @@
+{
+  "id": "MAP_ASHENVEIL_ASH_FIELDS1",
+  "name": "Ashenveil_AshFields1",
+  "layout": "LAYOUT_ASHENVEIL_ASH_FIELDS1",
+  "music": "MUS_ROUTE120",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ASHENVEIL_ASH_FIELDS",
+  "requires_flash": false,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ASHENVEIL_GREYPORT",
+      "offset": 1,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ASHENVEIL_DEAD_CITY_EXTERIOR",
+      "offset": -5,
+      "direction": "up"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 16,
+      "elevation": 3,
+      "var": "VAR_ASHENVEIL_PROGRESS",
+      "var_value": "2",
+      "script": "AshenveilAshFields1_EventScript_LanternGate"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 16,
+      "elevation": 3,
+      "var": "VAR_ASHENVEIL_PROGRESS",
+      "var_value": "2",
+      "script": "AshenveilAshFields1_EventScript_LanternGate"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 16,
+      "elevation": 3,
+      "var": "VAR_ASHENVEIL_PROGRESS",
+      "var_value": "2",
+      "script": "AshenveilAshFields1_EventScript_LanternGate"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AshenveilAshFields1_EventScript_ChildShoe"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AshenveilAshFields1_EventScript_DoorHandle"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AshenveilAshFields1_EventScript_StreetSign"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AshenveilAshFields1_EventScript_Footprints"
+    }
+  ]
+}

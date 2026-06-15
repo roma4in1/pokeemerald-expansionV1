@@ -1,0 +1,107 @@
+{
+  "id": "MAP_THALVERN_THRONE_ROOM",
+  "name": "Thalvern_ThroneRoom",
+  "layout": "LAYOUT_THALVERN_THRONE_ROOM",
+  "music": "MUS_SEALED_CHAMBER",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_THALVERN_THRONE_ROOM",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_THALVERN_PELAGIOS",
+      "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
+      "x": 13,
+      "y": 4,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_THALVERN_APPARATUS",
+      "graphics_id": "OBJ_EVENT_GFX_CABLE_CAR",
+      "x": 13,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ThalvernThroneRoom_EventScript_Apparatus",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_THALVERN_THRONE_DEX",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 14,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ThalvernThroneRoom_EventScript_Dex",
+      "flag": "FLAG_TEMP_1"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 13,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_THALVERN_SUBMERGED_RUINS_INTERIOR3",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 14,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_THALVERN_SUBMERGED_RUINS_INTERIOR3",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 34,
+      "elevation": 3,
+      "var": "VAR_THALVERN_PROGRESS",
+      "var_value": "5",
+      "script": "ThalvernThroneRoom_EventScript_ThroneSequence"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 34,
+      "elevation": 3,
+      "var": "VAR_THALVERN_PROGRESS",
+      "var_value": "5",
+      "script": "ThalvernThroneRoom_EventScript_ThroneSequence"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "ThalvernThroneRoom_EventScript_Inscription"
+    }
+  ]
+}

@@ -49,7 +49,26 @@
 //
 // If you choose to widen Map Sections, be aware that Met Locations (below)
 // are based on Map Sections and will also be widened.
-typedef u8  mapsec_u8_t;
+//
+// PELAGIOS (2026-06-14): WIDENED to u16. The Pelagios MAPSEC enum hit the u8
+// ceiling at Gildhaven (MAPSEC_NONE == 255). Primalis and the remaining islands
+// need more region-map sections than 255 can hold, so mapsec_u8_t is now a u16:
+// every variable/parameter that *handles* a MAPSEC id or a Pokemon Met Location
+// is now 16-bit and can hold ids past 255 and the relocated METLOC_* sentinels
+// (now 0x1FD/0x1FE/0x1FF; see region_map_sections.constants.json.txt).
+//
+// IMPORTANT - the STORED Pokemon metLocation is NOT a full u16. BoxPokemon could
+// not grow: the PC box storage save region is already at its flash budget and a
+// wider BoxPokemon overflows it (PokemonStorageFreeSpace static-assert). So the
+// stored field is a 9-bit bitfield repacked into the existing 12-byte
+// PokemonSubstruct3 (reclaiming its former `unused_0B` bit) - giving MAPSEC ids a
+// ceiling of 508 with sentinels at 509-511, and ZERO save-size growth. See
+// struct PokemonSubstruct3 in include/pokemon.h. This is still SAVE-BREAKING (the
+// substruct bit layout changed), accepted in the current dev phase.
+//
+// NOTE: the type is still named "_u8_t" for source-compatibility with the
+// hundreds of existing references; only its underlying width changed.
+typedef u16 mapsec_u8_t;
 typedef u16 mapsec_u16_t;
 typedef s16 mapsec_s16_t;
 typedef s32 mapsec_s32_t;

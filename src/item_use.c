@@ -61,6 +61,7 @@ static void PlayerFaceHiddenItem(enum Direction);
 static void CheckForHiddenItemsInMapConnection(u8);
 static void Task_OpenRegisteredPokeblockCase(u8);
 static void Task_AccessPokemonBoxLink(u8);
+static void Task_UseStormCompass(u8);
 static void ItemUseOnFieldCB_Bike(u8);
 static void ItemUseOnFieldCB_Rod(u8);
 static void ItemUseOnFieldCB_Itemfinder(u8);
@@ -96,6 +97,10 @@ static const u8 sText_UsedVar2WildRepelled[] = _("{PLAYER} used the\n{STR_VAR_2}
 static const u8 sText_PlayedPokeFluteCatchy[] = _("Played the POKé FLUTE.\pNow, that's a catchy tune!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PlayedPokeFlute[] = _("Played the POKé FLUTE.");
 static const u8 sText_PokeFluteAwakenedMon[] = _("The POKé FLUTE awakened sleeping\nPOKéMON.{PAUSE_UNTIL_PRESS}");
+
+// Pelagios: Storm Compass field-use script (defined in data/scripts/pelagios_boat.inc,
+// included via data/event_scripts.s). Not in event_scripts.h, so declare it here.
+extern const u8 Pelagios_EventScript_StormCompass[];
 
 // EWRAM variables
 EWRAM_DATA static TaskFunc sItemUseOnFieldCB = NULL;
@@ -754,6 +759,22 @@ void ItemUseOutOfBattle_PokemonBoxLink(u8 taskId)
 static void Task_AccessPokemonBoxLink(u8 taskId)
 {
     ScriptContext_SetupScript(EventScript_AccessPokemonBoxLink);
+    DestroyTask(taskId);
+}
+
+// Pelagios: Storm Compass (inter-island fast travel, replaces Fly). Mirrors
+// ItemUseOutOfBattle_PokemonBoxLink: closes the bag, returns to the field, then
+// runs the destination-select script. NO map-type / surf / harbor gate -
+// SetUpItemUseOnFieldCallback only fades the bag out; the menu opens anywhere.
+void ItemUseOutOfBattle_StormCompass(u8 taskId)
+{
+    sItemUseOnFieldCB = Task_UseStormCompass;
+    SetUpItemUseOnFieldCallback(taskId);
+}
+
+static void Task_UseStormCompass(u8 taskId)
+{
+    ScriptContext_SetupScript(Pelagios_EventScript_StormCompass);
     DestroyTask(taskId);
 }
 

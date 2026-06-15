@@ -1,0 +1,95 @@
+{
+  "id": "MAP_AETHERON_COVENANT_INSTALLATION_INTERIOR",
+  "name": "Aetheron_CovenantInstallation_Interior",
+  "layout": "LAYOUT_MOSSDEEP_CITY_SPACE_CENTER_1F",
+  "music": "MUS_AQUA_MAGMA_HIDEOUT",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_AETHERON_COVENANT_INSTALLATION",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_AETHERON_VOSS",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 8,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AetheronCovenantInstallationInterior_EventScript_Voss",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_AETHERON_INTERIOR_OFFICER",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 3,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "AetheronCovenantInstallationInterior_EventScript_Officer2",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_AETHERON_CASS_DEFECT",
+      "graphics_id": "OBJ_EVENT_GFX_RIVAL_MAY_NORMAL",
+      "x": 13,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AetheronCovenantInstallationInterior_EventScript_CassDefection",
+      "flag": "FLAG_AETHERON_GYM3_CLEAR"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_AETHERON_COVENANT_INSTALLATION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_AETHERON_COVENANT_INSTALLATION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_AETHERON_STORM_PEAK",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "AetheronCovenantInstallationInterior_EventScript_ControlPanel"
+    }
+  ]
+}

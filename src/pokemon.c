@@ -749,7 +749,10 @@ UNUSED static const struct BoxPokemon sBoxPokemonConstantsFit =
         .spDefenseEV = MAX_PER_STAT_EVS,
     },
     .secure.substructs[3].type3 = {
-        .metLocation = min(MAPSEC_COUNT, min(METLOC_SPECIAL_EGG, min(METLOC_IN_GAME_TRADE, METLOC_FATEFUL_ENCOUNTER))),
+        // PELAGIOS: metLocation is u16 now; assert it can hold the largest value
+        // it must store - the highest METLOC_* sentinel (0xFFFF). max() not min():
+        // we want the field proven wide enough for the biggest, not the smallest.
+        .metLocation = max(MAPSEC_COUNT, max(METLOC_SPECIAL_EGG, max(METLOC_IN_GAME_TRADE, METLOC_FATEFUL_ENCOUNTER))),
         .metLevel = MAX_LEVEL,
         .metGame = NUM_VERSIONS, // NOTE: NUM_VERSIONS is inclusive!
         .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -2756,7 +2759,9 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
             GetSubstruct3(boxMon)->pokerus = (GetSubstruct3(boxMon)->pokerus & 0xF0) | *data;
             break;
         case MON_DATA_MET_LOCATION:
-            SET8(GetSubstruct3(boxMon)->metLocation);
+            // PELAGIOS: metLocation is now u16 (metloc_u8_t == u16) — write both
+            // bytes so the full MAPSEC id round-trips. SET8 would truncate it.
+            SET16(GetSubstruct3(boxMon)->metLocation);
             break;
         case MON_DATA_MET_LEVEL:
             SET8(GetSubstruct3(boxMon)->metLevel);

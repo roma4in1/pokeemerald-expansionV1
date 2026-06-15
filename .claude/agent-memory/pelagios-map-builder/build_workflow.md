@@ -36,3 +36,36 @@ LOCALID_* constants are auto-generated from `local_id` fields in map.json - no m
 Land encounter tables need exactly 12 mons; slot rates are fixed
 20/20/10/10/10/10/5/5/4/4/1/1. Map a 40/30/20/10 brief split to consecutive slots that
 sum to those percents (40=slots0-1, 30=2-4, 20=5-7, 10=8-11).
+
+**Per-island exceptions exist — read the island brief before assuming the full checklist
+applies.** Ashenveil (the Dead Island, built 2026-06-14) deliberately OMITS heal locations
+(step 6 skipped entirely — no inn/nurse, and IsLastHealLocationPlayerHouse() must stay
+untouched), has ZERO trainers/gyms, and wild tables in only 3 of 9 maps. Its only "NPCs" are
+examine bg_event signs + two script-managed hide-flag objects (Dorne uses
+FLAG_ASHENVEIL_DORNE_MET so he's present-until-scene; Morthas uses FLAG_MORTHAS_ENCOUNTERED so
+the object vanishes once set — the map-builder just sets the object's `flag` field, the engine
+hides it). Sea Chart is a SCRIPTED examine, not a bg_hidden_item (no flag slot consumed).
+
+**MAPSEC >= 0x100 truncation (open systems item):** the map_section field in the map-header
+struct is a single .byte, so islands whose MAPSEC enum values exceed 0xFF (Primalis, Ashenveil)
+emit a harmless "value 0x10X truncated to 0xX" warning at header.inc line 12. Maps still build
+and function; region-map naming for those late islands may be slightly wrong until a
+systems-engineer widens the field. NOT a map-builder bug — don't chase it.
+
+**Aetheron (the SKY ISLAND, built 2026-06-14)** added a NEW arrival pattern: a SCRIPTED
+ASCENT map (KnockUpStream) with NO warps back — the boat (Pelagios_EventScript_SailToAetheron,
+which is Sea-Chart-gated, NOT boat-tier-gated) warps to KnockUpStream's arrival tile, the
+ascent coord-trigger cutscene fires, then a ONE-WAY forward warp lands the player on a
+DEDICATED non-door arrival tile on CloudLanding (point the forward warp at a warp_event index
+whose (x,y) is a plain off-path walkable tile, NOT the inn door — otherwise the player re-warps
+into the inn on arrival). Boat-stub swap: replace only the `goto SailNoChart` fall-through, keep
+the `goto_if_unset FLAG_SEA_CHART_FOUND` gate. Cloud aesthetic = light General ground (0x3001) +
+deep-water VOID (0x1170) as the open-sky abyss framing; true cloud-white is a Porymap pass.
+Installation exterior pairs gTileset_Mauville (angular = "feels wrong"). Multiple script-managed
+Cass objects across maps all share ONE hide flag (FLAG_AETHERON_CASS_SEEN) as a placeholder —
+the script-writer owns runtime "walks alongside" visibility; the defection object uses
+FLAG_AETHERON_GYM3_CLEAR. See [[link-time-gotchas]] for WEATHER_RAIN_THUNDERSTORM / MUS gotchas.
+
+**Dusk/dark-palette maps:** there is no map-builder lever for tinting a map dark. Approximate
+with the greyest available metatiles (Slateport stone for ash/ruin) + fog weather, and document
+that true darkening needs a Porymap per-map palette pass or a C tint. Done this way for Ashenveil.

@@ -675,69 +675,134 @@
 #define FLAG_HIDDEN_ITEM_EMBERVEIL_BERRY1                    (FLAG_HIDDEN_ITEMS_START + 0x74) // 0x268 (Rawst Berry, LavaRoute1)
 #define FLAG_HIDDEN_ITEM_EMBERVEIL_BERRY2                    (FLAG_HIDDEN_ITEMS_START + 0x75) // 0x269 (Rawst Berry, LavaRoute1 second)
 
+// Pelagios — Schism hidden-item flags (MUST be in the hidden-items range; the
+// bg_hidden_item_event macro hard-errors if flag < FLAG_HIDDEN_ITEMS_START).
+#define FLAG_HIDDEN_ITEM_SCHISM_1                            (FLAG_HIDDEN_ITEMS_START + 0x76) // 0x26A (ice side)
+#define FLAG_HIDDEN_ITEM_SCHISM_2                            (FLAG_HIDDEN_ITEMS_START + 0x77) // 0x26B (the Scar)
+
 #define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
-#define FLAG_UNUSED_0x276  0x276 // Unused Flag
-#define FLAG_UNUSED_0x277  0x277 // Unused Flag
-#define FLAG_UNUSED_0x278  0x278 // Unused Flag
-#define FLAG_UNUSED_0x279  0x279 // Unused Flag
-#define FLAG_UNUSED_0x27A  0x27A // Unused Flag
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
-#define FLAG_UNUSED_0x27C  0x27C // Unused Flag
-#define FLAG_UNUSED_0x27D  0x27D // Unused Flag
-#define FLAG_UNUSED_0x27E  0x27E // Unused Flag
-#define FLAG_UNUSED_0x27F  0x27F // Unused Flag
-#define FLAG_UNUSED_0x280  0x280 // Unused Flag
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
-#define FLAG_UNUSED_0x282  0x282 // Unused Flag
-#define FLAG_UNUSED_0x283  0x283 // Unused Flag
-#define FLAG_UNUSED_0x284  0x284 // Unused Flag
-#define FLAG_UNUSED_0x285  0x285 // Unused Flag
-#define FLAG_UNUSED_0x286  0x286 // Unused Flag
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
-#define FLAG_UNUSED_0x28B  0x28B // Unused Flag
-#define FLAG_UNUSED_0x28C  0x28C // Unused Flag
-#define FLAG_UNUSED_0x28D  0x28D // Unused Flag
-#define FLAG_UNUSED_0x28E  0x28E // Unused Flag
-#define FLAG_UNUSED_0x28F  0x28F // Unused Flag
-#define FLAG_UNUSED_0x290  0x290 // Unused Flag
-#define FLAG_UNUSED_0x291  0x291 // Unused Flag
-#define FLAG_UNUSED_0x292  0x292 // Unused Flag
-#define FLAG_UNUSED_0x293  0x293 // Unused Flag
-#define FLAG_UNUSED_0x294  0x294 // Unused Flag
-#define FLAG_UNUSED_0x295  0x295 // Unused Flag
-#define FLAG_UNUSED_0x296  0x296 // Unused Flag
-#define FLAG_UNUSED_0x297  0x297 // Unused Flag
-#define FLAG_UNUSED_0x298  0x298 // Unused Flag
-#define FLAG_UNUSED_0x299  0x299 // Unused Flag
-#define FLAG_UNUSED_0x29A  0x29A // Unused Flag
-#define FLAG_UNUSED_0x29B  0x29B // Unused Flag
-#define FLAG_UNUSED_0x29C  0x29C // Unused Flag
-#define FLAG_UNUSED_0x29D  0x29D // Unused Flag
-#define FLAG_UNUSED_0x29E  0x29E // Unused Flag
-#define FLAG_UNUSED_0x29F  0x29F // Unused Flag
-#define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
-#define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag
-#define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag
-#define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag
-#define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
-#define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
-#define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
+
+// ============================================================================
+// PELAGIOS STORY BLOCK 4 (0x26C-0x2BB, 80 flags) — RESERVED 2026-06-13
+//   For: Thalvern / Gildhaven / Primalis / Ashenveil / Aetheron / Convergence.
+// ----------------------------------------------------------------------------
+// Story blocks 1 (0x4A7-0x4EF), 2 (0x493-0x4A6) and 3 (scattered 0x468/0x470/
+// 0x472/0x479/0x4F9/0x4FA) are FULL; only 0x4FF remained below the trainer-flag
+// wall at 0x500. The remaining islands need a fresh contiguous run.
+//
+// This is a genuine vanilla FLAG_UNUSED run (0x26C-0x2BB, 80 contiguous slots),
+// bounded below by the Pelagios hidden-item flags (end 0x26B) and above by
+// vanilla object-hide flags (FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG 0x2BC).
+// COLLISION-VERIFIED 2026-06-13: every value 0x26C-0x2BB has exactly one
+// FLAG_UNUSED_* definition and is referenced NOWHERE outside flags.h (grepped
+// all of data/ src/ include/ asm/ for both the names and the raw hex values).
+//
+// SAFE against: trainer flags (0x500-0x8FF), SYSTEM_FLAGS (0x900+, floats off
+// MAX_TRAINERS_COUNT — never hardcode), the hidden-items range (>=0x1F4), and
+// SPECIAL_FLAGS_START (0x4000). FLAGS_COUNT is ~0xA00.
+//
+// HOW TO ALLOCATE: each island's constants pass renames the next contiguous
+// FLAG_UNUSED_0x### slots in this range to FLAG_<ISLAND>_<DESC> (same pattern as
+// blocks 1-3). Do NOT pre-name per-island flags here. The boundary placeholders
+// below visually claim the range; replace them as the range is consumed.
+// Per-island RESOLVED flags (0x4B0-0x4B4) and CIPHER_6-9 (0x4C2-0x4C5) are
+// ALREADY pre-allocated — grep before redefining; do not duplicate.
+//
+// HIDDEN-ITEM NOTE: this block consumes the last big contiguous hidden-item-
+// capable run below the trainer wall. After this, the only free hidden-item
+// slot left is 0x264 (1 slot). Future-island hidden items (~2/island) will need
+// a small carve-out — take it from the TOP of this block (which is over-
+// provisioned vs. the real ~50-60-flag need) when the time comes, or cut an
+// unreachable vanilla Hoenn hidden item. Flag to the user if it becomes tight.
+// ============================================================================
+// --- STORY BLOCK 4: Thalvern Isle (0x26C-0x275, 10 flags) ---
+// FLAG_THALVERN_RESOLVED (0x4B0), FLAG_DEX_ALIVE (0x4BA), FLAG_CIPHER_6_FOUND
+// (0x4C2) are PRE-ALLOCATED elsewhere and REUSED — not redefined here.
+#define FLAG_THALVERN_ARRIVED  0x26C // FLAG_PELAGIOS_BLOCK4_RESERVED_START — arrival cutscene done
+#define FLAG_THALVERN_GYM1_CLEAR  0x26D // Tide defeated
+#define FLAG_THALVERN_GYM2_CLEAR  0x26E // Psalm defeated
+#define FLAG_THALVERN_GYM3_CLEAR  0x26F // Lens defeated
+#define FLAG_THALVERN_DEX_MET  0x270 // Player spoke to Dex at DexCamp
+#define FLAG_THALVERN_LENS_DEFECTED  0x271 // Lens gave the Covenant access card
+#define FLAG_THALVERN_THRONE_CHOICE  0x272 // Choice scene triggered (Interior3)
+#define FLAG_THALVERN_SEAL_FOUND  0x273 // ThroneRoom entered
+#define FLAG_THALVERN_CIPHER_FOUND  0x274 // Cipher 6 collected (island flag; FLAG_CIPHER_6_FOUND is the cross-island one)
+#define FLAG_NUMA_VESS_CONFRONTED  0x275 // Optional Numa Vess confrontation done
+// --- Gildhaven Isle (STORY BLOCK 4, 0x276-0x281, 12 flags) ---
+// Reuses pre-allocated FLAG_GILDHAVEN_RESOLVED (0x4B1) and FLAG_CIPHER_7_FOUND (0x4C3).
+#define FLAG_GILDHAVEN_ARRIVED  0x276 // Arrival cutscene done (Goldport Harbor)
+#define FLAG_GILDHAVEN_GYM1_CLEAR  0x277 // Glint defeated
+#define FLAG_GILDHAVEN_GYM2_CLEAR  0x278 // Shade defeated
+#define FLAG_GILDHAVEN_GYM3_CLEAR  0x279 // Lace defeated
+#define FLAG_GILDHAVEN_GYM4_CLEAR  0x27A // Serel defeated
+#define FLAG_GILDHAVEN_DAGAN_MET  0x27B // Dagan met in BlackMarket (post-Gym1)
+#define FLAG_GILDHAVEN_LACE_TALKED  0x27C // Lace spoke post-battle
+#define FLAG_GILDHAVEN_MANOR_ACCESS  0x27D // VaneManor access granted (Lace key)
+#define FLAG_GILDHAVEN_COVENANT_MAP_SEEN  0x27E // Player examined Covenant yield map (Interior2)
+#define FLAG_GILDHAVEN_SEAL_FOUND  0x27F // SealChamber entered
+#define FLAG_GILDHAVEN_CIPHER_FOUND  0x280 // Cipher 7 collected (island flag; FLAG_CIPHER_7_FOUND is the cross-island one)
+#define FLAG_CASS_GILDHAVEN_SEEN  0x281 // Cass noble-quarter appearance logged (fires once)
+// --- Primalis Isle (STORY BLOCK 4, 0x282-0x28E, 13 flags) ---
+// Reuses pre-allocated FLAG_PRIMALIS_RESOLVED (0x4B2) and FLAG_CIPHER_8_FOUND (0x4C4).
+// ITEM_BEAST_WHISTLE (879) pre-existed; VAR_PRIMALIS_PROGRESS (0x4106) pre-existed.
+#define FLAG_PRIMALIS_ARRIVED  0x282 // Arrival cutscene done (Verdant Landing)
+#define FLAG_PRIMALIS_GYM1_CLEAR  0x283 // Fern defeated
+#define FLAG_PRIMALIS_GYM2_CLEAR  0x284 // Scale defeated
+#define FLAG_PRIMALIS_GYM3_CLEAR  0x285 // Thorn defeated
+#define FLAG_PRIMALIS_GYM4_CLEAR  0x286 // Elder Mako defeated
+#define FLAG_PRIMALIS_TRUST_EARNED  0x287 // Mako's trust earned (post-Gym4)
+#define FLAG_PRIMALIS_ORAL_HISTORY_HEARD  0x288 // Oral history scene seen (kill switch / Haven Isle node)
+#define FLAG_PRIMALIS_LENS_MET  0x289 // Lens met at the Verdant Landing inn
+#define FLAG_PRIMALIS_RUINS_FOUND  0x28A // AncientRuinsCamp altar examined
+#define FLAG_PRIMALIS_SEAL_FOUND  0x28B // Heartwood seal chamber entered
+#define FLAG_PRIMALIS_CIPHER_FOUND  0x28C // Cipher 8 collected (island flag; FLAG_CIPHER_8_FOUND is the cross-island one)
+#define FLAG_BEAST_WHISTLE_OBTAINED  0x28D // ITEM_BEAST_WHISTLE received from Mako
+#define FLAG_PRIMALIS_TOKEN_GIVEN  0x28E // ITEM_PRIMALIS_TOKEN (carved token) received from Mako
+// --- Ashenveil Isle (Dead Island — STORY BLOCK 4, 0x28F-0x296, 8 flags) ---
+// NO gyms, NO trainers — pure narrative island.
+// REUSES pre-allocated (do NOT redefine): FLAG_ASHENVEIL_VISITED (0x4B3),
+// FLAG_DORNE_CHOICE_STOP/HELP/DEFER (0x4B5-0x4B7), FLAG_TRUE_ENDING_UNLOCKED (0x4B8),
+// FLAG_CIPHER_9_FOUND (0x4C5). VAR_ASHENVEIL_PROGRESS (0x4107) +
+// VAR_DORNE_RELATIONSHIP (0x40F8) pre-existed. ITEM_PHANTOM_LANTERN (881) pre-existed.
+#define FLAG_ASHENVEIL_ARRIVED  0x28F // Arrival cutscene done (Greyport)
+#define FLAG_ASHENVEIL_OUTPOST_MET  0x290 // Orin met at the research outpost
+#define FLAG_PHANTOM_LANTERN_OBTAINED  0x291 // ITEM_PHANTOM_LANTERN received from Orin
+#define FLAG_ASHENVEIL_COVENANT_DOCS_FOUND  0x292 // Real Covenant documents found (DeadCity Ruins2)
+#define FLAG_ASHENVEIL_DORNE_MET  0x293 // Dorne memorial scene played (choice made)
+#define FLAG_SEA_CHART_FOUND  0x294 // ITEM_SEA_CHART found (MorthasGrove); ACTIVATES Aetheron in the boat menu
+#define FLAG_MORTHAS_ENCOUNTERED  0x295 // Morthas 5-turn endurance sequence completed; Seal Shard awarded
+#define FLAG_ASHENVEIL_CIPHER_FOUND  0x296 // Cipher 9 collected (island flag; FLAG_CIPHER_9_FOUND is the cross-island one)
+// --- Aetheron Isle (Sky Island — STORY BLOCK 4, 0x297-0x29E, 8 flags) ---
+// REUSES pre-allocated (do NOT redefine): FLAG_AETHERON_RESOLVED (0x4B4),
+// FLAG_CASS_DEFECTED (0x4BC). VAR_AETHERON_PROGRESS (0x4108) + VAR_CASS_RELATIONSHIP
+// (0x40F7) pre-existed. ITEM_STORM_COMPASS (880) pre-existed. NO new cipher
+// (CIPHER_1-9 complete; Ashenveil took cipher 9). Reached via Knock Up Stream +
+// ITEM_SEA_CHART (FLAG_SEA_CHART_FOUND 0x294), NOT by boat tier.
+#define FLAG_AETHERON_ARRIVED  0x297 // Knock Up Stream ascent done (CloudLanding)
+#define FLAG_AETHERON_GYM1_CLEAR  0x298 // Gale defeated
+#define FLAG_AETHERON_GYM2_CLEAR  0x299 // Arc defeated
+#define FLAG_AETHERON_GYM3_CLEAR  0x29A // Commander Voss defeated
+#define FLAG_AETHERON_CASS_SEEN  0x29B // First Cass sighting (AetherVillage)
+#define FLAG_AETHERON_INSTALLATION_FOUND  0x29C // Covenant installation panel examined
+#define FLAG_AETHERON_SEAL_FOUND  0x29D // SealChamber entered
+#define FLAG_STORM_COMPASS_OBTAINED  0x29E // ITEM_STORM_COMPASS received
+// --- Convergence (FINAL ISLAND — STORY BLOCK 4, 0x29F-0x2A6, 8 flags) ---
+// REUSES pre-allocated (do NOT redefine): FLAG_DORNE_CHOICE_STOP/HELP/DEFER
+// (0x4B5-0x4B7), FLAG_TRUE_ENDING_UNLOCKED (0x4B8), FLAG_CASS_DEFECTED (0x4BC).
+// VAR_CONVERGENCE_PROGRESS (0x4109) pre-existed. NO FLAG_CONVERGENCE_RESOLVED was
+// pre-allocated (RESOLVED set ends at FLAG_AETHERON_RESOLVED 0x4B4); per the brief
+// FLAG_CONVERGENCE_COMPLETE (0x2A6) serves the "island resolved/any ending played"
+// role instead. NO new cipher, NO new var, NO new item beyond ITEM_WARDENS_RESEARCH.
+#define FLAG_CONVERGENCE_ARRIVED  0x29F // Arrived at Convergence (Approach)
+#define FLAG_CONVERGENCE_GATHERING_SEEN  0x2A0 // Gathering scene played (Dorne + Sollis reunion)
+#define FLAG_SOLLIS_CONFESSION_HEARD  0x2A1 // Sollis told everything; gave ITEM_WARDENS_RESEARCH
+#define FLAG_DORNE_FINAL_BATTLE_DONE  0x2A2 // Ending 1 Dorne battle complete
+#define FLAG_ENDING_STOP_PLAYED  0x2A3 // Ending 1 (Stop Dorne) played
+#define FLAG_ENDING_HELP_PLAYED  0x2A4 // Ending 2 (Help Dorne) played
+#define FLAG_ENDING_TRUE_PLAYED  0x2A5 // Ending 3 (True/Liberation) played
+#define FLAG_CONVERGENCE_COMPLETE  0x2A6 // Any ending played (island resolved)
+// --- STORY BLOCK 4 free from here: 0x2A7-0x2BB (21 flags) for future use ---
+#define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
 #define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
 #define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
 #define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
@@ -757,8 +822,8 @@
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
 #define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
-#define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
-#define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
+#define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag (STORY BLOCK 4, free)
+#define FLAG_PELAGIOS_BLOCK4_RESERVED_END  0x2BB // last slot of STORY BLOCK 4 (0x26C-0x2BB)
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1185,7 +1250,7 @@
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MASTER_BALL                 0x465 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MAX_ELIXIR                  0x466 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL                   0x467 // Unused Flag, leftover from the Ruby Magma hideout
-#define FLAG_UNUSED_0x468                                           0x468 // Unused Flag
+#define FLAG_SCHISM_SEAL_NORTH_FOUND                                0x468 // Pelagios STORY BLOCK 3: North SealChamber (Glacith) discovered
 #define FLAG_ITEM_MT_PYRE_2F_ULTRA_BALL                             0x469
 #define FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE                            0x46A
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B
@@ -1193,16 +1258,16 @@
 #define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
-#define FLAG_UNUSED_0x470                                           0x470 // Unused Flag
+#define FLAG_SCHISM_SEAL_SOUTH_FOUND                                0x470 // Pelagios STORY BLOCK 3: South SealChamber (Toxara) discovered
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
-#define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
+#define FLAG_SCHISM_SEAL_NORTH_DONE                                 0x472 // Pelagios STORY BLOCK 3: Glacith seal reinforced
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
 #define FLAG_ITEM_ROUTE_109_POTION                                  0x474
 #define FLAG_ITEM_ROUTE_110_ELIXIR                                  0x475
 #define FLAG_ITEM_ROUTE_111_ELIXIR                                  0x476
 #define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0x477
 #define FLAG_ITEM_ROUTE_115_HEAL_POWDER                             0x478
-#define FLAG_UNUSED_0x479                                           0x479 // Unused Flag
+#define FLAG_SCHISM_SEAL_SOUTH_DONE                                 0x479 // Pelagios STORY BLOCK 3: Toxara seal reinforced
 #define FLAG_ITEM_ROUTE_116_POTION                                  0x47A
 #define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0x47B
 #define FLAG_ITEM_ROUTE_120_REVIVE                                  0x47C
@@ -1235,7 +1300,11 @@
 // for Emberveil and later islands. Safe: well below trainer flags (0x500),
 // SYSTEM_FLAGS (0x900+), and the hidden-items range. It reuses vanilla
 // FLAG_UNUSED_0x493..0x4A6 slots immediately preceding story block 1.
-// Emberveil claims 0x493-0x49C (10 flags). Free: 0x49D-0x4A6 (10 flags).
+// Emberveil claims 0x493-0x49C (10 flags). Schism claims 0x49D-0x4A6 (10 flags).
+// BLOCK 2 IS NOW FULL. The remaining 6 Schism story flags live in STORY BLOCK 3
+// (scattered genuine FLAG_UNUSED slots: 0x468, 0x470, 0x472, 0x479, 0x4F9, 0x4FA),
+// tagged below. Thalvern/Gildhaven and later islands must find a fresh contiguous
+// FLAG_UNUSED run (never collide with trainer flags 0x500-0x8FF or SYSTEM_FLAGS 0x900+).
 // =====================================================================
 // Emberveil progression (overflow; FLAG_EMBERVEIL_ARRIVED is at 0x4EF in block 1,
 // FLAG_EMBERVEIL_RESOLVED at 0x4AE, FLAG_SOLACE_ALT_ENDING at 0x4B9 — reused, not redefined)
@@ -1249,16 +1318,21 @@
 #define FLAG_EMBERVEIL_SEAL_FOUND                                   0x49A // Player entered SealChamber
 #define FLAG_EMBERVEIL_CIPHER_FOUND                                 0x49B // Warden's Journal cipher 4 collected
 #define FLAG_SOLACE_TOLD_TRUTH                                      0x49C // Player told Solace the truth (Path A)
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
+// Pelagios — Schism Isle Progression Flags, part 1 (story block 2, 0x49D-0x4A6).
+// Block 2 was 0x49D-0x4A6 free (10 flags) after Emberveil. Schism fills it entirely.
+// Schism needs 16 story flags; the remaining 6 live in "STORY BLOCK 3" (scattered
+// genuine FLAG_UNUSED slots) — see below. (FLAG_SCHISM_RESOLVED 0x4AF, FLAG_DRENN_ALIVE
+// 0x4BB, FLAG_CIPHER_5_FOUND 0x4C1 already existed and are REUSED, not redefined.)
+#define FLAG_SCHISM_ARRIVED                                         0x49D // Player docked at Frostmark OR Venomquay
+#define FLAG_SCHISM_GYM1_CLEAR                                      0x49E // Sleet defeated
+#define FLAG_SCHISM_GYM2_CLEAR                                      0x49F // Eira defeated
+#define FLAG_SCHISM_GYM3_CLEAR                                      0x4A0 // Murk defeated
+#define FLAG_SCHISM_GYM4_CLEAR                                      0x4A1 // Drenn defeated
+#define FLAG_EIRA_SCAR_PASS                                         0x4A2 // Eira granted Scar access (north)
+#define FLAG_DRENN_SCAR_PASS                                        0x4A3 // Drenn granted Scar access (south)
+#define FLAG_SCAR_RUINS_FOUND                                       0x4A4 // Player examined the unified ruins
+#define FLAG_EIRA_CEASEFIRE_WILLING                                 0x4A5 // Eira agreed to meet at the Scar
+#define FLAG_DRENN_CEASEFIRE_WILLING                                0x4A6 // Drenn agreed to meet at the Scar
 // Pokémon Pelagios — Story Progression Flags
 #define FLAG_STARTER_CHOSEN                                         0x4A7
 #define FLAG_JOURNAL_OBTAINED                                       0x4A8
@@ -1363,8 +1437,8 @@
 #define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7
 #define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4F8
 
-#define FLAG_UNUSED_0x4F9                                           0x4F9 // Unused Flag
-#define FLAG_UNUSED_0x4FA                                           0x4FA // Unused Flag
+#define FLAG_SCHISM_CEASEFIRE                                       0x4F9 // Pelagios STORY BLOCK 3: ceasefire achieved (Eira+Drenn)
+#define FLAG_SCHISM_CIPHER_FOUND                                    0x4FA // Pelagios STORY BLOCK 3: Warden's Journal cipher 5 collected
 
 #define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC

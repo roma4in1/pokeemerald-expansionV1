@@ -833,6 +833,74 @@ const struct Tileset gTileset_UnionRoom =
     .callback = NULL,
 };
 
+// Pelagios custom secondary tilesets
+
+const struct Tileset gTileset_PelagiosCoastal =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PelagiosCoastal,
+    .palettes = gTilesetPalettes_PelagiosCoastal,
+    .metatiles = gMetatiles_PelagiosCoastal,
+    .metatileAttributes = gMetatileAttributes_PelagiosCoastal,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PelagiosDesert =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PelagiosDesert,
+    .palettes = gTilesetPalettes_PelagiosDesert,
+    .metatiles = gMetatiles_PelagiosDesert,
+    .metatileAttributes = gMetatileAttributes_PelagiosDesert,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PelagiosVolcanic =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PelagiosVolcanic,
+    .palettes = gTilesetPalettes_PelagiosVolcanic,
+    .metatiles = gMetatiles_PelagiosVolcanic,
+    .metatileAttributes = gMetatileAttributes_PelagiosVolcanic,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PelagiosIce =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PelagiosIce,
+    .palettes = gTilesetPalettes_PelagiosIce,
+    .metatiles = gMetatiles_PelagiosIce,
+    .metatileAttributes = gMetatileAttributes_PelagiosIce,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PelagiosPoison =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PelagiosPoison,
+    .palettes = gTilesetPalettes_PelagiosPoison,
+    .metatiles = gMetatiles_PelagiosPoison,
+    .metatileAttributes = gMetatileAttributes_PelagiosPoison,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PelagiosUnderwater =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PelagiosUnderwater,
+    .palettes = gTilesetPalettes_PelagiosUnderwater,
+    .metatiles = gMetatiles_PelagiosUnderwater,
+    .metatileAttributes = gMetatileAttributes_PelagiosUnderwater,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets

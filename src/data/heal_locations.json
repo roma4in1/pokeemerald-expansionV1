@@ -193,10 +193,10 @@
       "map": "MAP_PALLET_TOWN",
       "x": 6,
       "y": 8,
-      "respawn_x": 8,
-      "respawn_y": 5,
       "respawn_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_1F",
-      "respawn_npc": "LOCALID_PLAYERS_HOUSE_1F_MOM"
+      "respawn_npc": "LOCALID_PLAYERS_HOUSE_1F_MOM",
+      "respawn_x": 8,
+      "respawn_y": 5
     },
     {
       "id": "HEAL_LOCATION_VIRIDIAN_CITY",
@@ -391,6 +391,54 @@
       "y": 8,
       "respawn_map": "MAP_SIROCCO_DUSTMOUTH_PORT_INN",
       "respawn_npc": "LOCALID_SIROCCO_INNKEEPER"
+    },
+    {
+      "id": "HEAL_LOCATION_SCHISM_FROSTMARK_PORT",
+      "map": "MAP_SCHISM_FROSTMARK_PORT",
+      "x": 4,
+      "y": 8,
+      "respawn_map": "MAP_SCHISM_FROSTMARK_PORT_INN",
+      "respawn_npc": "LOCALID_SCHISM_FROSTMARK_INNKEEPER"
+    },
+    {
+      "id": "HEAL_LOCATION_SCHISM_VENOMQUAY_PORT",
+      "map": "MAP_SCHISM_VENOMQUAY_PORT",
+      "x": 4,
+      "y": 8,
+      "respawn_map": "MAP_SCHISM_VENOMQUAY_PORT_INN",
+      "respawn_npc": "LOCALID_SCHISM_VENOMQUAY_INNKEEPER"
+    },
+    {
+      "id": "HEAL_LOCATION_THALVERN_TIDESPIRE_PORT",
+      "map": "MAP_THALVERN_TIDESPIRE_PORT",
+      "x": 4,
+      "y": 8,
+      "respawn_map": "MAP_THALVERN_TIDESPIRE_PORT_INN",
+      "respawn_npc": "LOCALID_THALVERN_TIDESPIRE_INNKEEPER"
+    },
+    {
+      "id": "HEAL_LOCATION_GILDHAVEN_GOLDPORT_HARBOR",
+      "map": "MAP_GILDHAVEN_GOLDPORT_HARBOR",
+      "x": 4,
+      "y": 8,
+      "respawn_map": "MAP_GILDHAVEN_GOLDPORT_HARBOR_INN",
+      "respawn_npc": "LOCALID_GILDHAVEN_HARBOR_INNKEEPER"
+    },
+    {
+      "id": "HEAL_LOCATION_PRIMALIS_VERDANT_LANDING",
+      "map": "MAP_PRIMALIS_VERDANT_LANDING",
+      "x": 4,
+      "y": 8,
+      "respawn_map": "MAP_PRIMALIS_VERDANT_LANDING_INN",
+      "respawn_npc": "LOCALID_PRIMALIS_VERDANT_INNKEEPER"
+    },
+    {
+      "id": "HEAL_LOCATION_AETHERON_CLOUD_LANDING",
+      "map": "MAP_AETHERON_CLOUD_LANDING",
+      "x": 4,
+      "y": 8,
+      "respawn_map": "MAP_AETHERON_CLOUD_LANDING_INN",
+      "respawn_npc": "LOCALID_AETHERON_INNKEEPER"
     }
   ]
 }

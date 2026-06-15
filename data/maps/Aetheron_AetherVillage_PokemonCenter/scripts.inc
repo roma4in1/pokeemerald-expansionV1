@@ -1,0 +1,16 @@
+Aetheron_AetherVillage_PokemonCenter_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Aetheron_AetherVillage_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	.byte 0
+
+Aetheron_AetherVillage_PokemonCenter_OnTransition:
+	setrespawn HEAL_LOCATION_AETHERON_CLOUD_LANDING
+	end
+
+AetheronAetherVillagePokemonCenter_EventScript_Nurse::
+	setvar VAR_0x800B, LOCALID_AETHERON_VILLAGE_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end

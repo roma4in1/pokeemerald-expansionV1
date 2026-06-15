@@ -63,8 +63,12 @@ mapjson('Ironhold_GatemarkPort', 'LAYOUT_IRONHOLD_GATEMARK_PORT',
         warp(4, 8, M('GATEMARK_PORT_INN'), 0),       # 0: into Inn
     ],
     objects=[
-        # Dock guard blocks entry until Navigator's Log check (arrival script)
-        obj('OBJ_EVENT_GFX_MAN_3', 9, 2, 'IronholdGatemarkPort_EventScript_DockGuard',
+        # Dock guard blocks entry until Navigator's Log check (arrival script).
+        # BLACK_BELT placeholder: a uniformed/martial sprite reads as a Covenant
+        # garrison gate guard far better than the generic civilian MAN_3 (fits
+        # Ironhold's Steel/Fighting "occupied island" aesthetic). Swap to a
+        # custom Covenant-soldier sprite later.
+        obj('OBJ_EVENT_GFX_BLACK_BELT', 9, 2, 'IronholdGatemarkPort_EventScript_DockGuard',
             local_id='LOCALID_IRONHOLD_DOCK_GUARD'),
         obj('OBJ_EVENT_GFX_SAILOR', 12, 11, 'IronholdGatemarkPort_EventScript_Sailor'),
         obj('OBJ_EVENT_GFX_MART_EMPLOYEE', 6, 9, 'IronholdGatemarkPort_EventScript_Merchant'),
@@ -182,22 +186,25 @@ mapjson('Ironhold_IronholdCity', 'LAYOUT_IRONHOLD_IRONHOLD_CITY',
             movement='MOVEMENT_TYPE_WANDER_AROUND', rx=1, ry=1),
         obj('OBJ_EVENT_GFX_HIKER', 17, 6, 'IronholdCity_EventScript_CovenantOfficer'),
         # Covenant soldier patrol pair (set movement scripts handled in scripts.inc)
-        obj('OBJ_EVENT_GFX_HIKER', 13, 19, 'IronholdCity_EventScript_SoldierPatrolA',
+        obj('OBJ_EVENT_GFX_BLACK_BELT', 13, 19, 'IronholdCity_EventScript_SoldierPatrolA',
             movement='MOVEMENT_TYPE_WALK_UP_AND_DOWN', ry=2),
-        obj('OBJ_EVENT_GFX_HIKER', 14, 19, 'IronholdCity_EventScript_SoldierPatrolB',
+        obj('OBJ_EVENT_GFX_BLACK_BELT', 14, 19, 'IronholdCity_EventScript_SoldierPatrolB',
             movement='MOVEMENT_TYPE_WALK_UP_AND_DOWN', ry=2),
         # Covenant soldier posted outside the contact's house (the door at 20,17
         # leads to the ResistanceHideout). He is reassigned (hidden) once Petra
         # falls - FLAG_IRONHOLD_GYM1_CLEAR doubles as his hide flag, opening the
         # hideout per the brief ("accessible after defeating Gym 1").
-        obj('OBJ_EVENT_GFX_HIKER', 20, 18, 'IronholdCity_EventScript_HQGuard',
+        obj('OBJ_EVENT_GFX_BLACK_BELT', 20, 18, 'IronholdCity_EventScript_HQGuard',
             local_id='LOCALID_IRONHOLD_HQ_GUARD', flag='FLAG_IRONHOLD_GYM1_CLEAR'),
     ],
     bgs=[
         sign(6, 4, 'IronholdCity_EventScript_GymSign'),
-        sign(6, 10, 'IronholdCity_EventScript_ArmorySign'),
-        sign(20, 10, 'IronholdCity_EventScript_CenterSign'),
-        sign(20, 16, 'IronholdCity_EventScript_HQSign'),
+        # signs sit on plaza ground just LEFT of each building's door (the
+        # buildings rise north of their warps, so the old above-door sign tiles
+        # are now inside the building facade). Layout S_SIGN tiles match these.
+        sign(3, 11, 'IronholdCity_EventScript_ArmorySign'),
+        sign(17, 11, 'IronholdCity_EventScript_CenterSign'),
+        sign(17, 17, 'IronholdCity_EventScript_HQSign'),
     ])
 
 # ============================ Armory (foyer) ============================
@@ -284,7 +291,7 @@ mapjson('Ironhold_MountainPass', 'LAYOUT_IRONHOLD_MOUNTAIN_PASS',
     objects=[
         obj('OBJ_EVENT_GFX_HIKER', 7, 10, 'IronholdMountainPass_EventScript_HikerCrag',
             trainer_type='TRAINER_TYPE_NORMAL', sight='3'),
-        obj('OBJ_EVENT_GFX_HIKER', 11, 23, 'IronholdMountainPass_EventScript_SoldierVenn',
+        obj('OBJ_EVENT_GFX_BLACK_BELT', 11, 23, 'IronholdMountainPass_EventScript_SoldierVenn',
             trainer_type='TRAINER_TYPE_NORMAL', sight='3'),
     ],
     bgs=[
@@ -321,9 +328,9 @@ mapjson('Ironhold_SummitApproach', 'LAYOUT_IRONHOLD_SUMMIT_APPROACH',
     objects=[
         obj('OBJ_EVENT_GFX_HIKER', 8, 7, 'IronholdSummitApproach_EventScript_EliteSorn',
             trainer_type='TRAINER_TYPE_NORMAL', sight='3'),
-        obj('OBJ_EVENT_GFX_HIKER', 13, 11, 'IronholdSummitApproach_EventScript_Patrol2',
+        obj('OBJ_EVENT_GFX_BLACK_BELT', 13, 11, 'IronholdSummitApproach_EventScript_Patrol2',
             trainer_type='TRAINER_TYPE_NORMAL', sight='3'),
-        obj('OBJ_EVENT_GFX_HIKER', 10, 15, 'IronholdSummitApproach_EventScript_Patrol3',
+        obj('OBJ_EVENT_GFX_BLACK_BELT', 10, 15, 'IronholdSummitApproach_EventScript_Patrol3',
             trainer_type='TRAINER_TYPE_NORMAL', sight='3'),
     ],
     bgs=[sign(11, 17, 'IronholdSummitApproach_EventScript_Vista')])
@@ -338,7 +345,7 @@ mapjson('Ironhold_SummitFortress_Exterior', 'LAYOUT_IRONHOLD_SUMMIT_FORTRESS_EXT
     objects=[
         obj('OBJ_EVENT_GFX_HIKER', 6, 8, 'IronholdSummitFortressExterior_EventScript_EliteVael',
             trainer_type='TRAINER_TYPE_NORMAL', sight='3'),
-        obj('OBJ_EVENT_GFX_HIKER', 11, 8, 'IronholdSummitFortressExterior_EventScript_EliteGuard2',
+        obj('OBJ_EVENT_GFX_BLACK_BELT', 11, 8, 'IronholdSummitFortressExterior_EventScript_EliteGuard2',
             trainer_type='TRAINER_TYPE_NORMAL', sight='3'),
         # Commander Sever appears here after both guards defeated (hidden until then)
         obj('OBJ_EVENT_GFX_COOLTRAINER_M', 9, 4, 'IronholdSummitFortressExterior_EventScript_Sever',

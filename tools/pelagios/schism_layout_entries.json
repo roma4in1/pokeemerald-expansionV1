@@ -1,0 +1,101 @@
+[
+  {
+    "id": "LAYOUT_SCHISM_FROSTMARK_PORT",
+    "name": "Schism_FrostmarkPort_Layout",
+    "width": 20,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosIce",
+    "border_filepath": "data/layouts/Schism_FrostmarkPort/border.bin",
+    "blockdata_filepath": "data/layouts/Schism_FrostmarkPort/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SCHISM_FROZEN_TUNDRA",
+    "name": "Schism_FrozenTundra_Layout",
+    "width": 20,
+    "height": 32,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosIce",
+    "border_filepath": "data/layouts/Schism_FrozenTundra/border.bin",
+    "blockdata_filepath": "data/layouts/Schism_FrozenTundra/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SCHISM_ICE_CITY",
+    "name": "Schism_IceCity_Layout",
+    "width": 28,
+    "height": 24,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosIce",
+    "border_filepath": "data/layouts/Schism_IceCity/border.bin",
+    "blockdata_filepath": "data/layouts/Schism_IceCity/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SCHISM_ICE_CAVE",
+    "name": "Schism_IceCave_Layout",
+    "width": 20,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosIce",
+    "border_filepath": "data/layouts/Schism_IceCave/border.bin",
+    "blockdata_filepath": "data/layouts/Schism_IceCave/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SCHISM_THE_SCAR",
+    "name": "Schism_TheScar_Layout",
+    "width": 28,
+    "height": 20,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Cave",
+    "border_filepath": "data/layouts/Schism_TheScar/border.bin",
+    "blockdata_filepath": "data/layouts/Schism_TheScar/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SCHISM_SCAR_RUINS",
+    "name": "Schism_ScarRuins_Layout",
+    "width": 20,
+    "height": 22,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_Cave",
+    "border_filepath": "data/layouts/Schism_ScarRuins/border.bin",
+    "blockdata_filepath": "data/layouts/Schism_ScarRuins/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SCHISM_VENOMQUAY_PORT",
+    "name": "Schism_VenomquayPort_Layout",
+    "width": 20,
+    "height": 18,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosPoison",
+    "border_filepath": "data/layouts/Schism_VenomquayPort/border.bin",
+    "blockdata_filepath": "data/layouts/Schism_VenomquayPort/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SCHISM_TOXIC_SWAMP",
+    "name": "Schism_ToxicSwamp_Layout",
+    "width": 20,
+    "height": 32,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosPoison",
+    "border_filepath": "data/layouts/Schism_ToxicSwamp/border.bin",
+    "blockdata_filepath": "data/layouts/Schism_ToxicSwamp/map.bin",
+    "layout_version": "emerald"
+  },
+  {
+    "id": "LAYOUT_SCHISM_POISON_CITY",
+    "name": "Schism_PoisonCity_Layout",
+    "width": 28,
+    "height": 24,
+    "primary_tileset": "gTileset_General",
+    "secondary_tileset": "gTileset_PelagiosPoison",
+    "border_filepath": "data/layouts/Schism_PoisonCity/border.bin",
+    "blockdata_filepath": "data/layouts/Schism_PoisonCity/map.bin",
+    "layout_version": "emerald"
+  }
+]

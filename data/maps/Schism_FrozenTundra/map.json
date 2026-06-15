@@ -1,0 +1,126 @@
+{
+  "id": "MAP_SCHISM_FROZEN_TUNDRA",
+  "name": "Schism_FrozenTundra",
+  "layout": "LAYOUT_SCHISM_FROZEN_TUNDRA",
+  "music": "MUS_ROUTE110",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_SCHISM_FROZEN_TUNDRA",
+  "requires_flash": false,
+  "weather": "WEATHER_SNOW",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_SCHISM_FROSTMARK_PORT",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_SCHISM_ICE_CITY",
+      "offset": -4,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_SCHISM_THE_SCAR",
+      "offset": 6,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+      "x": 5,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SchismFrozenTundra_EventScript_ScoutHeln",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
+      "x": 13,
+      "y": 22,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SchismFrozenTundra_EventScript_ScoutVera",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_SCHISM_TUNDRA_SCAR_GUARD",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+      "x": 17,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SchismFrozenTundra_EventScript_ScarGuard",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 15,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "1",
+      "script": "SchismFrozenTundra_EventScript_ScarGate"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 16,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "1",
+      "script": "SchismFrozenTundra_EventScript_ScarGate"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 15,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "2",
+      "script": "SchismFrozenTundra_EventScript_ScarGate"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 16,
+      "elevation": 3,
+      "var": "VAR_SCHISM_PROGRESS",
+      "var_value": "2",
+      "script": "SchismFrozenTundra_EventScript_ScarGate"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 4,
+      "y": 7,
+      "elevation": 3,
+      "item": "ITEM_NEVER_MELT_ICE",
+      "flag": "FLAG_HIDDEN_ITEM_SCHISM_1",
+      "quantity": 1,
+      "underfoot": false
+    }
+  ]
+}

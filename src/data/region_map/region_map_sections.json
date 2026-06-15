@@ -782,7 +782,6 @@
     {
       "id": "MAPSEC_ROUTE_4_POKECENTER",
       "name": "ROUTE 4",
-      "name_clone": true,
       "x": 8,
       "y": 3,
       "width": 1,
@@ -791,7 +790,6 @@
     {
       "id": "MAPSEC_ROUTE_10_POKECENTER",
       "name": "ROUTE 10",
-      "name_clone": true,
       "x": 18,
       "y": 3,
       "width": 1,
@@ -1032,7 +1030,6 @@
     {
       "id": "MAPSEC_UNDERGROUND_PATH_2",
       "name": "UNDERGROUND PATH",
-      "name_clone": true,
       "x": 12,
       "y": 6,
       "width": 1,
@@ -1072,7 +1069,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_MANSION",
-      "name": "POKéMON MANSION",
+      "name": "POK\u00e9MON MANSION",
       "x": 4,
       "y": 14,
       "width": 1,
@@ -1088,7 +1085,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_LEAGUE",
-      "name": "POKéMON LEAGUE",
+      "name": "POK\u00e9MON LEAGUE",
       "x": 2,
       "y": 3,
       "width": 1,
@@ -1112,7 +1109,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_TOWER",
-      "name": "POKéMON TOWER",
+      "name": "POK\u00e9MON TOWER",
       "x": 18,
       "y": 6,
       "width": 1,
@@ -1393,7 +1390,6 @@
     {
       "id": "MAPSEC_TRAINER_TOWER_2",
       "name": "TRAINER TOWER",
-      "name_clone": true,
       "x": 5,
       "y": 6,
       "width": 1,
@@ -1730,6 +1726,174 @@
     {
       "id": "MAPSEC_EMBERVEIL_VOLCANO",
       "name": "EMBERVEIL VOLCANO"
+    },
+    {
+      "id": "MAPSEC_SCHISM_FROSTMARK_PORT",
+      "name": "FROSTMARK PORT"
+    },
+    {
+      "id": "MAPSEC_SCHISM_FROZEN_TUNDRA",
+      "name": "FROZEN TUNDRA"
+    },
+    {
+      "id": "MAPSEC_SCHISM_ICE_CITY",
+      "name": "ICE CITY"
+    },
+    {
+      "id": "MAPSEC_SCHISM_ICE_CAVE",
+      "name": "ICE CAVE"
+    },
+    {
+      "id": "MAPSEC_SCHISM_THE_SCAR",
+      "name": "THE SCAR"
+    },
+    {
+      "id": "MAPSEC_SCHISM_VENOMQUAY_PORT",
+      "name": "VENOMQUAY PORT"
+    },
+    {
+      "id": "MAPSEC_SCHISM_TOXIC_SWAMP",
+      "name": "TOXIC SWAMP"
+    },
+    {
+      "id": "MAPSEC_SCHISM_POISON_CITY",
+      "name": "POISON CITY"
+    },
+    {
+      "id": "MAPSEC_THALVERN_TIDESPIRE_PORT",
+      "name": "TIDESPIRE PORT"
+    },
+    {
+      "id": "MAPSEC_THALVERN_FLOATING_MARKET",
+      "name": "FLOATING MARKET"
+    },
+    {
+      "id": "MAPSEC_THALVERN_COASTAL_ROUTE",
+      "name": "COASTAL ROUTE"
+    },
+    {
+      "id": "MAPSEC_THALVERN_SUBMERGED_RUINS",
+      "name": "SUBMERGED RUINS"
+    },
+    {
+      "id": "MAPSEC_THALVERN_COVENANT_SITE",
+      "name": "COVENANT SITE"
+    },
+    {
+      "id": "MAPSEC_THALVERN_THRONE_ROOM",
+      "name": "THRONE ROOM"
+    },
+    {
+      "id": "MAPSEC_GILDHAVEN_GOLDPORT_HARBOR",
+      "name": "GOLDPORT HARBOR"
+    },
+    {
+      "id": "MAPSEC_GILDHAVEN_MERCHANT_DISTRICT",
+      "name": "MERCHANT DIST."
+    },
+    {
+      "id": "MAPSEC_GILDHAVEN_BLACK_MARKET",
+      "name": "BLACK MARKET"
+    },
+    {
+      "id": "MAPSEC_GILDHAVEN_NOBLE_QUARTER",
+      "name": "NOBLE QUARTER"
+    },
+    {
+      "id": "MAPSEC_GILDHAVEN_VANE_MANOR",
+      "name": "VANE MANOR"
+    },
+    {
+      "id": "MAPSEC_GILDHAVEN_THE_EXCHANGE",
+      "name": "THE EXCHANGE"
+    },
+    {
+      "id": "MAPSEC_GILDHAVEN_SEAL_CHAMBER",
+      "name": "SEAL CHAMBER"
+    },
+    {
+      "id": "MAPSEC_PRIMALIS_VERDANT_LANDING",
+      "name": "VERDANT LAND"
+    },
+    {
+      "id": "MAPSEC_PRIMALIS_JUNGLE_ROUTE_1",
+      "name": "JUNGLE RT 1"
+    },
+    {
+      "id": "MAPSEC_PRIMALIS_JUNGLE_INTERIOR",
+      "name": "JUNGLE"
+    },
+    {
+      "id": "MAPSEC_PRIMALIS_ZOAN_VILLAGE",
+      "name": "ZOAN VILLAGE"
+    },
+    {
+      "id": "MAPSEC_PRIMALIS_JUNGLE_ROUTE_2",
+      "name": "JUNGLE RT 2"
+    },
+    {
+      "id": "MAPSEC_PRIMALIS_ANCIENT_RUINS_CAMP",
+      "name": "RUINS CAMP"
+    },
+    {
+      "id": "MAPSEC_PRIMALIS_HEARTWOOD",
+      "name": "HEARTWOOD"
+    },
+    {
+      "id": "MAPSEC_ASHENVEIL_GREYPORT",
+      "name": "GREYPORT"
+    },
+    {
+      "id": "MAPSEC_ASHENVEIL_ASH_FIELDS",
+      "name": "ASH FIELDS"
+    },
+    {
+      "id": "MAPSEC_ASHENVEIL_DEAD_CITY",
+      "name": "DEAD CITY"
+    },
+    {
+      "id": "MAPSEC_ASHENVEIL_MEMORIAL",
+      "name": "MEMORIAL"
+    },
+    {
+      "id": "MAPSEC_ASHENVEIL_MORTHAS_GROVE",
+      "name": "MORTHAS GRV"
+    },
+    {
+      "id": "MAPSEC_AETHERON_KNOCK_UP_STREAM",
+      "name": "KNOCK STREAM"
+    },
+    {
+      "id": "MAPSEC_AETHERON_CLOUD_LANDING",
+      "name": "CLOUD LAND"
+    },
+    {
+      "id": "MAPSEC_AETHERON_SKY_ROUTE",
+      "name": "SKY ROUTE"
+    },
+    {
+      "id": "MAPSEC_AETHERON_AETHER_VILLAGE",
+      "name": "AETHER VLG"
+    },
+    {
+      "id": "MAPSEC_AETHERON_COVENANT_INSTALLATION",
+      "name": "INSTALLATION"
+    },
+    {
+      "id": "MAPSEC_AETHERON_STORM_PEAK",
+      "name": "STORM PEAK"
+    },
+    {
+      "id": "MAPSEC_CONVERGENCE_APPROACH",
+      "name": "CONVERGENCE"
+    },
+    {
+      "id": "MAPSEC_CONVERGENCE_ANCIENT_CAPITAL",
+      "name": "ANCIENT CAPITAL"
+    },
+    {
+      "id": "MAPSEC_CONVERGENCE_KILL_SWITCH",
+      "name": "KILL SWITCH"
     }
   ]
 }

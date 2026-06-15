@@ -61,4 +61,12 @@ extern const struct Tileset gTileset_SSAnne;
 extern const struct Tileset gTileset_SeaCottage;
 extern const struct Tileset gTileset_TrainerTower;
 
+// Pelagios custom secondary tilesets
+extern const struct Tileset gTileset_PelagiosCoastal;
+extern const struct Tileset gTileset_PelagiosDesert;
+extern const struct Tileset gTileset_PelagiosVolcanic;
+extern const struct Tileset gTileset_PelagiosIce;
+extern const struct Tileset gTileset_PelagiosPoison;
+extern const struct Tileset gTileset_PelagiosUnderwater;
+
 #endif //GUARD_tilesets_H
